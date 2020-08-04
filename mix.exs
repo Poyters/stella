@@ -1,4 +1,4 @@
-defmodule STELLA.MixProject do
+defmodule Stella.MixProject do
   use Mix.Project
 
   def project do

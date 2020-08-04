@@ -1,6 +1,6 @@
-defmodule STELLA do
+defmodule Stella do
   @moduledoc """
-  Documentation for `STELLA`.
+  Documentation for `Stella`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule STELLA do
 
   ## Examples
 
-      iex> STELLA.hello()
+      iex> Stella.hello()
       :world
 
   """

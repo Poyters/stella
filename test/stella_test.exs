@@ -1,8 +1,8 @@
-defmodule STELLATest do
+defmodule StellaTest do
   use ExUnit.Case
-  doctest STELLA
+  doctest Stella
 
   test "greets the world" do
-    assert STELLA.hello() == :world
+    assert Stella.hello() == :world
   end
 end

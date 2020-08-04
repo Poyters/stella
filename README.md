@@ -1,4 +1,4 @@
-# STELLA
+# Stella
 
 **TODO: Add description**
 
