@@ -8,13 +8,21 @@ defmodule Number do
 
   ## Examples
     iex> Number.is_power(10, 1)
-    true
+    false
   """
   def is_power(x, y) do
-    if x == 1, do: y == 1
+    cond do
+      x == y -> :true
+      y == 1 -> x == 1
+      :true -> increment_power(x, y, 1)
+    end
+  end
 
-    pow = 1
-
-
+  defp increment_power(x, y, pow) do
+    cond do
+      pow < x -> increment_power(x, y, pow*y)
+      pow == x -> :true
+      :true -> :false
+    end
   end
 end
