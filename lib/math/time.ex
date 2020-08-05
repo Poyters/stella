@@ -7,8 +7,10 @@ defmodule Time do
   Converts seconds to miliseconds (integer)
 
   ## Examples
-    iex> Time.sec_to_ms(1)
-    1000
+
+      iex> Time.sec_to_ms(1)
+      1000
+
   """
   def sec_to_ms (sec) do
     sec * 1000
@@ -18,8 +20,10 @@ defmodule Time do
   Converts miliseconds to seconds (float)
 
   ## Examples
-    iex> Time.ms_to_sec(1000)
-    1.0
+
+      iex> Time.ms_to_sec(1000)
+      1.0
+
   """
   def ms_to_sec (ms) do
     ms / 1000
@@ -29,8 +33,10 @@ defmodule Time do
   Converts HH:MM:SS time type to seconds (integer)
 
   ## Examples
-    iex> Time.hms_to_sec("0:1:10")
-    70
+
+      iex> Time.hms_to_sec("0:1:10")
+      70
+
   """
   def hms_to_sec (hms) do
     items = hms 
@@ -44,8 +50,10 @@ defmodule Time do
   Converts HH:MM:SS time type to seconds (integer)
 
   ## Examples
-    iex> Time.hms_to_ms("0:1:10")
-    70000
+
+      iex> Time.hms_to_ms("0:1:10")
+      70000
+      
   """
   def hms_to_ms (hms) do
     hms_to_sec(hms) * 1000

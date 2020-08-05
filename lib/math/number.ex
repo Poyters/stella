@@ -7,8 +7,10 @@ defmodule Number do
   Check if y is power of x
 
   ## Examples
-    iex> Number.is_power(10, 1)
-    false
+
+      iex> Number.is_power(10, 1)
+      false
+      
   """
   def is_power(x, y) do
     cond do
