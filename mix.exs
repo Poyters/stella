@@ -7,7 +7,13 @@ defmodule Stella.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: description(),
+      package: package(),
+      docs: [
+        main: "Stella",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -21,8 +27,20 @@ defmodule Stella.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.22", only: :dev, runtime: false}
+    ]
+  end
+
+  defp description() do
+    "Elixir library providing implementations of the most famous algorithms, data structures and math functions, out of the box"
+  end
+
+  defp package() do
+    [
+      name: "stella",
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/RafalKostecki/stella"}
     ]
   end
 end
