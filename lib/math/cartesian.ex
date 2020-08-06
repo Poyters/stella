@@ -78,4 +78,27 @@ defmodule Cartesian do
   def order_by_distance(point_a, point_b) do 
     if proximity(point_a) < proximity(point_b), do: -1, else: 1
   end
+
+  @doc """
+  Determine in which quadrant at two dimensional Cartesian plane point are.
+
+  ## Examples
+
+      iex> Cartesian.determine_quadrant_2d(%{x: 1, y: 2})
+      1
+
+      iex> Cartesian.determine_quadrant_2d(%{x: 0, y: 0})
+      nil
+      
+  """
+
+  def determine_quadrant_2d(point) do 
+    cond do
+      point[:x] > 0 && point[:y] > 0 -> 1
+      point[:x] < 0 && point[:y] > 0 -> 2
+      point[:x] < 0 && point[:y] < 0 -> 3
+      point[:x] > 0 && point[:y] < 0 -> 4
+      true -> nil 
+    end
+  end
 end

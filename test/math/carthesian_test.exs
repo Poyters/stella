@@ -14,6 +14,25 @@ defmodule CartesianTest do
     z: 3
   }
 
+  @point3 %{
+    x: 1,
+    y: 1
+  }
+
+  @point4 %{
+    x: -1,
+    y: 1
+  }
+
+  @point5 %{
+    x: -1,
+    y: -1
+  }
+
+  @point6 %{
+    x: 1,
+    y: -1
+  }
 
   test "Check proximity: 1,2,3" do
     assert Cartesian.proximity(@point1) == 6
@@ -53,5 +72,25 @@ defmodule CartesianTest do
 
   test "Order by distance, more" do
     assert Cartesian.order_by_distance(@point2, @point1) == 1
+  end
+
+
+  test "Determine 2D quadrant; 1" do
+    assert Cartesian.determine_quadrant_2d(@point3) == 1
+  end
+
+
+  test "Determine 2D quadrant; 2" do
+    assert Cartesian.determine_quadrant_2d(@point4) == 2
+  end
+
+
+  test "Determine 2D quadrant; 3" do
+    assert Cartesian.determine_quadrant_2d(@point5) == 3
+  end
+
+
+  test "Determine 2D quadrant; 4" do
+    assert Cartesian.determine_quadrant_2d(@point6) == 4
   end
 end
