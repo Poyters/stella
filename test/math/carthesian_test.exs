@@ -23,4 +23,28 @@ defmodule CarthesianTest do
     assert Carthesian.proximity(@point2) == 13
   end
 
+  test "Check ordering by x param, less" do
+    assert Carthesian.order_by_x(@point1, @point2) == -1
+  end
+
+  test "Check ordering by x param, more" do
+    assert Carthesian.order_by_x(@point2, @point1) == 1
+  end
+
+  test "Check ordering by y param, less" do
+    assert Carthesian.order_by_y(@point1, @point2) == 1
+  end
+
+  test "Check ordering by y param, more" do
+    assert Carthesian.order_by_y(@point2, @point1) == -1
+  end
+
+  test "Check ordering by z param, less" do
+    assert Carthesian.order_by_z(@point1, @point2) == 1
+  end
+
+  test "Check ordering by z param, more" do
+    assert Carthesian.order_by_z(@point2, @point1) == 1
+  end
+
 end
