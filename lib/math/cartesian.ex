@@ -1,4 +1,4 @@
-defmodule Carthesian do
+defmodule Cartesian do
   @moduledoc """
   Documentation for `Time`.
   """
@@ -10,7 +10,7 @@ defmodule Carthesian do
 
   ## Examples
 
-      iex> Carthesian.proximity(%{x: 1, y: 2, z: 3})
+      iex> Cartesian.proximity(%{x: 1, y: 2, z: 3})
       6
       
   """
@@ -25,7 +25,7 @@ defmodule Carthesian do
 
   ## Examples
 
-      iex> Carthesian.order_by_x(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
+      iex> Cartesian.order_by_x(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
       -1
       
   """
@@ -40,7 +40,7 @@ defmodule Carthesian do
 
   ## Examples
 
-      iex> Carthesian.order_by_y(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
+      iex> Cartesian.order_by_y(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
       1
       
   """
@@ -55,7 +55,7 @@ defmodule Carthesian do
 
   ## Examples
 
-      iex> Carthesian.order_by_z(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
+      iex> Cartesian.order_by_z(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
       1
       
   """
@@ -70,7 +70,7 @@ defmodule Carthesian do
 
   ## Examples
 
-      iex> Carthesian.order_by_distance(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
+      iex> Cartesian.order_by_distance(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
       -1
       
   """
