@@ -20,7 +20,8 @@ defmodule Carthesian do
   end
 
   @doc """
-  Order points looking by x parametr value
+  Order points looking by x parametr value.
+  Returns 1 if A is nearer thatn B, else returns -1
 
   ## Examples
 
@@ -34,7 +35,8 @@ defmodule Carthesian do
   end
 
   @doc """
-  Order points looking by y parametr value
+  Order points looking by y parametr value.
+  Returns 1 if A is nearer thatn B, else returns -1
 
   ## Examples
 
@@ -48,7 +50,8 @@ defmodule Carthesian do
   end
 
   @doc """
-  Order points looking by z parametr value
+  Order points looking by z parametr value.
+  Returns 1 if A is nearer thatn B, else returns -1
 
   ## Examples
 
@@ -59,5 +62,20 @@ defmodule Carthesian do
 
   def order_by_z(point_a, point_b) do 
     if point_a[:z] < point_b[:z], do: -1, else: 1
+  end
+
+  @doc """
+  Order points by distance between them.
+  Returns 1 if A is nearer thatn B, else returns -1
+
+  ## Examples
+
+      iex> Carthesian.order_by_distance(%{x: 1, y: 2, z: 3}, %{x: 2, y: 2, z: 3})
+      -1
+      
+  """
+
+  def order_by_distance(point_a, point_b) do 
+    if proximity(point_a) < proximity(point_b), do: -1, else: 1
   end
 end

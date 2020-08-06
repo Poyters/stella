@@ -47,4 +47,11 @@ defmodule CarthesianTest do
     assert Carthesian.order_by_z(@point2, @point1) == 1
   end
 
+  test "Order by distance, less" do
+    assert Carthesian.order_by_distance(@point1, @point2) == -1
+  end
+
+  test "Order by distance, more" do
+    assert Carthesian.order_by_distance(@point2, @point1) == 1
+  end
 end
