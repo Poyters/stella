@@ -1,6 +1,6 @@
 defmodule Number do
   @moduledoc """
-  Documentation for `Time`.
+  Documentation for `Number`.
   """
 
   @doc """

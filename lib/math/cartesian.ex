@@ -1,6 +1,6 @@
 defmodule Cartesian do
   @moduledoc """
-  Documentation for `Time`.
+  Documentation for `Cartesian`.
   """
 
   @doc """
