@@ -34,6 +34,62 @@ defmodule CartesianTest do
     y: -1
   }
 
+  @point7 %{
+    x: 1,
+    y: 2,
+    z: 3
+  }
+
+  @point8 %{
+    x: -1,
+    y: 2,
+    z: 3
+  }
+
+  @point9 %{
+    x: -1,
+    y: -2,
+    z: 3
+  }
+
+  @point10 %{
+    x: 1,
+    y: -2,
+    z: 3
+  }
+
+  @point11 %{
+    x: 1,
+    y: -2,
+    z: -3
+  }
+
+  @point12 %{
+    x: -1,
+    y: -2,
+    z: -3
+  }
+
+  @point13 %{
+    x: -1,
+    y: 2,
+    z: -3
+  }
+
+  @point14 %{
+    x: 1,
+    y: 2,
+    z: -3
+  }
+
+
+
+
+
+
+
+
+
   test "Check proximity: 1,2,3" do
     assert Cartesian.proximity(@point1) == 6
   end
@@ -75,22 +131,54 @@ defmodule CartesianTest do
   end
 
 
-  test "Determine 2D quadrant; 1" do
-    assert Cartesian.determine_quadrant_2d(@point3) == 1
+  test "Determine  quadrant; 1" do
+    assert Cartesian.determine_quadrant(@point3) == 1
   end
 
 
-  test "Determine 2D quadrant; 2" do
-    assert Cartesian.determine_quadrant_2d(@point4) == 2
+  test "Determine  quadrant; 2" do
+    assert Cartesian.determine_quadrant(@point4) == 2
   end
 
 
-  test "Determine 2D quadrant; 3" do
-    assert Cartesian.determine_quadrant_2d(@point5) == 3
+  test "Determine  quadrant; 3" do
+    assert Cartesian.determine_quadrant(@point5) == 3
   end
 
 
-  test "Determine 2D quadrant; 4" do
-    assert Cartesian.determine_quadrant_2d(@point6) == 4
+  test "Determine  quadrant; 4" do
+    assert Cartesian.determine_quadrant(@point6) == 4
+  end
+
+  test "Determine octan; 0" do
+    assert Cartesian.determine_octan(@point7) == 0
+  end
+
+  test "Determine octan; 1" do
+    assert Cartesian.determine_octan(@point8) == 1
+  end
+
+  test "Determine octan; 2" do
+    assert Cartesian.determine_octan(@point9) == 2
+  end
+
+  test "Determine octan; 3" do
+    assert Cartesian.determine_octan(@point10) == 3
+  end
+
+  test "Determine octan; 4" do
+    assert Cartesian.determine_octan(@point11) == 4
+  end
+
+  test "Determine octan; 5" do
+    assert Cartesian.determine_octan(@point12) == 5
+  end
+
+  test "Determine octan; 6" do
+    assert Cartesian.determine_octan(@point13) == 6
+  end
+
+  test "Determine octan; 7" do
+    assert Cartesian.determine_octan(@point14) == 7
   end
 end

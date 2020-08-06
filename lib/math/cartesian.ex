@@ -84,20 +84,48 @@ defmodule Cartesian do
 
   ## Examples
 
-      iex> Cartesian.determine_quadrant_2d(%{x: 1, y: 2})
+      iex> Cartesian.determine_quadrant(%{x: 1, y: 2})
       1
 
-      iex> Cartesian.determine_quadrant_2d(%{x: 0, y: 0})
+      iex> Cartesian.determine_quadrant(%{x: 0, y: 0})
       nil
       
   """
 
-  def determine_quadrant_2d(point) do 
+  def determine_quadrant(point) do 
     cond do
       point[:x] > 0 && point[:y] > 0 -> 1
       point[:x] < 0 && point[:y] > 0 -> 2
       point[:x] < 0 && point[:y] < 0 -> 3
       point[:x] > 0 && point[:y] < 0 -> 4
+      true -> nil 
+    end
+  end
+
+
+  @doc """
+  Determine in which quadrant at two dimensional Cartesian plane point are.
+
+  ## Examples
+
+      iex> Cartesian.determine_octan(%{x: 1, y: 2, z: 3})
+      0
+
+      iex> Cartesian.determine_octan(%{x: 0, y: 0, z: 3})
+      nil
+      
+  """
+
+  def determine_octan(point) do 
+    cond do
+      point[:x] > 0 && point[:y] > 0 && point[:z] > 0 -> 0
+      point[:x] < 0 && point[:y] > 0 && point[:z] > 0 -> 1
+      point[:x] < 0 && point[:y] < 0 && point[:z] > 0 -> 2
+      point[:x] > 0 && point[:y] < 0 && point[:z] > 0 -> 3
+      point[:x] > 0 && point[:y] < 0 && point[:z] < 0 -> 4
+      point[:x] < 0 && point[:y] < 0 && point[:z] < 0 -> 5
+      point[:x] < 0 && point[:y] > 0 && point[:z] < 0 -> 6
+      point[:x] > 0 && point[:y] > 0 && point[:z] < 0 -> 7
       true -> nil 
     end
   end
