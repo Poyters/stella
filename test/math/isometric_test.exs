@@ -29,4 +29,12 @@ defmodule IsometricTest do
   test "Isometric to string, 2dpoint" do
     assert Isometric.point_to_string(%{x: 6, y: -22}) == "x: 6, y: -22"
   end
+
+  test "String to point, 2d" do
+    assert Isometric.string_to_point("x: 1, y: -7") == %{x: 1, y: -7}
+  end
+
+  test "String to point, 3d" do
+    assert Isometric.string_to_point("x: 1, y: -7, z: 8") == %{x: 1, y: -7, z: 8}
+  end
 end

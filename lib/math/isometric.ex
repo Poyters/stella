@@ -53,7 +53,7 @@ defmodule Isometric do
 
   ## Examples
 
-      iex> Isometric.to_string(1, 2, 3)
+      iex> Isometric.point_to_string(%{x: 1, y: 2, z: 3})
       "x: 1, y: 2, z: 3"
       
   """
@@ -63,6 +63,24 @@ defmodule Isometric do
     else 
       "x: #{point[:x]}, y: #{point[:y]}"
     end
-    
+  end
+
+  @doc """
+  Convert point to string
+
+  ## Examples
+
+      iex> Isometric.string_to_point("x: 1, y: 2, z: 3")
+      %{x: 1, y: 2, z: 3}
+      
+  """
+  def string_to_point(string) do
+    items = string 
+    |> String.split([", ", ": "])
+    |> Enum.chunk_every(2)
+    |> Enum.map(fn [key, value] -> 
+        {String.to_atom(key), String.to_integer(value)} 
+      end) 
+    |> Map.new
   end
 end
