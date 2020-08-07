@@ -21,4 +21,48 @@ defmodule Isometric do
       y: (x + y) / 2 - z,
     }
   end
+
+  @doc """
+  Convert coorddinates to string
+
+  ## Examples
+
+      iex> Isometric.to_string(1, 2)
+      "x: 1, y: 2"
+      
+  """
+  def to_string(x, y) do
+    "x: #{x}, y: #{y}"
+  end
+
+  @doc """
+  Convert coorddinates to string
+
+  ## Examples
+
+      iex> Isometric.to_string(1, 2, 3)
+      "x: 1, y: 2, z: 3"
+      
+  """
+  def to_string(x, y, z) do
+    "x: #{x}, y: #{y}, z: #{z}"
+  end
+
+  @doc """
+  Convert point to string
+
+  ## Examples
+
+      iex> Isometric.to_string(1, 2, 3)
+      "x: 1, y: 2, z: 3"
+      
+  """
+  def point_to_string(point) do
+    if point[:z] do
+       "x: #{point[:x]}, y: #{point[:y]}, z: #{point[:z]}"
+    else 
+      "x: #{point[:x]}, y: #{point[:y]}"
+    end
+    
+  end
 end
