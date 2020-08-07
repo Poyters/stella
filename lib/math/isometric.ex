@@ -66,7 +66,7 @@ defmodule Isometric do
   end
 
   @doc """
-  Convert point to string
+  Convert string to point (2D or 3D)
 
   ## Examples
 
@@ -82,5 +82,24 @@ defmodule Isometric do
         {String.to_atom(key), String.to_integer(value)} 
       end) 
     |> Map.new
+  end
+
+  @doc """
+  Convert string to point (2D or 3D)
+
+  ## Examples
+
+      iex> Isometric.distance_between(%{x: -1, y: 2}, %{x: 1, y: 2})
+      2
+
+      iex> Isometric.distance_between(%{x: -91, y: -20}, %{x: -10, y: 2})
+      103
+      
+  """
+  def distance_between(point_a, point_b) do
+    x_delta = abs(point_a[:x] - point_b[:x]) 
+    y_delta = abs(point_a[:y] - point_b[:y]) 
+
+    x_delta + y_delta
   end
 end

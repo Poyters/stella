@@ -37,4 +37,16 @@ defmodule IsometricTest do
   test "String to point, 3d" do
     assert Isometric.string_to_point("x: 1, y: -7, z: 8") == %{x: 1, y: -7, z: 8}
   end
+
+  test "Distance, part 1" do
+    assert  Isometric.distance_between(
+      %{x: -1, y: 2}, %{x: 1, y: 2}
+    ) == 2
+  end
+
+  test "Distance, part 2" do
+    assert  Isometric.distance_between(
+      %{x: -90, y: -20}, %{x: -10, y: 0}
+    ) == 100
+  end
 end
