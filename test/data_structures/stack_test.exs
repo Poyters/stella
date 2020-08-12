@@ -44,6 +44,6 @@ defmodule StackTest do
       |> Stack.push([1, 2, 3])
       |> Stack.pop()
       |> Stack.push(4)
-       == [1, 2, 4]
+      == [1, 2, 4]
   end
 end
