@@ -9,7 +9,7 @@ defmodule Stack do
   ## Examples
 
       iex> Stack.new()
-      %{}
+      []
 
       iex> Stack.new() |> Stack.push([1, 2, 3])
       [1, 2, 3]
@@ -19,7 +19,7 @@ defmodule Stack do
       
   """
 
-  def new, do: %{}
+  def new, do: []
 
   @doc """
   Check if stack is empty
