@@ -1,14 +1,14 @@
-defmodule Heapsort do
+defmodule Heap do
   @moduledoc """
-  Documentation for `Heapsort` algorithm
+  Documentation for `Heap` algorithm
   """
 
   @doc """
-  Create new, empty Heapsort
+  Create new, empty Heap
 
   ## Examples
 
-      iex> Heapsort.new()
+      iex> Heap.new()
       []
       
   """
@@ -20,10 +20,10 @@ defmodule Heapsort do
 
   ## Examples
 
-      iex> Heapsort.parent(2)
+      iex> Heap.parent(2)
       1
 
-      iex> Heapsort.parent(5)
+      iex> Heap.parent(5)
       2
       
   """
@@ -35,7 +35,7 @@ defmodule Heapsort do
 
   ## Examples
 
-      iex> Heapsort.left(2)
+      iex> Heap.left(2)
       4
       
   """
@@ -47,7 +47,7 @@ defmodule Heapsort do
 
   ## Examples
 
-      iex> Heapsort.right(2)
+      iex> Heap.right(2)
       5
       
   """

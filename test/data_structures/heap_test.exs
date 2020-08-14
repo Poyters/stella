@@ -1,16 +1,16 @@
-defmodule HeapsortTest do
+defmodule HeapTest do
   use ExUnit.Case
-  doctest Heapsort
+  doctest Heap
 
   test "get parent index of element" do
-    assert Heapsort.parent(6) == 3
+    assert Heap.parent(6) == 3
   end
 
   test "get left index of element" do
-    assert Heapsort.left(6) == 12
+    assert Heap.left(6) == 12
   end
 
   test "get right index of element" do
-    assert Heapsort.right(6) == 13
+    assert Heap.right(6) == 13
   end
 end
