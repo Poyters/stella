@@ -1,18 +1,7 @@
 defmodule Stella do
   @moduledoc """
-  Documentation for `Stella`.
+  Documentation for `Project Stella`. 
+  Rapid elixir library providing implementations of the most
+  famous algorithms, data structures and math functions
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Stella.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end

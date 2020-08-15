@@ -1,7 +1,7 @@
 # Stella
 
-Rapid elixir library providing implementations of the most famous algorithms, data structures and math functions. Keyf fetures of this library are:
-- a high test coverage (above 95 percentage)
+Rapid elixir library providing implementations of the most famous algorithms, data structures and math functions. Key fetures of this library are:
+- a high test coverage (near to 100%)
 - good quality documentation with examples of usage to each function
 - featured complexity of each action
 
@@ -47,5 +47,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [ ] Binary Search Tree
 
 ### Others
+- [x] Create readme
 - [ ] Feature complexity of each function in "O" notation
 
