@@ -23,4 +23,9 @@ defmodule HeapTest do
     assert Heap.build_max_heap([4, 1, 3, 2, 16, 9, 10, 14, 8, 7])
     == [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
   end
+
+  test "build max heapify 2" do
+    assert Heap.build_max_heap([35, 33, 42, 10, 14, 19, 27, 44, 26, 31])
+    == [44, 42, 35, 33, 31, 19, 27, 10, 26, 14]
+  end
 end

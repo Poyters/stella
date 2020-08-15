@@ -12,7 +12,7 @@ The package can be installed by adding `stella` to your list of dependencies in 
 ```elixir
 def deps do
   [
-    {:stella, "~> 0.1.0"}
+    {:stella, "~> 0.2.1"}
   ]
 end
 ```

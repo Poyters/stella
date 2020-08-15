@@ -65,27 +65,22 @@ defmodule Heap do
 
   def right(index), do: index * 2 + 2
 
-	defp left_largest(heap, index) do
+	def max_heap(heap, index) do
 		l = left(index)
-
-    if (
+		r = right(index)
+		largest = if (
 			l < length(heap) &&
 			Enum.at(heap, l) > Enum.at(heap, index)
 		), do: l, else: index
-	end 
 
-	defp right_largest(heap, index) do
-		r = right(index)
-		l = left_largest(heap, index)
-		
 		if (
 			r < length(heap) &&
-			Enum.at(heap, r) > Enum.at(heap, l)
-		), do: r, else: l
+			Enum.at(heap, r) > Enum.at(heap, largest)
+		), do: r, else: largest
 	end
 
 	@doc """
-	Method complexity: O(nlgn)
+	Method complexity: O(lgn)
 	Max heapify changes list of elements in max heap where for each 
 	elements of list (except roots) ownership takes place:
 	Heap[parent(i)] >= Heap[i]
@@ -97,15 +92,15 @@ defmodule Heap do
       
   """
 
-	def max_heapify(heap, i) do
-		largest = right_largest(heap, i)
+	def max_heapify(heap, index) do
+		largest = max_heap(heap, index)
 	
-		if largest != i do
-			help = Enum.at(heap, i)
+		if largest != index do
+			swap_helper = Enum.at(heap, index)
 
 			heap
-				|> List.replace_at(i, Enum.at(heap, largest))
-				|> List.replace_at(largest, help)
+				|> List.replace_at(index, Enum.at(heap, largest))
+				|> List.replace_at(largest, swap_helper)
 				|> max_heapify(largest)
 		else
 			heap
@@ -128,7 +123,7 @@ defmodule Heap do
 	
 	def build_max_heap(heap) do
 		leaf = Integer.floor_div(length(heap), 2) - 1
-		build_max_heap(max_heapify(heap, leaf - 1), leaf - 1)
+		build_max_heap(max_heapify(heap, leaf), leaf)
 	end
 
 	def build_max_heap(heap, i) do
