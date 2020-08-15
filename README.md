@@ -1,6 +1,9 @@
 # Stella
 
-**TODO: Add description**
+Rapid elixir library providing implementations of the most famous algorithms, data structures and math functions. Keyf fetures of this library are:
+- a high test coverage (above 95 percentage)
+- good quality documentation with examples of usage to each function
+- featured complexity of each action
 
 ## Installation
 
@@ -33,7 +36,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ### Algorithms
 - [ ] Heapsort
-- [ ] QuickSort
 
 ### Data structures
 - [x] Queue
@@ -43,4 +45,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [ ] B-tree
 - [ ] Red-black Binary Search Tree
 - [ ] Binary Search Tree
+
+### Others
+- [ ] Feature complexity of each function in "O" notation
 
