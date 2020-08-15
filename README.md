@@ -4,8 +4,7 @@
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `stella` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `stella` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +14,33 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/stella](https://hexdocs.pm/stella).
+Link to hex package: https://hex.pm/packages/stella
+
+## Documentation
+Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
+
+
+## Content of version 0.3.0
+
+### Math
+- [x] Cartesian
+- [x] Easing functions
+- [x] Isometric
+- [x] Common number operations
+- [x] Time converter
+- [ ] Vector 2D
+- [ ] Vector 3D
+
+### Algorithms
+- [ ] Heapsort
+- [ ] QuickSort
+
+### Data structures
+- [x] Queue
+- [x] Stack
+- [ ] Heap
+- [ ] Priority queue
+- [ ] B-tree
+- [ ] Red-black Binary Search Tree
+- [ ] Binary Search Tree
 

@@ -13,4 +13,9 @@ defmodule HeapTest do
   test "get right index of element" do
     assert Heap.right(1) == 4
   end
+
+  test "max heapify" do
+    assert Heap.max_heapify([16, 4, 10, 14, 7, 9, 3, 2, 8, 1], 1)
+    == [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
+  end
 end
