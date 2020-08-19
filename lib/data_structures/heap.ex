@@ -108,6 +108,7 @@ defmodule Heap do
 	end
 
 	@doc """
+	Method complexity: O(n)
 	Restores ownership of a whole heap to	Heap[parent(i)] >= Heap[i],
 	so build heap max
 

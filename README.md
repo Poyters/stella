@@ -46,7 +46,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [ ] Red-black Binary Search Tree
 - [ ] Binary Search Tree
 
-### Others
-- [x] Create readme
-- [ ] Feature complexity of each function in "O" notation
+
+Planned release date: *September/October 2020*
 

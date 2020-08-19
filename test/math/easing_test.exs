@@ -11,7 +11,7 @@ defmodule EasingTest do
   end
 
   test "ease out quad" do
-    assert Easing.ease_out_quad(2, 3, 4, 5) == 3
+    assert Easing.ease_out_quad(2, 3, 4, 5) == 5.5600000000000005
   end
 
   test "ease in out quad" do

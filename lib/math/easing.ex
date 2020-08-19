@@ -42,13 +42,13 @@ defmodule Easing do
   ## Examples
 
       iex> Easing.ease_out_quad(1, 2, 3, 4)
-      5
+      3.3125
       
   """
 
   def ease_out_quad(t, b, c, d) do
     x = t / d
-	  -c * t*(t-2) + b
+	  -c * x*(x-2) + b
   end
 
   @doc """

@@ -10,6 +10,7 @@ defmodule Stella.MixProject do
       deps: deps(),
       description: description(),
       package: package(),
+      aliases: aliases(),
       docs: [
         main: "Stella",
         extras: ["README.md"]
@@ -22,6 +23,20 @@ defmodule Stella.MixProject do
     [
       extra_applications: [:logger]
     ]
+  end
+
+  defp aliases do
+    [docs: ["docs", &copy_images/1]]
+  end
+
+  defp copy_images(_) do
+    File.cp_r("assets", "doc/assets", fn source, destination ->
+      IO.gets("Overwriting #{destination} by #{source}. Type y to confirm. ") == "y\n"
+    end)
+
+    File.cp_r("doc", "docs", fn _source, _destination ->
+      true
+    end)
   end
 
   # Run "mix help deps" to learn about dependencies.
