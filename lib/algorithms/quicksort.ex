@@ -1,6 +1,6 @@
 defmodule Quicksort do
   @moduledoc """
-	Documentation for `Heapsort` algorithm
+	Documentation for `Quicksort` algorithm
 	
 	Annotations
 	n - number of elements in list
@@ -15,6 +15,9 @@ defmodule Quicksort do
 
     # iex> Quicksort.sort([4, 1, 3, 2])
     # [1, 2, 3, 4]
+
+     # iex> Quicksort.sort([-2.0, 0, 4, 1, 3, 2])
+    # [-2.0, 0, 1, 2, 3, 4]
       
   """
 

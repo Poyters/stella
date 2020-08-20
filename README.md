@@ -33,6 +33,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Time converter
 - [x] Vector 2D
 - [x] Vector 3D
+- [x] Ackermann function
 
 ### Algorithms
 - [ ] Heapsort
@@ -45,7 +46,25 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [ ] Priority queue
 
 
-Planned release date: *August/September 2020*
+## Changellog
+
+### Version 0.3.0 (planned September/October 2020)
+- Add Ackermann function
+- Create readme
+- Create implementation of Quicksort algorithm
+- Create implementation of Queue data structure
+- Create implementation of Stack data structure
+- Add service of cartesian diagram
+- Create implementation of two dimensional vector 
+- Create implementation of three dimensional vector 
+- Add easing functions
+- Add service of isometric layout
 
 
+### Version 0.2.0 (5 August 2020)
+- Add basic number operations
+- Create time converter
+
+### Version 0.1.0 (5 August 2020)
+- Create initial project package
 
