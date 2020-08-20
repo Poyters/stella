@@ -12,7 +12,7 @@ The package can be installed by adding `stella` to your list of dependencies in 
 ```elixir
 def deps do
   [
-    {:stella, "~> 0.2.1"}
+    {:stella, "~> 0.3.0"}
   ]
 end
 ```
@@ -31,8 +31,8 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Isometric
 - [x] Common number operations
 - [x] Time converter
-- [ ] Vector 2D
-- [ ] Vector 3D
+- [x] Vector 2D
+- [x] Vector 3D
 
 ### Algorithms
 - [ ] Heapsort
@@ -42,10 +42,9 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Stack
 - [ ] Heap
 - [ ] Priority queue
-- [ ] B-tree
-- [ ] Red-black Binary Search Tree
-- [ ] Binary Search Tree
 
 
-Planned release date: *September/October 2020*
+Planned release date: *August/September 2020*
+
+
 

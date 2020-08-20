@@ -3,7 +3,7 @@ defmodule Stella do
   ![print image](assets/images/stella.png)
   
   Documentation for `Project Stella`. 
-  Rapid elixir library providing implementations of the most
+  Rapid pure elixir library providing implementations of the most
   famous algorithms, data structures and math functions
   """
 end
