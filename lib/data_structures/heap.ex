@@ -66,7 +66,6 @@ defmodule Heap do
   def right(index), do: index * 2 + 2
 
 	def max_heap(heap, index, len) do
-		IO.puts "len #{len}"
 		l = left(index)
 		r = right(index)
 		largest = if (

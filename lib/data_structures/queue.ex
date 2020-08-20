@@ -4,7 +4,7 @@ defmodule Queue do
   """
 
   @doc """
-  Create new, empty qeue
+  Create a new, empty qeue
 
   ## Examples
 
