@@ -41,13 +41,13 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Data structures
 - [x] Queue
 - [x] Stack
-- [ ] Max Heap
+- [ ] Max and Min Heap
 - [ ] Priority queue
 
 
 ## Changellog
 
-### Version 0.3.0 (planned September 2020)
+### Version 0.3.0 (planned August 2020)
 - Add Ackermann function
 - Create readme
 - Create implementation of Quicksort algorithm
