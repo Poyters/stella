@@ -96,16 +96,18 @@ defmodule Heap do
 		largest = max_heap(heap, index)
 	
 		if largest != index do
-			swap_helper = Enum.at(heap, index)
-
-			heap
-				|> List.replace_at(index, Enum.at(heap, largest))
-				|> List.replace_at(largest, swap_helper)
+			swap(List.to_tuple(heap), index, largest)
+				|> Tuple.to_list
 				|> max_heapify(largest)
 		else
 			heap
 		end
 	end
+
+	def swap(heap, i, j) do
+    {vi, vj} = {elem(heap, i), elem(heap, j)}
+    heap |> put_elem(i, vj) |> put_elem(j, vi)
+  end
 
 	@doc """
 	Method complexity: O(n)
@@ -127,8 +129,10 @@ defmodule Heap do
 		build_max_heap(max_heapify(heap, leaf), leaf)
 	end
 
-	def build_max_heap(heap, i) do
-		if i > 0, do: build_max_heap(max_heapify(heap, i - 1), i - 1), else: heap
+	def build_max_heap(heap, i) when i >= 0 do
+		build_max_heap(max_heapify(heap, i), i - 1)
 	end
+
+	def build_max_heap(heap, _i), do: heap
 
 end

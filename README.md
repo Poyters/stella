@@ -36,6 +36,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ### Algorithms
 - [ ] Heapsort
+- [x] Quicksort
 
 ### Data structures
 - [x] Queue
