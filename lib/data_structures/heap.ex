@@ -65,16 +65,17 @@ defmodule Heap do
 
   def right(index), do: index * 2 + 2
 
-	def max_heap(heap, index) do
+	def max_heap(heap, index, len) do
+		IO.puts "len #{len}"
 		l = left(index)
 		r = right(index)
 		largest = if (
-			l < length(heap) &&
+			l < len &&
 			Enum.at(heap, l) > Enum.at(heap, index)
 		), do: l, else: index
 
 		if (
-			r < length(heap) &&
+			r < len &&
 			Enum.at(heap, r) > Enum.at(heap, largest)
 		), do: r, else: largest
 	end
@@ -92,8 +93,10 @@ defmodule Heap do
       
   """
 
-	def max_heapify(heap, index) do
-		largest = max_heap(heap, index)
+	def max_heapify(heap, index, len \\ nil) do
+		largest = if len != nil, 
+			do: max_heap(heap, index, len),
+			else: max_heap(heap, index, length(heap))
 	
 		if largest != index do
 			swap(List.to_tuple(heap), index, largest)
