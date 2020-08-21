@@ -21,12 +21,12 @@ defmodule Queue do
   ## Examples
 
       iex> Queue.is_empty([])
-      :true
+      true
       
   """
 
   def is_empty(queue) do
-    if length(queue) == 0, do: :true, else: :false
+    if length(queue) == 0, do: true, else: false
   end
 
   @doc """

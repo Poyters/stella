@@ -84,7 +84,7 @@ defmodule Vector3DTest do
 
   test "Check if vectors are equal" do
     assert Vector3D.equals(%{x: 7, y: 1, z: 2}, %{x: 1, y: 2, z: 1})
-      === :false
+      === false
   end
 
   test "Check if vectors are equal; new pipe" do

@@ -14,17 +14,17 @@ defmodule Number do
   """
   def is_power(x, y) do
     cond do
-      x == y -> :true
+      x == y -> true
       y == 1 -> x == 1
-      :true -> increment_power(x, y, 1)
+      true -> increment_power(x, y, 1)
     end
   end
 
   defp increment_power(x, y, pow) do
     cond do
       pow < x -> increment_power(x, y, pow*y)
-      pow == x -> :true
-      :true -> :false
+      pow == x -> true
+      true -> false
     end
   end
 end

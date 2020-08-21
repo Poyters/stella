@@ -27,12 +27,12 @@ defmodule Stack do
   ## Examples
 
       iex> Stack.is_empty([])
-      :true
+      true
       
   """
 
   def is_empty(stack) do
-    if length(stack) == 0, do: :true, else: :false
+    if length(stack) == 0, do: true, else: false
   end
 
 

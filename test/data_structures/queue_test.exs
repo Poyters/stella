@@ -8,11 +8,11 @@ defmodule QueueTest do
   end
 
   test "is empty false" do
-    assert Queue.is_empty([1, 2]) == :false
+    assert Queue.is_empty([1, 2]) == false
   end
 
   test "is empty true" do
-    assert Queue.is_empty([]) == :true
+    assert Queue.is_empty([]) == true
   end
 
   test "add element to queue, single" do

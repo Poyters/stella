@@ -78,7 +78,7 @@ defmodule Vector2DTest do
   end
 
   test "Check if vectors are equal" do
-    assert Vector2D.equals(%{x: 7, y: 1}, %{x: 1, y: 2}) === :false
+    assert Vector2D.equals(%{x: 7, y: 1}, %{x: 1, y: 2}) === false
   end
 
   test "Check if vectors are equal; new pipe" do

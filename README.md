@@ -58,6 +58,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Create implementation of three dimensional vector 
 - Add easing functions
 - Add service of isometric layout
+- Create min heap
 
 
 ### Version 0.2.0 (5 August 2020)
