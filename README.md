@@ -42,7 +42,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Queue
 - [x] Stack
 - [ ] Max and Min Heap
-- [ ] Priority queue
+- [x] Priority queue
 
 
 ## Changellog
