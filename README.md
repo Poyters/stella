@@ -45,7 +45,12 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Priority queue
 
 
-## Changellog
+## Changelog
+
+### Version 0.3.1 (23 August 2020)
+- Fix Heap documentation examples
+- Fix unused variables
+- Rename some unit test headers to more appropriate
 
 ### Version 0.3.0 (22 August 2020)
 - Add Ackermann function
