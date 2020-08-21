@@ -8,7 +8,7 @@
     <meta name="project" content="stella v0.3.0">
     <title>Heap — stella v0.3.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-62ec633428.js"></script>
+    <script src="dist/sidebar_items-681103d216.js"></script>
       <script src="docs_config.js"></script>
     <script async src="dist/app-0103364119015b97e56c.js"></script>
   </head>
@@ -136,11 +136,6 @@ Heap[parent(i)] &lt;= Heap[i]</p></div>
   </div>
     <div class="summary-synopsis"><p>Return right element of index</p></div>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#swap/3">swap(heap, i, j)</a>
-  </div>
-</div>
   </div>
         </section>
 
@@ -169,10 +164,14 @@ so build heap max</p><h2 id="build_heap/2-examples" class="section-heading">
   <a href="#build_heap/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<p>iex&gt; Heap.build_heap([4, 1, 3, 2, 16, 9, 10, 14, 8, 7], :max)
-[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p><p>iex&gt; Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :max)
-[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p><p>iex&gt; Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :min)
-[1, 2, 3, 8, 4, 10, 9, 14, 16, 7]</p>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="5540866091-1">(</span><span class="p" data-group-id="5540866091-2">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="5540866091-2">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:max</span><span class="p" data-group-id="5540866091-1">)</span><span class="w">
+</span><span class="p" data-group-id="5540866091-3">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="5540866091-3">]</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="5540866091-4">(</span><span class="p" data-group-id="5540866091-5">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="5540866091-5">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:max</span><span class="p" data-group-id="5540866091-4">)</span><span class="w">
+</span><span class="p" data-group-id="5540866091-6">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="5540866091-6">]</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="5540866091-7">(</span><span class="p" data-group-id="5540866091-8">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="5540866091-8">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:min</span><span class="p" data-group-id="5540866091-7">)</span><span class="w">
+</span><span class="p" data-group-id="5540866091-9">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="5540866091-9">]</span></code></pre>  </section>
 </section>
 <section class="detail" id="left/1">
   <div class="detail-header">
@@ -189,9 +188,11 @@ so build heap max</p><h2 id="build_heap/2-examples" class="section-heading">
   <a href="#left/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<p>iex&gt; Heap.left(2)
-5</p><p>iex&gt; Heap.left(4)
-9</p>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">left</span><span class="p" data-group-id="9051287676-1">(</span><span class="mi">2</span><span class="p" data-group-id="9051287676-1">)</span><span class="w">
+</span><span class="mi">5</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">left</span><span class="p" data-group-id="9051287676-2">(</span><span class="mi">4</span><span class="p" data-group-id="9051287676-2">)</span><span class="w">
+</span><span class="mi">9</span></code></pre>  </section>
 </section>
 <section class="detail" id="max_heapify/3">
     <span id="max_heapify/2"></span>
@@ -212,8 +213,8 @@ Heap[parent(i)] &gt;= Heap[i]</p><h2 id="max_heapify/3-examples" class="section-
   <a href="#max_heapify/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<p>iex&gt; Heap.max_heapify([16, 4, 10, 14, 7, 9, 3, 2, 8, 1], 1)
-[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">max_heapify</span><span class="p" data-group-id="2914300748-1">(</span><span class="p" data-group-id="2914300748-2">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2914300748-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2914300748-1">)</span><span class="w">
+</span><span class="p" data-group-id="2914300748-3">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2914300748-3">]</span></code></pre>  </section>
 </section>
 <section class="detail" id="min_heapify/3">
     <span id="min_heapify/2"></span>
@@ -234,8 +235,8 @@ Heap[parent(i)] &lt;= Heap[i]</p><h2 id="min_heapify/3-examples" class="section-
   <a href="#min_heapify/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<p>iex&gt; Heap.min_heapify([1, 4, 10, 14, 7, 9, 3, 2, 8, 16], 1)
-[1, 4, 10, 14, 7, 9, 3, 2, 8, 16]</p>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">min_heapify</span><span class="p" data-group-id="0432287345-1">(</span><span class="p" data-group-id="0432287345-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p" data-group-id="0432287345-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0432287345-1">)</span><span class="w">
+</span><span class="p" data-group-id="0432287345-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p" data-group-id="0432287345-3">]</span></code></pre>  </section>
 </section>
 <section class="detail" id="new/0">
   <div class="detail-header">
@@ -252,8 +253,8 @@ Heap[parent(i)] &lt;= Heap[i]</p><h2 id="min_heapify/3-examples" class="section-
   <a href="#new/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<p>iex&gt; Heap.new()
-[]</p>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">new</span><span class="p" data-group-id="0514235823-1">(</span><span class="p" data-group-id="0514235823-1">)</span><span class="w">
+</span><span class="p" data-group-id="0514235823-2">[</span><span class="p" data-group-id="0514235823-2">]</span></code></pre>  </section>
 </section>
 <section class="detail" id="parent/1">
   <div class="detail-header">
@@ -270,9 +271,11 @@ Heap[parent(i)] &lt;= Heap[i]</p><h2 id="min_heapify/3-examples" class="section-
   <a href="#parent/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<p>iex&gt; Heap.parent(7)
-3</p><p>iex&gt; Heap.parent(0)
-nil</p>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">parent</span><span class="p" data-group-id="0217151402-1">(</span><span class="mi">7</span><span class="p" data-group-id="0217151402-1">)</span><span class="w">
+</span><span class="mi">3</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">parent</span><span class="p" data-group-id="0217151402-2">(</span><span class="mi">0</span><span class="p" data-group-id="0217151402-2">)</span><span class="w">
+</span><span class="no">nil</span></code></pre>  </section>
 </section>
 <section class="detail" id="right/1">
   <div class="detail-header">
@@ -289,20 +292,8 @@ nil</p>  </section>
   <a href="#right/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<h1>iex&gt; Heap.right(2)</h1><h1>6</h1>  </section>
-</section>
-<section class="detail" id="swap/3">
-  <div class="detail-header">
-    <a href="#swap/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature">swap(heap, i, j)</h1>
-  </div>
-
-  <section class="docstring">
-
-  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">right</span><span class="p" data-group-id="8317500400-1">(</span><span class="mi">2</span><span class="p" data-group-id="8317500400-1">)</span><span class="w">
+</span><span class="mi">6</span></code></pre>  </section>
 </section>
           </div>
         </section>

@@ -11,8 +11,8 @@ defmodule Heap do
 
   ## Examples
 
-		iex> Heap.new()
-		[]
+			iex> Heap.new()
+			[]
       
   """
 
@@ -23,11 +23,11 @@ defmodule Heap do
 
   ## Examples
 
-		iex> Heap.parent(7)
-		3
+			iex> Heap.parent(7)
+			3
 
-		iex> Heap.parent(0)
-		nil
+			iex> Heap.parent(0)
+			nil
 
       
   """
@@ -43,11 +43,11 @@ defmodule Heap do
 
   ## Examples
 
-		iex> Heap.left(2)
-		5
+			iex> Heap.left(2)
+			5
 
-		iex> Heap.left(4)
-		9
+			iex> Heap.left(4)
+			9
       
   """
 
@@ -58,8 +58,8 @@ defmodule Heap do
 
   ## Examples
 
-		# iex> Heap.right(2)
-		# 6
+			iex> Heap.right(2)
+			6
       
   """
 
@@ -101,8 +101,8 @@ defmodule Heap do
 
   ## Examples
 
-		iex> Heap.max_heapify([16, 4, 10, 14, 7, 9, 3, 2, 8, 1], 1)
-		[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
+			iex> Heap.max_heapify([16, 4, 10, 14, 7, 9, 3, 2, 8, 1], 1)
+			[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
       
   """
 
@@ -128,8 +128,8 @@ defmodule Heap do
 
   ## Examples
 
-		iex> Heap.min_heapify([1, 4, 10, 14, 7, 9, 3, 2, 8, 16], 1)
-		[1, 4, 10, 14, 7, 9, 3, 2, 8, 16]
+			iex> Heap.min_heapify([1, 4, 10, 14, 7, 9, 3, 2, 8, 16], 1)
+			[1, 4, 10, 14, 7, 9, 3, 2, 8, 16]
       
   """
 
@@ -147,7 +147,7 @@ defmodule Heap do
 		end
 	end
 
-	def swap(heap, i, j) do
+	defp swap(heap, i, j) do
     {vi, vj} = {elem(heap, i), elem(heap, j)}
     heap |> put_elem(i, vj) |> put_elem(j, vi)
   end
@@ -159,14 +159,14 @@ defmodule Heap do
 
   ## Examples
 
-		iex> Heap.build_heap([4, 1, 3, 2, 16, 9, 10, 14, 8, 7], :max)
-		[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
+			iex> Heap.build_heap([4, 1, 3, 2, 16, 9, 10, 14, 8, 7], :max)
+			[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
 
-		iex> Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :max)
-		[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
+			iex> Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :max)
+			[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
 
-		iex> Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :min)
-		[1, 2, 3, 8, 4, 10, 9, 14, 16, 7]
+			iex> Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :min)
+			[1, 2, 3, 8, 4, 10, 9, 14, 16, 7]
       
   """ 
 	
@@ -183,6 +183,6 @@ defmodule Heap do
 		else: build_heap(min_heapify(heap, i), type, i - 1)
 	end
 
-	defp build_heap(heap, type, _i), do: heap
+	defp build_heap(heap, _type, _i), do: heap
 
 end

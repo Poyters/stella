@@ -75,7 +75,7 @@ defmodule Isometric do
       
   """
   def string_to_point(string) do
-    items = string 
+    string 
     |> String.split([", ", ": "])
     |> Enum.chunk_every(2)
     |> Enum.map(fn [key, value] -> 
