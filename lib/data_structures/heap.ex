@@ -96,7 +96,7 @@ defmodule Heap do
 	@doc """
 	Method complexity: O(lgn)
 	Max heapify changes list of elements in max heap where for each 
-	elements of list (except roots) ownership takes place:
+	elements of list (except root) ownership takes place:
 	Heap[parent(i)] >= Heap[i]
 
   ## Examples
@@ -122,9 +122,9 @@ defmodule Heap do
 
 	@doc """
 	Method complexity: O(lgn)
-	Max heapify changes list of elements in max heap where for each 
-	elements of list (except roots) ownership takes place:
-	Heap[parent(i)] >= Heap[i]
+	Min heapify changes list of elements in min heap where for each 
+	elements of list (except root) ownership takes place:
+	Heap[parent(i)] <= Heap[i]
 
   ## Examples
 
@@ -177,12 +177,12 @@ defmodule Heap do
 		else: build_heap(min_heapify(heap, leaf), type, leaf)
 	end
 
-	def build_heap(heap, type, i) when i >= 0 do
+	defp build_heap(heap, type, i) when i >= 0 do
 		if type == :max, 
 		do: build_heap(max_heapify(heap, i), type, i - 1),
 		else: build_heap(min_heapify(heap, i), type, i - 1)
 	end
 
-	def build_heap(heap, type, _i), do: heap
+	defp build_heap(heap, type, _i), do: heap
 
 end

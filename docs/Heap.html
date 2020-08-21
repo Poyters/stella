@@ -8,7 +8,7 @@
     <meta name="project" content="stella v0.3.0">
     <title>Heap — stella v0.3.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-b81cd26a3e.js"></script>
+    <script src="dist/sidebar_items-62ec633428.js"></script>
       <script src="docs_config.js"></script>
     <script async src="dist/app-0103364119015b97e56c.js"></script>
   </head>
@@ -46,9 +46,6 @@ stella      </a>
         v0.3.0
       </h2>
     </div>
-      <a href="Stella.html">
-        <img src="assets/logo.png" alt="stella" class="sidebar-projectImage">
-      </a>
   </div>
 
   <ul class="sidebar-listNav">
@@ -88,16 +85,11 @@ n - number of elements in heap</p>        </section>
     </h2>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#build_max_heap/1">build_max_heap(heap)</a>
+    <a href="#build_heap/2">build_heap(heap, type)</a>
   </div>
     <div class="summary-synopsis"><p>Method complexity: O(n)
 Restores ownership of a whole heap to   Heap[parent(i)] &gt;= Heap[i],
 so build heap max</p></div>
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#build_max_heap/2">build_max_heap(heap, i)</a>
-  </div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -107,17 +99,21 @@ so build heap max</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#max_heap/3">max_heap(heap, index, len)</a>
-  </div>
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#max_heapify/3">max_heapify(heap, index, len \\ nil)</a>
   </div>
     <div class="summary-synopsis"><p>Method complexity: O(lgn)
 Max heapify changes list of elements in max heap where for each 
-elements of list (except roots) ownership takes place:
+elements of list (except root) ownership takes place:
 Heap[parent(i)] &gt;= Heap[i]</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min_heapify/3">min_heapify(heap, index, len \\ nil)</a>
+  </div>
+    <div class="summary-synopsis"><p>Method complexity: O(lgn)
+Min heapify changes list of elements in min heap where for each 
+elements of list (except root) ownership takes place:
+Heap[parent(i)] &lt;= Heap[i]</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -153,39 +149,27 @@ Heap[parent(i)] &gt;= Heap[i]</p></div>
             </a>
 Functions          </h1>
           <div class="functions-list">
-<section class="detail" id="build_max_heap/1">
+<section class="detail" id="build_heap/2">
   <div class="detail-header">
-    <a href="#build_max_heap/1" class="detail-link" title="Link to this function">
+    <a href="#build_heap/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">build_max_heap(heap)</h1>
+    <h1 class="signature">build_heap(heap, type)</h1>
   </div>
 
   <section class="docstring">
 
 <p>Method complexity: O(n)
 Restores ownership of a whole heap to   Heap[parent(i)] &gt;= Heap[i],
-so build heap max</p><h2 id="build_max_heap/1-examples" class="section-heading">
-  <a href="#build_max_heap/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+so build heap max</p><h2 id="build_heap/2-examples" class="section-heading">
+  <a href="#build_heap/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<p>iex&gt; Heap.build_max_heap([4, 1, 3, 2, 16, 9, 10, 14, 8, 7])
-[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p><p>iex&gt; Heap.build_max_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1])
-[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p>  </section>
-</section>
-<section class="detail" id="build_max_heap/2">
-  <div class="detail-header">
-    <a href="#build_max_heap/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature">build_max_heap(heap, i)</h1>
-  </div>
-
-  <section class="docstring">
-
-  </section>
+<p>iex&gt; Heap.build_heap([4, 1, 3, 2, 16, 9, 10, 14, 8, 7], :max)
+[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p><p>iex&gt; Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :max)
+[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p><p>iex&gt; Heap.build_heap([16, 4, 9, 14, 7, 10, 3, 2, 8, 1], :min)
+[1, 2, 3, 8, 4, 10, 9, 14, 16, 7]</p>  </section>
 </section>
 <section class="detail" id="left/1">
   <div class="detail-header">
@@ -206,19 +190,6 @@ so build heap max</p><h2 id="build_max_heap/1-examples" class="section-heading">
 5</p><p>iex&gt; Heap.left(4)
 9</p>  </section>
 </section>
-<section class="detail" id="max_heap/3">
-  <div class="detail-header">
-    <a href="#max_heap/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature">max_heap(heap, index, len)</h1>
-  </div>
-
-  <section class="docstring">
-
-  </section>
-</section>
 <section class="detail" id="max_heapify/3">
     <span id="max_heapify/2"></span>
   <div class="detail-header">
@@ -233,13 +204,35 @@ so build heap max</p><h2 id="build_max_heap/1-examples" class="section-heading">
 
 <p>Method complexity: O(lgn)
 Max heapify changes list of elements in max heap where for each 
-elements of list (except roots) ownership takes place:
+elements of list (except root) ownership takes place:
 Heap[parent(i)] &gt;= Heap[i]</p><h2 id="max_heapify/3-examples" class="section-heading">
   <a href="#max_heapify/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 <p>iex&gt; Heap.max_heapify([16, 4, 10, 14, 7, 9, 3, 2, 8, 1], 1)
 [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</p>  </section>
+</section>
+<section class="detail" id="min_heapify/3">
+    <span id="min_heapify/2"></span>
+  <div class="detail-header">
+    <a href="#min_heapify/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">min_heapify(heap, index, len \\ nil)</h1>
+  </div>
+
+  <section class="docstring">
+
+<p>Method complexity: O(lgn)
+Min heapify changes list of elements in min heap where for each 
+elements of list (except root) ownership takes place:
+Heap[parent(i)] &lt;= Heap[i]</p><h2 id="min_heapify/3-examples" class="section-heading">
+  <a href="#min_heapify/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<p>iex&gt; Heap.min_heapify([1, 4, 10, 14, 7, 9, 3, 2, 8, 16], 1)
+[1, 4, 10, 14, 7, 9, 3, 2, 8, 16]</p>  </section>
 </section>
 <section class="detail" id="new/0">
   <div class="detail-header">
