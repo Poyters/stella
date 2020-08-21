@@ -12,7 +12,7 @@ The package can be installed by adding `stella` to your list of dependencies in 
 ```elixir
 def deps do
   [
-    {:stella, "~> 0.3.1"}
+    {:stella, "~> 0.4.0"}
   ]
 end
 ```
@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.3.1
+## Content of version 0.4.0
 
 ### Math
 - [x] Cartesian
@@ -43,9 +43,15 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Stack
 - [x] Max and Min Heap
 - [x] Priority queue
+- [ ] Binary Search Tree
+- [ ] Red–black tree 
+- [ ] B-tree
 
 
 ## Changelog
+
+### Version 0.4.0 (planned 2020)
+- Add Elixir Binary Search Tree implementation
 
 ### Version 0.3.1 (23 August 2020)
 - Fix Heap documentation examples
