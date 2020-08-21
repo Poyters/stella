@@ -2,8 +2,8 @@ defmodule Quicksort do
   @moduledoc """
 	Documentation for `Quicksort` algorithm
 	
-	Annotations
-	n - number of elements in list
+	### Annotations
+	 - n - number of elements in list
 	"""
 
   @doc """

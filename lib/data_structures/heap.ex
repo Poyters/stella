@@ -2,8 +2,8 @@ defmodule Heap do
   @moduledoc """
 	Documentation for `Heap` data structure
 	
-	Annotations
-	n - number of elements in heap
+	### Annotations
+	- n - number of elements in heap
 	"""
 
   @doc """

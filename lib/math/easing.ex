@@ -2,11 +2,11 @@ defmodule Easing do
   @moduledoc """
   Documentation for `Easing`.
 
-  Signs:
-  t - current time (seconds or miliseconds)
-  b - start value
-  c - change in value
-  d - duration (seconds or miliseconds)
+  ### Annotations
+  - t - current time (seconds or miliseconds)
+  - b - start value
+  - c - change in value
+  - d - duration (seconds or miliseconds)
   """
 
   @doc """
