@@ -41,13 +41,13 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Data structures
 - [x] Queue
 - [x] Stack
-- [ ] Max and Min Heap
+- [x] Max and Min Heap
 - [x] Priority queue
 
 
 ## Changellog
 
-### Version 0.3.0 (planned August 2020)
+### Version 0.3.0 (22 August 2020)
 - Add Ackermann function
 - Create readme
 - Create implementation of Quicksort algorithm
@@ -58,7 +58,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Create implementation of three dimensional vector 
 - Add easing functions
 - Add service of isometric layout
-- Create min heap
+- Implement max and min heap
 
 
 ### Version 0.2.0 (5 August 2020)

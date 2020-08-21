@@ -102,5 +102,4 @@ defmodule PriorityQueue do
     element
   end
 
-
 end

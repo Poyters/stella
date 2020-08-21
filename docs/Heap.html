@@ -8,7 +8,7 @@
     <meta name="project" content="stella v0.3.0">
     <title>Heap — stella v0.3.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-74911c3873.js"></script>
+    <script src="dist/sidebar_items-b81cd26a3e.js"></script>
       <script src="docs_config.js"></script>
     <script async src="dist/app-0103364119015b97e56c.js"></script>
   </head>
@@ -46,6 +46,9 @@ stella      </a>
         v0.3.0
       </h2>
     </div>
+      <a href="Stella.html">
+        <img src="assets/logo.png" alt="stella" class="sidebar-projectImage">
+      </a>
   </div>
 
   <ul class="sidebar-listNav">
@@ -104,12 +107,12 @@ so build heap max</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#max_heap/2">max_heap(heap, index)</a>
+    <a href="#max_heap/3">max_heap(heap, index, len)</a>
   </div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#max_heapify/2">max_heapify(heap, index)</a>
+    <a href="#max_heapify/3">max_heapify(heap, index, len \\ nil)</a>
   </div>
     <div class="summary-synopsis"><p>Method complexity: O(lgn)
 Max heapify changes list of elements in max heap where for each 
@@ -133,6 +136,11 @@ Heap[parent(i)] &gt;= Heap[i]</p></div>
     <a href="#right/1">right(index)</a>
   </div>
     <div class="summary-synopsis"><p>Return right element of index</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#swap/3">swap(heap, i, j)</a>
+  </div>
 </div>
   </div>
         </section>
@@ -198,26 +206,27 @@ so build heap max</p><h2 id="build_max_heap/1-examples" class="section-heading">
 5</p><p>iex&gt; Heap.left(4)
 9</p>  </section>
 </section>
-<section class="detail" id="max_heap/2">
+<section class="detail" id="max_heap/3">
   <div class="detail-header">
-    <a href="#max_heap/2" class="detail-link" title="Link to this function">
+    <a href="#max_heap/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">max_heap(heap, index)</h1>
+    <h1 class="signature">max_heap(heap, index, len)</h1>
   </div>
 
   <section class="docstring">
 
   </section>
 </section>
-<section class="detail" id="max_heapify/2">
+<section class="detail" id="max_heapify/3">
+    <span id="max_heapify/2"></span>
   <div class="detail-header">
-    <a href="#max_heapify/2" class="detail-link" title="Link to this function">
+    <a href="#max_heapify/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">max_heapify(heap, index)</h1>
+    <h1 class="signature">max_heapify(heap, index, len \\ nil)</h1>
   </div>
 
   <section class="docstring">
@@ -225,8 +234,8 @@ so build heap max</p><h2 id="build_max_heap/1-examples" class="section-heading">
 <p>Method complexity: O(lgn)
 Max heapify changes list of elements in max heap where for each 
 elements of list (except roots) ownership takes place:
-Heap[parent(i)] &gt;= Heap[i]</p><h2 id="max_heapify/2-examples" class="section-heading">
-  <a href="#max_heapify/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+Heap[parent(i)] &gt;= Heap[i]</p><h2 id="max_heapify/3-examples" class="section-heading">
+  <a href="#max_heapify/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 <p>iex&gt; Heap.max_heapify([16, 4, 10, 14, 7, 9, 3, 2, 8, 1], 1)
@@ -285,6 +294,19 @@ nil</p>  </section>
   Examples
 </h2>
 <h1>iex&gt; Heap.right(2)</h1><h1>6</h1>  </section>
+</section>
+<section class="detail" id="swap/3">
+  <div class="detail-header">
+    <a href="#swap/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">swap(heap, i, j)</h1>
+  </div>
+
+  <section class="docstring">
+
+  </section>
 </section>
           </div>
         </section>
