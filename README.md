@@ -12,7 +12,7 @@ The package can be installed by adding `stella` to your list of dependencies in 
 ```elixir
 def deps do
   [
-    {:stella, "~> 0.3.0"}
+    {:stella, "~> 0.3.1"}
   ]
 end
 ```
@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.3.0
+## Content of version 0.3.1
 
 ### Math
 - [x] Cartesian
