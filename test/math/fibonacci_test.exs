@@ -70,11 +70,15 @@ defmodule FibonacciTest do
     assert Fibonacci.sequence(17) == 1597
   end
 
+  test "Fibonacci sequence; 18" do
+    assert Fibonacci.sequence(18) == 2584
+  end
+
   test "Fibonacci sequence; 19" do
     assert Fibonacci.sequence(19) == 4181
   end
 
-  test "Fibonacci sequence; 30" do
-    assert Fibonacci.sequence(30) == 832040
+  test "Fibonacci sequence; 20" do
+    assert Fibonacci.sequence(20) == 6765
   end
 end

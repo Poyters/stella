@@ -80,6 +80,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Add basic number operations
 - Create time converter
 
-### Version 0.1.0 (5 August 2020)
+### Version 0.1.0 (4 August 2020)
 - Create initial project package
+- Create proof of concept
 
