@@ -6,4 +6,16 @@ defmodule Stella do
   Rapid pure elixir library providing implementations of the most
   famous algorithms, data structures and math functions
   """
+
+  @doc """
+  Return current stella version
+
+  ## Examples
+
+      iex> Stella.version
+      '0.4.0'
+      
+  """
+
+  def version, do: Application.spec(:stella, :vsn)
 end

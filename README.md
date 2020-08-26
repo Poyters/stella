@@ -34,9 +34,13 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Vector 2D
 - [x] Vector 3D
 - [x] Ackermann function
+- [x] Fibonacci sequence
+ 
 
 ### Algorithms
 - [x] Quicksort
+- [ ] Counting Sort
+
 
 ### Data structures
 - [x] Queue
@@ -50,8 +54,9 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ## Changelog
 
-### Version 0.4.0 (planned 2020)
-- Add Elixir Binary Search Tree implementation
+### Version 0.4.0 (planned December 2020)
+- Stella module can return current version of package
+- Add Fibonacci sequence
 
 ### Version 0.3.1 (23 August 2020)
 - Fix Heap documentation examples
@@ -60,7 +65,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ### Version 0.3.0 (22 August 2020)
 - Add Ackermann function
-- Create readme
 - Create implementation of Quicksort algorithm
 - Create implementation of Queue data structure
 - Create implementation of Stack data structure
