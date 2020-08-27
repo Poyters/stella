@@ -1,6 +1,6 @@
 # Stella
 
-Rapid elixir library providing implementations of the most famous algorithms, data structures and math functions. Key fetures of this library are:
+Rapid elixir library providing implementations of the most famous algorithms, data structures and math functions. Key features of this library are:
 - a high test coverage (near to 100%)
 - good quality documentation with examples of usage to each function
 - featured complexity of each action
@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.4.0
+## Content of version 0.4.0 (planned November/December 2020)
 
 ### Math
 - [x] Cartesian
@@ -54,7 +54,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ## Changelog
 
-### Version 0.4.0 (planned November/December 2020)
+### Version 0.4.0 
 - Stella module can return current version of package
 - Add Fibonacci sequence
 - Add counting sort
