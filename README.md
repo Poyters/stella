@@ -39,7 +39,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ### Algorithms
 - [x] Quicksort
-- [ ] Counting Sort
+- [x] Counting Sort
 
 
 ### Data structures
@@ -54,14 +54,17 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ## Changelog
 
-### Version 0.4.0 (planned December 2020)
+### Version 0.4.0 (planned November/December 2020)
 - Stella module can return current version of package
 - Add Fibonacci sequence
+- Add counting sort
+
 
 ### Version 0.3.1 (23 August 2020)
 - Fix Heap documentation examples
 - Fix unused variables
 - Rename some unit test headers to more appropriate
+
 
 ### Version 0.3.0 (22 August 2020)
 - Add Ackermann function
@@ -79,6 +82,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Version 0.2.0 (5 August 2020)
 - Add basic number operations
 - Create time converter
+
 
 ### Version 0.1.0 (4 August 2020)
 - Create initial project package
