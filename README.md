@@ -52,7 +52,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [ ] Binary Search Tree
 - [ ] Red–black tree 
 - [ ] B-tree
-- [ ] Linked list
 
 
 ## Changelog
@@ -62,6 +61,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Add Fibonacci sequence
 - Add counting sort
 - Add quick sort
+- Add clamp method to Number module that clamps number in min-max range
 
 
 ### Version 0.3.1 (23 August 2020)
