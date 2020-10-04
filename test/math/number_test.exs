@@ -38,16 +38,40 @@ defmodule NumberTest do
     assert Number.clamp(10, 1, 2) == 2
   end
 
+  test "clamp larger, without max" do
+    assert Number.clamp(10, 0) == 1
+  end
+
+  test "clamp larger, without min" do
+    assert Number.clamp(10, nil, 2) == 2
+  end
+
+  test "clamp larger, without min and max" do
+    assert Number.clamp(10) == 1
+  end
+
   test "clamp smaller" do
     assert Number.clamp(-1, 1, 2) == 1
+  end
+
+  test "clamp smaller, without max" do
+    assert Number.clamp(-1, 0) == 0
   end
 
   test "clamp inside" do
     assert Number.clamp(2, 1, 3) == 2
   end
 
+  test "clamp inside without min and max" do
+    assert Number.clamp(0.5) == 0.5
+  end
+
   test "clamp equal to min" do
     assert Number.clamp(1, 1, 3) == 1
+  end
+
+  test "clamp equal to min, without max" do
+    assert Number.clamp(1, 1) == 1
   end
 
   test "clamp equal to max" do

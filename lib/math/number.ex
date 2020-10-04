@@ -39,7 +39,7 @@ defmodule Number do
       2
       
   """
-  def clamp(number, _min, max) when number > max, do: max
+  def clamp(number, _min \\ 0, max \\ 1) when number > max, do: max
   def clamp(number, min, _max) when number < min, do: min
   def clamp(number, _min, _max), do: number
 
