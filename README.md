@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.4.0 (planned November/December 2020)
+## Content of version 0.4.0 (planned November 2020)
 
 ### Math
 - [x] Cartesian
@@ -38,8 +38,9 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
  
 
 ### Algorithms
-- [x] Quicksort
-- [x] Counting Sort
+- [x] Quick sort
+- [x] Counting sort
+- [ ] Bucket sort
 
 
 ### Data structures
@@ -47,17 +48,20 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Stack
 - [x] Max and Min Heap
 - [x] Priority queue
+- [ ] Linked lists
 - [ ] Binary Search Tree
 - [ ] Red–black tree 
 - [ ] B-tree
+- [ ] Linked list
 
 
 ## Changelog
 
-### Version 0.4.0 
+### Version 0.4.0 (unreleased) 
 - Stella module can return current version of package
 - Add Fibonacci sequence
 - Add counting sort
+- Add quick sort
 
 
 ### Version 0.3.1 (23 August 2020)
