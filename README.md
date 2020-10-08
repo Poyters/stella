@@ -41,6 +41,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Quick sort
 - [x] Counting sort
 - [ ] Bucket sort
+- [x] Binary search
 
 
 ### Data structures
@@ -48,10 +49,8 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Stack
 - [x] Max and Min Heap
 - [x] Priority queue
-- [ ] Linked lists
 - [ ] Binary Search Tree
-- [ ] Red–black tree 
-- [ ] B-tree
+- [ ] Red–black tree
 
 
 ## Changelog
