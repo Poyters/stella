@@ -43,4 +43,25 @@ defmodule Number do
   def clamp(number, min, _max) when number < min, do: min
   def clamp(number, _min, _max), do: number
 
+  @doc """
+  Determines whether number is equal to the other by given epsilon.
+
+  ## Examples
+
+      # iex> Number.nearly_equal(1, 1)
+      # true
+
+      # iex> Number.nearly_equal(1, 1, 5)
+      # true
+
+      # iex> Number.nearly_equal(-2, 1, 2)
+      # false
+      
+  """
+  def nearly_equal(x, y, epsilon \\ 1) do
+    cond do
+      x < 0 && y < 0 -> abs(x + y) < epsilon 
+      true -> abs(x - y) < epsilon 
+    end
+  end
 end

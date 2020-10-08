@@ -77,4 +77,39 @@ defmodule NumberTest do
   test "clamp equal to max" do
     assert Number.clamp(3, 1, 3) == 3
   end
+
+  test "nearly equal, positive, positive; without epsilon, true" do
+    assert Number.nearly_equal(1, 1) == true
+  end
+
+  test "nearly equal, positive, positive, true" do
+    assert Number.nearly_equal(1, 1, 1.0001) == true
+  end
+
+  test "nearly equal, positive, positive, false" do
+    assert Number.nearly_equal(1, 2, 1) == false
+  end
+
+  test "nearly equal, negative, positive, false" do
+    assert Number.nearly_equal(-2, 1, 3) == false
+  end
+
+  test "nearly equal, negative, positive, true" do
+    assert Number.nearly_equal(-2, 1, 3.1) == true
+  end
+  test "nearly equal, positive, negative, true" do
+    assert Number.nearly_equal(1, -2, 3.1) == true
+  end
+
+  test "nearly equal, positive, negative, false" do
+    assert Number.nearly_equal(1, -2, 3) == false
+  end
+
+  test "nearly equal, negative, negative, false" do
+    assert Number.nearly_equal(-2, -2, 3) == false
+  end
+
+  test "nearly equal, negative, negative, true" do
+    assert Number.nearly_equal(-2, -2, 4.001) == true
+  end
 end

@@ -29,7 +29,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Cartesian
 - [x] Easing functions
 - [x] Isometric
-- [x] Common number operations
+- [x] Common number operations like cplam, nearly equal, is power etc
 - [x] Time converter
 - [x] Vector 2D
 - [x] Vector 3D
@@ -61,7 +61,9 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Add Fibonacci sequence
 - Add counting sort
 - Add quick sort
-- Add clamp method to Number module that clamps number in min-max range
+- Create clamp method for a Number module that clamps number in min-max range
+- Create nearly equal method to Number module that determines whether number is equal to the other by given epsilon
+
 
 
 ### Version 0.3.1 (23 August 2020)

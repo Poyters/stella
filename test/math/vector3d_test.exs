@@ -92,14 +92,14 @@ defmodule Vector3DTest do
       |> Vector3D.divide(%{x: 2, y: 2, z: 2}) 
       |> Vector3D.divide(%{x: 2, y: 2, z: 2}) 
       |> Vector3D.equals(%{x: 0.75, y: 0.75, z: 0.75}) 
-      === :true
+      === true
   end
 
   test "Check if vectors are equal; new pipe 2" do
     assert Vector3D.new(3, 3, 3)
       |> Vector3D.divide(%{x: 3, y: 3, z: 3})
       |> Vector3D.equals(%{x: 1, y: 1, z: 1.0}) 
-      === :true
+      === true
   end
 
   test "Convert vector to list" do

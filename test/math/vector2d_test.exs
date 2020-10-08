@@ -86,14 +86,14 @@ defmodule Vector2DTest do
       |> Vector2D.divide(%{x: 2, y: 2}) 
       |> Vector2D.divide(%{x: 2, y: 2}) 
       |> Vector2D.equals(%{x: 0.75, y: 0.75}) 
-      === :true
+      === true
   end
 
   test "Check if vectors are equal; new pipe 2" do
     assert Vector2D.new(3, 3)
       |> Vector2D.divide(%{x: 3, y: 3})
       |> Vector2D.equals(%{x: 1, y: 1}) 
-      === :true
+      === true
   end
 
   test "Convert vector to list" do

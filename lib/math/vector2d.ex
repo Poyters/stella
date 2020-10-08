@@ -137,19 +137,19 @@ defmodule Vector2D do
   ## Examples
 
       iex> Vector2D.equals(%{x: 2, y: 2}, %{x: 2, y: 2})
-      :true
+      true
 
       iex> Vector2D.equals(%{x: 2, y: 2}, %{x: 2.0, y: 2.0})
-      :true
+      true
 
       iex> Vector2D.equals(%{x: 2.0, y: 2.0}, %{x: 2, y: 2})
-      :true
+      true
 
       iex> Vector2D.equals(%{x: 2.0, y: 2.0}, %{x: 2, y: 2.0})
-      :true
+      true
 
       iex> Vector2D.new(-3, 3) |> Vector2D.equals(%{x: 2, y: 3})
-      :false
+      false
       
   """
   def equals(curr_vector, given_vector) do 
