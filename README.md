@@ -40,7 +40,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Algorithms
 - [x] Quick sort
 - [x] Counting sort
-- [ ] Insertion sort
+- [x] Insertion sort
 - [x] Binary search
 
 

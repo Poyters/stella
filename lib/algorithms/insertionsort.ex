@@ -10,7 +10,9 @@ defmodule Insertionsort do
 
   @doc """
   Sort list
-  Complexity time in average case: O(n)
+  Worst-case performance: O(n^2)
+  Average performance: O(n^2)
+  Best-case performance: O(n) - for already sorted or empty lists
 
   ## Examples
 
