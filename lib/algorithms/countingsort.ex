@@ -1,6 +1,8 @@
 defmodule Countingsort do
   @moduledoc """
-	Documentation for `Countingsort` algorithm
+  Documentation for `Counting sort` algorithm. All important
+  informations about counting sort you can find on
+  [Wikipedia](https://en.wikipedia.org/wiki/Counting_sort) page.
 	
 	### Annotations
 	 - n - number of elements in list
@@ -12,14 +14,14 @@ defmodule Countingsort do
 
   ## Examples
 
-    # iex> Countingsort.sort([4, 1, 3, 5, 2])
+    # iex> Countingsort.run([4, 1, 3, 5, 2])
     # [1, 2, 3, 4]
       
   """
 
-  def sort([]), do: []
+  def run([]), do: []
 
-  def sort(list) do
+  def run(list) do
     {min, max} = Enum.min_max(list)
     # Create empty touple for each number in <min, max>
     count = Tuple.duplicate(0, max - min + 1)

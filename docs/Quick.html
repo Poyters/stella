@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
     <meta name="project" content="stella v0.4.0">
-    <title>404 — stella v0.4.0</title>
+    <title>Quick — stella v0.4.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-6cf62b5e5b.js"></script>
+    <script src="dist/sidebar_items-855ecd33e4.js"></script>
       <script src="docs_config.js"></script>
     <script async src="dist/app-0103364119015b97e56c.js"></script>
   </head>
-  <body data-type="extras">
+  <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
 <div class="main">
 
@@ -62,13 +62,72 @@ stella      </a>
   <div class="content-outer">
     <div id="content" class="content-inner">
 
-<h2>Page not found</h2>
+      <h1>
+        <small class="app-vsn">stella v0.4.0</small>
+Quick      </h1>
 
-<p>Sorry, but the page you were trying to get to, does not exist. You
-may want to try searching this site using the sidebar
-  or using our <a href="api-reference.html">API Reference</a> page
-to find what you were looking for.</p>
 
+        <section id="moduledoc">
+<p>Documentation for <code class="inline">Quick sort</code> algorithm</p><h3 id="module-annotations" class="section-heading">
+  <a href="#module-annotations" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Annotations
+</h3>
+<ul><li>n - number of elements in list</li></ul>        </section>
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sort/1">sort(list)</a>
+  </div>
+    <div class="summary-synopsis"><p>Sort list
+Pesimistic complexity: O(n^2)
+Normal complexity: O(nlgn)</p></div>
+</div>
+  </div>
+        </section>
+
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="sort/1">
+  <div class="detail-header">
+    <a href="#sort/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">sort(list)</h1>
+  </div>
+
+  <section class="docstring">
+
+<p>Sort list
+Pesimistic complexity: O(n^2)
+Normal complexity: O(nlgn)</p><h2 id="sort/1-examples" class="section-heading">
+  <a href="#sort/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<p>  # iex&gt; Quicksort.sort([4, 1, 3, 2])
+  # [1, 2, 3, 4]</p><p>   # iex&gt; Quicksort.sort([-2.0, 0, 4, 1, 3, 2])
+  # [-2.0, 0, 1, 2, 3, 4]</p>  </section>
+</section>
+          </div>
+        </section>
       <footer class="footer">
         <p>
           <span class="line">

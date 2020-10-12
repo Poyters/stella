@@ -40,7 +40,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Algorithms
 - [x] Quick sort
 - [x] Counting sort
-- [ ] Bucket sort
+- [ ] Insertion sort
 - [x] Binary search
 
 
@@ -58,8 +58,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Version 0.4.0 (unreleased) 
 - Stella module can return current version of package
 - Add Fibonacci sequence
-- Add counting sort
-- Add quick sort
+- Add implementation of counting sort
 - Create clamp method for a Number module that clamps number in min-max range
 - Create nearly equal method to Number module that determines whether number is equal to the other by given epsilon
 - Add Binary search algorithm
@@ -80,6 +79,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Add service of cartesian diagram
 - Create implementation of two dimensional vector 
 - Create implementation of three dimensional vector 
+- Add quick sort
 - Add easing functions
 - Add service of isometric layout
 - Implement max and min heap

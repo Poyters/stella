@@ -48,7 +48,7 @@ defmodule Stella.MixProject do
   end
 
   defp description() do
-    "Elixir library providing implementations of the most famous algorithms, data structures and math functions, out of the box"
+    "Rapid, Elixir library providing implementations of the most famous algorithms, data structures and math functions, out of the box"
   end
 
   defp package() do

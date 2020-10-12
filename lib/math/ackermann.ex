@@ -5,7 +5,7 @@ defmodule Ackermann do
 
   @doc """
   Run Ackermann function for given initials
-  More info: https://en.wikipedia.org/wiki/Ackermann_function
+  More info on [Wikipedia](https://en.wikipedia.org/wiki/Ackermann_function) page
 
   ## Examples
 

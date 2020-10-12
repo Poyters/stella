@@ -4,9 +4,8 @@ defmodule Cartesian do
   """
 
   @doc """
-  Calculates the proximity to the nearest point. 
-
-  More info: https://gamedev.stackexchange.com/a/8355
+  Calculates the proximity to the nearest point.
+  More info [here](https://gamedev.stackexchange.com/a/8355)
 
   ## Examples
 
