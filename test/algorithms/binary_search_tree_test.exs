@@ -38,12 +38,37 @@ defmodule BSTTest do
   end
 
   test "Insert key to empty 1" do
-    assert BST.insert(nil, 2) |> BST.insert(1) |> BST.insert(3)
+    assert BST.insert(nil, 2) |> BST.insert(1)
     === %{
       key: 2,
-      left: %{key: 1, left: nil, right: nil, parent: nil},
-      right: %{key: 3, left: nil, right: nil, parent: nil},
+      left: %{
+        key: 1,
+        parent: 2,
+        right: nil,
+        left: nil
+      },
+      right: nil,
       parent: nil
     }
+  end
+
+  test "Get minimum 1" do
+    assert BST.insert(nil, 2) |> BST.insert(1) |> BST.insert(3) |> BST.minimum
+    === %{key: 1, left: nil, parent: 2, right: nil}
+  end
+
+  test "Get minimum 2" do
+    assert BST.insert(nil, 2) |> BST.minimum
+    === %{key: 2, left: nil, parent: nil, right: nil}
+  end
+
+  test "Get maximum 1" do
+    assert BST.insert(nil, 2) |> BST.insert(1) |> BST.insert(3) |> BST.maximum
+    === %{key: 3, left: nil, parent: 2, right: nil}
+  end
+
+  test "Get maximum 2" do
+    assert BST.insert(nil, 2) |> BST.maximum
+    === %{key: 2, left: nil, parent: nil, right: nil}
   end
 end
