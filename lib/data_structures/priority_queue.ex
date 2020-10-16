@@ -4,7 +4,7 @@ defmodule PriorityQueue do
   These have no storage overhead compared to unbalanced binary trees, and
   their performance is better than AVL trees.
 
-  Arne Andersson work: http://user.it.uu.se/~hansh/arne1.pdf
+  More about GB trees on [Arne Andersson work](http://user.it.uu.se/~hansh/arne1.pdf)
   """
 
   @doc """

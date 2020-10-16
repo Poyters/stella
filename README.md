@@ -62,6 +62,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Create clamp method for a Number module that clamps number in min-max range
 - Create nearly equal method to Number module that determines whether number is equal to the other by given epsilon
 - Add Binary search algorithm
+- Create implementation of insertion sort
 
 
 
