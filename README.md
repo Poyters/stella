@@ -42,6 +42,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Counting sort
 - [x] Insertion sort
 - [x] Binary search
+- [x] Bubble sort
 
 
 ### Data structures
@@ -50,7 +51,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Max and Min Heap
 - [x] Priority queue
 - [ ] Binary Search Tree
-- [ ] Red–black tree
 
 
 ## Changelog
@@ -63,6 +63,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Create nearly equal method to Number module that determines whether number is equal to the other by given epsilon
 - Add Binary search algorithm
 - Create implementation of insertion sort
+- Create Elixir's implementation of bubble sort
 
 
 
