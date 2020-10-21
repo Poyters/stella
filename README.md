@@ -50,12 +50,12 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Stack
 - [x] Max and Min Heap
 - [x] Priority queue
-- [ ] Binary Search Tree
+- [x] Binary Search Tree (without deletion)
 
 
 ## Changelog
 
-### Version 0.4.0 (unreleased) 
+### Version 0.4.0 (21 October 2020) 
 - Stella module can return current version of package
 - Add Fibonacci sequence
 - Add implementation of counting sort
@@ -64,6 +64,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Add Binary search algorithm
 - Create implementation of insertion sort
 - Create Elixir's implementation of bubble sort
+- Create Binary Search Tree data structure (without deletion option)
 
 
 

@@ -8,7 +8,7 @@
     <meta name="project" content="stella v0.4.0">
     <title>Number — stella v0.4.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-6cf62b5e5b.js"></script>
+    <script src="dist/sidebar_items-1e6a74effd.js"></script>
       <script src="docs_config.js"></script>
     <script async src="dist/app-0103364119015b97e56c.js"></script>
   </head>
@@ -132,7 +132,7 @@ Function assumes min &lt; max</p><h2 id="clamp/3-examples" class="section-headin
   <a href="#clamp/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">clamp</span><span class="p" data-group-id="7712431251-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="7712431251-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">clamp</span><span class="p" data-group-id="0722338812-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="0722338812-1">)</span><span class="w">
 </span><span class="mi">2</span></code></pre>  </section>
 </section>
 <section class="detail" id="is_power/2">
@@ -150,7 +150,7 @@ Function assumes min &lt; max</p><h2 id="clamp/3-examples" class="section-headin
   <a href="#is_power/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">is_power</span><span class="p" data-group-id="0324665017-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0324665017-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">is_power</span><span class="p" data-group-id="0370283696-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0370283696-1">)</span><span class="w">
 </span><span class="no">false</span></code></pre>  </section>
 </section>
 <section class="detail" id="nearly_equal/3">
@@ -169,14 +169,17 @@ Function assumes min &lt; max</p><h2 id="clamp/3-examples" class="section-headin
   <a href="#nearly_equal/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="c1"># iex&gt; Number.nearly_equal(1, 1)</span><span class="w">
-</span><span class="c1"># true</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="8503368001-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="8503368001-1">)</span><span class="w">
+</span><span class="no">true</span><span class="w">
 
-</span><span class="c1"># iex&gt; Number.nearly_equal(1, 1, 5)</span><span class="w">
-</span><span class="c1"># true</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="8503368001-2">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="8503368001-2">)</span><span class="w">
+</span><span class="no">false</span><span class="w">
 
-</span><span class="c1"># iex&gt; Number.nearly_equal(-2, 1, 2)</span><span class="w">
-</span><span class="c1"># false</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="8503368001-3">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="8503368001-3">)</span><span class="w">
+</span><span class="no">true</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="8503368001-4">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="8503368001-4">)</span><span class="w">
+</span><span class="no">false</span></code></pre>  </section>
 </section>
           </div>
         </section>

@@ -16,8 +16,8 @@ defmodule BST do
 
   @doc """
   Search a specific node by given searched_key in given subtree (or a whole tree)
-  Average time complexity: 	O(log n)
-  Worst time complexity: 	O(n)
+   - Average time complexity: O(log n)
+   - Worst time complexity: O(n)
 
   ## Examples
 
@@ -29,14 +29,14 @@ defmodule BST do
     cond do
       subtree == nil || searched_key == subtree.key -> subtree
       searched_key < subtree.key -> search(subtree.left, searched_key)
-      nil -> search(subtree.right, searched_key)
+      true -> search(subtree.right, searched_key)
     end
   end
 
   @doc """
   Insert a new node to the given tree.
-  Average time complexity: 	O(log n)
-  Worst time complexity: 	O(n)
+   - Average time complexity: O(log n)
+   - Worst time complexity:	O(n)
 
   ## Examples
 
@@ -45,9 +45,9 @@ defmodule BST do
       
   """
   def insert(nil, new_key), do: new(new_key)
-  def insert(nil, new_key, parent_key), do: new(new_key, parent_key)
-  def insert(%{key: k} = tree, new_key) when new_key < k, do: update_in(tree.left, &insert(&1, new_key, tree.key))
-  def insert(tree, new_key), do: update_in(tree.right, &insert(&1, new_key, tree.key))
+  def insert(%{key: k} = tree, new_key) when new_key < k, do: update_in(tree.left, &insert_priv(&1, new_key, tree.key))
+  def insert(tree, new_key), do: update_in(tree.right, &insert_priv(&1, new_key, tree.key))
+  defp insert_priv(nil, new_key, parent_key), do: new(new_key, parent_key)
 
   @doc """
   Returns a minimum node of a given subtree

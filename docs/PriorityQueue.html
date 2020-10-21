@@ -8,7 +8,7 @@
     <meta name="project" content="stella v0.4.0">
     <title>PriorityQueue — stella v0.4.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-6cf62b5e5b.js"></script>
+    <script src="dist/sidebar_items-1e6a74effd.js"></script>
       <script src="docs_config.js"></script>
     <script async src="dist/app-0103364119015b97e56c.js"></script>
   </head>
@@ -70,7 +70,7 @@ PriorityQueue      </h1>
         <section id="moduledoc">
 <p>Documentation for <a href="#content"><code class="inline">PriorityQueue</code></a> data structure implemented on general balanced trees by Arne Andersson
 These have no storage overhead compared to unbalanced binary trees, and
-their performance is better than AVL trees.</p><p>Arne Andersson work: <a href="http://user.it.uu.se/">http://user.it.uu.se/</a>~hansh/arne1.pdf</p>        </section>
+their performance is better than AVL trees.</p><p>More about GB trees on <a href="http://user.it.uu.se/~hansh/arne1.pdf">Arne Andersson work</a></p>        </section>
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -152,8 +152,8 @@ Functions          </h1>
   <a href="#insert/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="1319312218-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1319312218-1">)</span><span class="w">
-</span><span class="p" data-group-id="1319312218-2">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1319312218-3">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="1319312218-3">}</span><span class="p" data-group-id="1319312218-2">}</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="1169700512-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1169700512-1">)</span><span class="w">
+</span><span class="p" data-group-id="1169700512-2">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1169700512-3">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="1169700512-3">}</span><span class="p" data-group-id="1169700512-2">}</span></code></pre>  </section>
 </section>
 <section class="detail" id="is_empty/1">
   <div class="detail-header">
@@ -170,7 +170,7 @@ Functions          </h1>
   <a href="#is_empty/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="9415020299-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="9415020299-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">is_empty</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="6907661811-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="6907661811-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">is_empty</span><span class="w">
 </span><span class="no">false</span><span class="w">
 
 </span><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">is_empty</span><span class="w">
@@ -192,7 +192,7 @@ Functions          </h1>
   Examples
 </h2>
 <pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w">
-</span><span class="p" data-group-id="7662576450-1">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="7662576450-1">}</span></code></pre>  </section>
+</span><span class="p" data-group-id="4955490278-1">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="4955490278-1">}</span></code></pre>  </section>
 </section>
 <section class="detail" id="peek/1">
   <div class="detail-header">
@@ -209,7 +209,7 @@ Functions          </h1>
   <a href="#peek/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="4333345871-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="4333345871-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">peek</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="1197813168-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1197813168-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">peek</span><span class="w">
 </span><span class="s">&quot;Do homework&quot;</span></code></pre>  </section>
 </section>
 <section class="detail" id="size/1">
@@ -227,7 +227,7 @@ Functions          </h1>
   <a href="#size/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="6607943083-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="6607943083-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">size</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="5813470338-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="5813470338-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">size</span><span class="w">
 </span><span class="mi">1</span></code></pre>  </section>
 </section>
 <section class="detail" id="to_list/1">
@@ -246,10 +246,10 @@ Functions          </h1>
   Examples
 </h2>
 <pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> 
-</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="0791178068-1">(</span><span class="s">&quot;Do4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="0791178068-1">)</span><span class="w"> 
-</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="0791178068-2">(</span><span class="s">&quot;Do1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0791178068-2">)</span><span class="w">
+</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="2519912542-1">(</span><span class="s">&quot;Do4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2519912542-1">)</span><span class="w"> 
+</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="2519912542-2">(</span><span class="s">&quot;Do1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2519912542-2">)</span><span class="w">
 </span><span class="gp unselectable">iex&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">to_list</span><span class="w">
-</span><span class="p" data-group-id="0791178068-3">[</span><span class="p" data-group-id="0791178068-4">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do1&quot;</span><span class="p" data-group-id="0791178068-4">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0791178068-5">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do4&quot;</span><span class="p" data-group-id="0791178068-5">}</span><span class="p" data-group-id="0791178068-3">]</span></code></pre>  </section>
+</span><span class="p" data-group-id="2519912542-3">[</span><span class="p" data-group-id="2519912542-4">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do1&quot;</span><span class="p" data-group-id="2519912542-4">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="2519912542-5">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do4&quot;</span><span class="p" data-group-id="2519912542-5">}</span><span class="p" data-group-id="2519912542-3">]</span></code></pre>  </section>
 </section>
 <section class="detail" id="top/1">
   <div class="detail-header">
@@ -266,8 +266,8 @@ Functions          </h1>
   <a href="#top/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="4341677124-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="4341677124-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">top</span><span class="w">
-</span><span class="p" data-group-id="4341677124-2">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="4341677124-2">}</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="2509729373-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2509729373-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">top</span><span class="w">
+</span><span class="p" data-group-id="2509729373-2">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="2509729373-2">}</span></code></pre>  </section>
 </section>
           </div>
         </section>

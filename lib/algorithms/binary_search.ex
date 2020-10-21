@@ -8,16 +8,16 @@ defmodule BinarySearch do
 
   @doc """
   Find number in list and return it index. Requires as input sorted list.
-  Time complexity: O(log2n)
-  Memory complexity: O(1)
+   - Time complexity: O(log2n)
+   - Memory complexity: O(1)
 
   ## Examples
 
-    iex> BinarySearch.run([-1, 2, 3.00000001, 4], 3.00000001)
-    2
+      iex> BinarySearch.run([-1, 2, 3.00000001, 4], 3.00000001)
+      2
 
-    iex> BinarySearch.run([0, 0, 0, 0, 1, 2, 3, 4], 0)
-    3
+      iex> BinarySearch.run([0, 0, 0, 0, 1, 2, 3, 4], 0)
+      3
       
   """
 

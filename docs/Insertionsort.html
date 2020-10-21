@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
     <meta name="project" content="stella v0.4.0">
-    <title>BinarySearch — stella v0.4.0</title>
+    <title>Insertionsort — stella v0.4.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
     <script src="dist/sidebar_items-1e6a74effd.js"></script>
       <script src="docs_config.js"></script>
@@ -64,11 +64,13 @@ stella      </a>
 
       <h1>
         <small class="app-vsn">stella v0.4.0</small>
-BinarySearch      </h1>
+Insertionsort      </h1>
 
 
         <section id="moduledoc">
-<p>Documentation for <code class="inline">Binary search</code> algorithm</p><h3 id="module-annotations" class="section-heading">
+<p>Documentation for <code class="inline">Insertion sort</code> algorithm. All important
+ informations about counting sort you can find on
+ <a href="https://en.wikipedia.org/wiki/Insertion_sort">Wikipedia</a> page.</p><h3 id="module-annotations" class="section-heading">
   <a href="#module-annotations" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Annotations
 </h3>
@@ -88,9 +90,9 @@ BinarySearch      </h1>
     </h2>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#run/2">run(list, searched_value)</a>
+    <a href="#run/1">run(unsorted)</a>
   </div>
-    <div class="summary-synopsis"><p>Find number in list and return it index. Requires as input sorted list.</p></div>
+    <div class="summary-synopsis"><p>Sort list</p></div>
 </div>
   </div>
         </section>
@@ -103,26 +105,26 @@ BinarySearch      </h1>
             </a>
 Functions          </h1>
           <div class="functions-list">
-<section class="detail" id="run/2">
+<section class="detail" id="run/1">
   <div class="detail-header">
-    <a href="#run/2" class="detail-link" title="Link to this function">
+    <a href="#run/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">run(list, searched_value)</h1>
+    <h1 class="signature">run(unsorted)</h1>
   </div>
 
   <section class="docstring">
 
-<p>Find number in list and return it index. Requires as input sorted list.</p><ul><li>Time complexity: O(log2n)</li><li>Memory complexity: O(1)</li></ul><h2 id="run/2-examples" class="section-heading">
-  <a href="#run/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+<p>Sort list</p><ul><li>Worst-case performance: O(n^2)</li><li>Average performance: O(n^2)</li><li>Best-case performance: O(n) - for already sorted or empty lists</li></ul><h2 id="run/1-examples" class="section-heading">
+  <a href="#run/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">BinarySearch</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="2894608901-1">(</span><span class="p" data-group-id="2894608901-2">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.00000001</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2894608901-2">]</span><span class="p">,</span><span class="w"> </span><span class="mf">3.00000001</span><span class="p" data-group-id="2894608901-1">)</span><span class="w">
-</span><span class="mi">2</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Insertionsort</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="0507594945-1">(</span><span class="p" data-group-id="0507594945-2">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="0507594945-2">]</span><span class="p" data-group-id="0507594945-1">)</span><span class="w">
+</span><span class="p" data-group-id="0507594945-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="0507594945-3">]</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">BinarySearch</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="2894608901-3">(</span><span class="p" data-group-id="2894608901-4">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2894608901-4">]</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="2894608901-3">)</span><span class="w">
-</span><span class="mi">3</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Insertionsort</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="0507594945-4">(</span><span class="p" data-group-id="0507594945-5">[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="0507594945-5">]</span><span class="p" data-group-id="0507594945-4">)</span><span class="w">
+</span><span class="p" data-group-id="0507594945-6">[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="0507594945-6">]</span></code></pre>  </section>
 </section>
           </div>
         </section>

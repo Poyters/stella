@@ -10,17 +10,17 @@ defmodule Insertionsort do
 
   @doc """
   Sort list
-  Worst-case performance: O(n^2)
-  Average performance: O(n^2)
-  Best-case performance: O(n) - for already sorted or empty lists
+   - Worst-case performance: O(n^2)
+   - Average performance: O(n^2)
+   - Best-case performance: O(n) - for already sorted or empty lists
 
   ## Examples
 
-    iex> Insertionsort.run([4, 1, 3, 2])
-    [1, 2, 3, 4]
+      iex> Insertionsort.run([4, 1, 3, 2])
+      [1, 2, 3, 4]
 
-    iex> Insertionsort.run([-7, 0, 0, -2, -3, 5, 2])
-    [-7, -3, -2, 0, 0, 2, 5]
+      iex> Insertionsort.run([-7, 0, 0, -2, -3, 5, 2])
+      [-7, -3, -2, 0, 0, 2, 5]
       
   """
   

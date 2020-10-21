@@ -4,7 +4,7 @@ defmodule Fibonacci do
   """
 
   @doc """
-  Returns result of Fibonacci Sequence
+  Returns result of Fibonacci Sequence for a given number
 
   ## Examples
 

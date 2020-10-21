@@ -5,17 +5,19 @@ defmodule Countingsort do
   [Wikipedia](https://en.wikipedia.org/wiki/Counting_sort) page.
 	
 	### Annotations
-	 - n - number of elements in list
+   - n - number of elements in list
+   - range of the non-negative key values.
 	"""
 
   @doc """
   Sort list
-  Normal complexity: O(n)
+   - Normal complexity: O(n)
+   - Worst complexity: O(n + k)
 
   ## Examples
 
-    # iex> Countingsort.run([4, 1, 3, 5, 2])
-    # [1, 2, 3, 4]
+      iex> Countingsort.run([4, 1, 3, 5, 2])
+      [1, 2, 3, 4, 5]
       
   """
 
