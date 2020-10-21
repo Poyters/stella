@@ -29,7 +29,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Cartesian
 - [x] Easing functions
 - [x] Isometric
-- [x] Common number operations like cplam, nearly equal, is power etc
+- [x] Common number operations like clamp, nearly equal, is power etc
 - [x] Time converter
 - [x] Vector 2D
 - [x] Vector 3D
