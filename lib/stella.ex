@@ -13,7 +13,7 @@ defmodule Stella do
   ## Examples
 
       iex> Stella.version
-      '0.4.0'
+      '0.5.0'
       
   """
 

@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.4.0 (planned November 2020)
+## Content of version 0.5.0 (planned January 2021)
 
 ### Math
 - [x] Cartesian
@@ -35,6 +35,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Vector 3D
 - [x] Ackermann function
 - [x] Fibonacci sequence
+- [ ] Time module: sec, min to HMS
  
 
 ### Algorithms
@@ -43,6 +44,11 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Insertion sort
 - [x] Binary search
 - [x] Bubble sort
+- [ ] Smooth sort
+- [ ] Topological sort
+- [ ] Depth-first search
+- [ ] Breadth-first search
+- [ ] Radix sort
 
 
 ### Data structures
@@ -51,9 +57,15 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Max and Min Heap
 - [x] Priority queue
 - [x] Binary Search Tree (without deletion)
+- [ ] Binary Search Tree (with deletion)
+- [ ] B-tree
+- [ ] Graph
 
 
 ## Changelog
+
+### Version 0.5.0 (unreleased) 
+- Update doc tests
 
 ### Version 0.4.0 (21 October 2020) 
 - Stella module can return current version of package
