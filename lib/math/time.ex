@@ -60,7 +60,7 @@ defmodule Time do
   end
 
   @doc """
-  Converts miliseconds to HH:MM:SS format
+  Converts miliseconds to HHMMSS format
 
   ## Examples
 
@@ -70,11 +70,14 @@ defmodule Time do
       iex> Time.ms_to_hms(1000)
       "00:00:01"
 
+      iex> Time.ms_to_hms(1000, "-")
+      "00-00-01"
+
       iex> Time.ms_to_hms(61000)
       "00:01:01"
       
   """
-  def ms_to_hms(ms) do
+  def ms_to_hms(ms, separator \\ ":") do
     hours = Integer.to_string(Integer.floor_div(Integer.floor_div(ms, 1000), 3600))
     ms_modulo = rem(Integer.floor_div(ms, 1000), 3600)
     minutes = Integer.to_string(Integer.floor_div(ms_modulo, 60))
@@ -84,16 +87,19 @@ defmodule Time do
     mm = String.pad_leading(minutes, 2, "0")
     ss = String.pad_leading(seconds, 2, "0")
     
-    "#{hh}:#{mm}:#{ss}"
+    "#{hh}#{separator}#{mm}#{separator}#{ss}"
   end
 
   @doc """
-  Converts seconds to HH:MM:SS format
+  Converts seconds to HHMMSS format
 
   ## Examples
 
       iex> Time.sec_to_hms(28565)
       "07:56:05"
+
+      iex> Time.sec_to_hms(28565, "-")
+      "07-56-05"
 
       iex> Time.sec_to_hms(1)
       "00:00:01"
@@ -102,6 +108,6 @@ defmodule Time do
       "00:01:01"
       
   """
-  def sec_to_hms(sec), do: ms_to_hms(sec*1000)
+  def sec_to_hms(sec, separator \\ ":"), do: ms_to_hms(sec*1000, separator)
 
 end

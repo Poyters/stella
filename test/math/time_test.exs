@@ -138,6 +138,18 @@ defmodule TimeTest do
     assert Time.ms_to_hms(86400090) == "24:00:00"
   end
 
+  test "convert ms to HMS; 19)" do
+    assert Time.ms_to_hms(86400090, ":") == "24:00:00"
+  end
+
+  test "convert ms to HMS; 20)" do
+    assert Time.ms_to_hms(86400090, "-") == "24-00-00"
+  end
+
+  test "convert ms to HMS; 21)" do
+    assert Time.ms_to_hms(86400090, ".") == "24.00.00"
+  end
+
   test "convert sec to HMS; 1)" do
     assert Time.sec_to_hms(1) == "00:00:01"
   end
@@ -180,6 +192,18 @@ defmodule TimeTest do
 
   test "convert sec to HMS; 11)" do
     assert Time.sec_to_hms(86400) == "24:00:00"
+  end
+
+  test "convert sec to HMS; 12)" do
+    assert Time.sec_to_hms(3611, "-") == "01-00-11"
+  end
+
+  test "convert sec to HMS; 13)" do
+    assert Time.sec_to_hms(86400, ":") == "24:00:00"
+  end
+
+  test "convert sec to HMS; 14)" do
+    assert Time.sec_to_hms(86400, ".") == "24.00.00"
   end
 
 end
