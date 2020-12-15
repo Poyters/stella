@@ -1,6 +1,6 @@
 defmodule Time do
   @moduledoc """
-  Documentation for `Time`.
+  Documentation for `Time` module.
   """
 
   @doc """
@@ -12,7 +12,7 @@ defmodule Time do
       1000
 
   """
-  def sec_to_ms (sec) do
+  def sec_to_ms(sec) do
     sec * 1000
   end
 
@@ -25,7 +25,7 @@ defmodule Time do
       1.0
 
   """
-  def ms_to_sec (ms) do
+  def ms_to_sec(ms) do
     ms / 1000
   end
 
@@ -38,7 +38,7 @@ defmodule Time do
       70
 
   """
-  def hms_to_sec (hms) do
+  def hms_to_sec(hms) do
     items = hms 
       |> String.split(":")
       |> Enum.map(&String.to_integer/1)
@@ -55,7 +55,53 @@ defmodule Time do
       70000
       
   """
-  def hms_to_ms (hms) do
+  def hms_to_ms(hms) do
     hms_to_sec(hms) * 1000
   end
+
+  @doc """
+  Converts miliseconds to HH:MM:SS format
+
+  ## Examples
+
+      iex> Time.ms_to_hms(28565000)
+      "07:56:05"
+
+      iex> Time.ms_to_hms(1000)
+      "00:00:01"
+
+      iex> Time.ms_to_hms(61000)
+      "00:01:01"
+      
+  """
+  def ms_to_hms(ms) do
+    hours = Integer.to_string(Integer.floor_div(Integer.floor_div(ms, 1000), 3600))
+    ms_modulo = rem(Integer.floor_div(ms, 1000), 3600)
+    minutes = Integer.to_string(Integer.floor_div(ms_modulo, 60))
+    seconds = Integer.to_string(rem(ms_modulo, 60))
+
+    hh = String.pad_leading(hours, 2, "0")
+    mm = String.pad_leading(minutes, 2, "0")
+    ss = String.pad_leading(seconds, 2, "0")
+    
+    "#{hh}:#{mm}:#{ss}"
+  end
+
+  @doc """
+  Converts seconds to HH:MM:SS format
+
+  ## Examples
+
+      iex> Time.sec_to_hms(28565)
+      "07:56:05"
+
+      iex> Time.sec_to_hms(1)
+      "00:00:01"
+
+      iex> Time.sec_to_hms(61)
+      "00:01:01"
+      
+  """
+  def sec_to_hms(sec), do: ms_to_hms(sec*1000)
+
 end

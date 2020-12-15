@@ -30,12 +30,11 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Easing functions
 - [x] Isometric
 - [x] Common number operations like clamp, nearly equal, is power etc
-- [x] Time converter
+- [x] Time converter (hms, sec, ms etc)
 - [x] Vector 2D
 - [x] Vector 3D
 - [x] Ackermann function
 - [x] Fibonacci sequence
-- [ ] Time module: sec, min to HMS
  
 
 ### Algorithms
@@ -66,6 +65,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ### Version 0.5.0 (unreleased) 
 - Update doc tests
+- Add to Time module conversions from miliseconds or seconds to HMS format
 
 ### Version 0.4.0 (21 October 2020) 
 - Stella module can return current version of package
