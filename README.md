@@ -59,7 +59,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Version 0.5.0 (01 March 2021) 
 - Add a new documentation test, expand the method descriptions 
 - Add to Time module conversions from miliseconds or seconds to HMS format
-- Add conversion of nested structures
+- Add conversion of nested structures to nested maps
 
 ### Version 0.4.0 (21 October 2020) 
 - Stella module can return current version of package
