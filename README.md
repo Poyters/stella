@@ -12,7 +12,7 @@ The package can be installed by adding `stella` to your list of dependencies in 
 ```elixir
 def deps do
   [
-    {:stella, "~> 0.4.0"}
+    {:stella, "~> 0.5.0"}
   ]
 end
 ```
@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.5.0 (planned January 2021)
+## Content of version 0.5.0 (01 March 2021)
 
 ### Math
 - [x] Cartesian
@@ -43,11 +43,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Insertion sort
 - [x] Binary search
 - [x] Bubble sort
-- [ ] Smooth sort
-- [ ] Topological sort
-- [ ] Depth-first search
-- [ ] Breadth-first search
-- [ ] Radix sort
 
 
 ### Data structures
@@ -56,16 +51,15 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Max and Min Heap
 - [x] Priority queue
 - [x] Binary Search Tree (without deletion)
-- [ ] Binary Search Tree (with deletion)
-- [ ] B-tree
-- [ ] Graph
+- [ ] Struct, converting a nested Struct to a nested Map 
 
 
 ## Changelog
 
-### Version 0.5.0 (unreleased) 
-- Update doc tests
+### Version 0.5.0 (01 March 2021) 
+- Add a new documentation test, expand the method descriptions 
 - Add to Time module conversions from miliseconds or seconds to HMS format
+- Add conversion of nested structures
 
 ### Version 0.4.0 (21 October 2020) 
 - Stella module can return current version of package
@@ -78,15 +72,12 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Create Elixir's implementation of bubble sort
 - Create Binary Search Tree data structure (without deletion option)
 
-
-
-### Version 0.3.1 (23 August 2020)
+### Version 0.3.1 (21 August 2020)
 - Fix Heap documentation examples
 - Fix unused variables
 - Rename some unit test headers to more appropriate
 
-
-### Version 0.3.0 (22 August 2020)
+### Version 0.3.0 (21 August 2020)
 - Add Ackermann function
 - Create implementation of Quicksort algorithm
 - Create implementation of Queue data structure
@@ -99,13 +90,14 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - Add service of isometric layout
 - Implement max and min heap
 
+### Version 0.2.1 (5 August 2020)
+- fix documentation examples validation
 
 ### Version 0.2.0 (5 August 2020)
 - Add basic number operations
 - Create time converter
 
-
-### Version 0.1.0 (4 August 2020)
+### Version 0.1.0 (5 August 2020)
 - Create initial project package
 - Create proof of concept
 
