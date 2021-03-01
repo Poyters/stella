@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.5.0 (01 March 2021)
+## Content of version 0.5.0 (02 March 2021)
 
 ### Math
 - [x] Cartesian
@@ -56,7 +56,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 ## Changelog
 
-### Version 0.5.0 (01 March 2021) 
+### Version 0.5.0 (02 March 2021) 
 - Add a new documentation test, expand the method descriptions 
 - Add to Time module conversions from miliseconds or seconds to HMS format
 - Add conversion of nested structures to nested maps
