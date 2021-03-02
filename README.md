@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.5.0 (02 March 2021)
+## Content of version 0.5.0
 
 ### Math
 - [x] Cartesian
