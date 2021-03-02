@@ -28,7 +28,7 @@ defmodule Struct do
 
   def to_map(map), do: :maps.map(&do_sample/2, map)
 
-  def do_sample(_key, value), do: ensure_nested_map(value)
+  defp do_sample(_key, value), do: ensure_nested_map(value)
 
   defp ensure_nested_map(list) when is_list(list), do: Enum.map(list, &ensure_nested_map/1)
 
