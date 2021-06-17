@@ -14,9 +14,20 @@ defmodule PriorityQueue do
 
       iex> PriorityQueue.new
       {0, nil}
-      
+
   """
   def new, do: :gb_trees.empty
+
+  @doc """
+  Check if priority queue is empty
+
+  ## Examples
+
+      iex> PriorityQueue.new |> PriorityQueue.empty?
+      true
+
+  """
+  def empty?(queue), do: :gb_trees.is_empty(queue)
 
   @doc """
   Add a new element with priority to queue
@@ -25,7 +36,7 @@ defmodule PriorityQueue do
 
       iex> PriorityQueue.new |> PriorityQueue.insert("Do homework", 4)
       {1, {4, "Do homework", nil, nil}}
-      
+
   """
 
   def insert(queue, element, priority), do: :gb_trees.enter(priority, element, queue)
@@ -37,7 +48,7 @@ defmodule PriorityQueue do
 
       iex> PriorityQueue.new |> PriorityQueue.insert("Do homework", 4) |> PriorityQueue.top
       {0, nil}
-      
+
   """
 
   def top(queue) do
@@ -52,7 +63,7 @@ defmodule PriorityQueue do
 
       iex> PriorityQueue.new |> PriorityQueue.insert("Do homework", 4) |> PriorityQueue.size
       1
-      
+
   """
 
   def size(queue), do: :gb_trees.size(queue)
@@ -67,7 +78,7 @@ defmodule PriorityQueue do
 
       iex> PriorityQueue.new |> PriorityQueue.is_empty
       true
-      
+
   """
 
   def is_empty(queue), do: if :gb_trees.size(queue) > 0, do: false, else: true
@@ -77,12 +88,12 @@ defmodule PriorityQueue do
 
   ## Examples
 
-      iex> PriorityQueue.new 
-      iex> |> PriorityQueue.insert("Do4", 4) 
+      iex> PriorityQueue.new
+      iex> |> PriorityQueue.insert("Do4", 4)
       iex> |> PriorityQueue.insert("Do1", 1)
       iex> |> PriorityQueue.to_list
       [{1, "Do1"}, {4, "Do4"}]
-      
+
   """
 
   def to_list(queue), do: :gb_trees.to_list(queue)
@@ -94,7 +105,7 @@ defmodule PriorityQueue do
 
       iex> PriorityQueue.new |> PriorityQueue.insert("Do homework", 4) |> PriorityQueue.peek
       "Do homework"
-      
+
   """
 
   def peek(queue) do

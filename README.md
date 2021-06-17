@@ -52,7 +52,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Priority queue
 - [ ] Binary Search Tree (with deletion)
 - [x] Struct, converting a nested Struct to a nested Map 
-- [ ] Heap with heapsort
+- [x] Heap with heapsort
 
 
 ## Changelog
