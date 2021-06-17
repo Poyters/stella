@@ -173,4 +173,27 @@ defmodule HeapTest do
       === [-20, 0, 0, 0, 1, 2, 5, 5, 9, 10]
   end
 
+  test "sort 15" do
+    assert Heap.sort([-2, -3, 4, 5]) === [-3, -2, 4, 5]
+  end
+
+  test "sort 16" do
+    assert Heap.sort([-2.11, -3.4, 4.0, 15]) === [-3.4, -2.11, 4.0, 15]
+  end
+
+  test "sort 17" do
+    assert Heap.sort([4, 1, 3, -7, -2, 0, 2])
+      === [-7, -2, 0, 1, 2, 3, 4]
+  end
+
+  test "sort 18" do
+    assert Heap.sort([4, 1, 3, 2, 16, 9, 10, 14, 8, 7])
+      === [1, 2, 3, 4, 7, 8, 9, 10, 14, 16]
+  end
+
+  test "sort 19" do
+    assert Heap.sort([4, 1, 3, 2])
+      === [1, 2, 3, 4]
+  end
+
 end
