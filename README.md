@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.5.0
+## Content of version 0.6.0 (in development)
 
 ### Math
 - [x] Cartesian
@@ -35,6 +35,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Vector 3D
 - [x] Ackermann function
 - [x] Fibonacci sequence
+- [ ] Range
  
 
 ### Algorithms
@@ -48,13 +49,16 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ### Data structures
 - [x] Queue
 - [x] Stack
-- [x] Max and Min Heap
 - [x] Priority queue
-- [x] Binary Search Tree (without deletion)
+- [ ] Binary Search Tree (with deletion)
 - [x] Struct, converting a nested Struct to a nested Map 
+- [ ] Heap with heapsort
 
 
 ## Changelog
+
+### Version 0.6.0 (planned 2021)
+- Rewrite `Heap` data structure and add `heapsort` to it
 
 ### Version 0.5.0 (02 March 2021) 
 - Add a new documentation test, expand the method descriptions 
