@@ -35,7 +35,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Vector 3D
 - [x] Ackermann function
 - [x] Fibonacci sequence
-- [ ] Range
+- [x] Range
  
 
 ### Algorithms
@@ -58,6 +58,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 ## Changelog
 
 ### Version 0.6.0 (planned 2021)
+- Create Range module with `random_number` and `member?` methods
 - Rewrite `Heap` data structure and add `heapsort` to it
 
 ### Version 0.5.0 (02 March 2021) 
