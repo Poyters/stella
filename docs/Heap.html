@@ -5,15 +5,21 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
-    <meta name="project" content="stella v0.4.0">
-    <title>Heap — stella v0.4.0</title>
+    <meta name="project" content="stella v0.5.0">
+
+    <title>Heap — stella v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-1e6a74effd.js"></script>
+
+    <script src="dist/sidebar_items-19ef8d83d7.js"></script>
+
       <script src="docs_config.js"></script>
+
     <script async src="dist/app-0103364119015b97e56c.js"></script>
+
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -41,17 +47,20 @@
   <div class="sidebar-header">
     <div class="sidebar-projectDetails">
       <a href="Stella.html" class="sidebar-projectName">
-stella      </a>
+stella
+      </a>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
+
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
+
 
   </ul>
   <div class="gradient"></div>
@@ -63,16 +72,16 @@ stella      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">stella v0.4.0</small>
-Heap      </h1>
+        <small class="app-vsn">stella v0.5.0</small>
+Heap
+
+      </h1>
 
 
         <section id="moduledoc">
-<p>Documentation for <a href="#content"><code class="inline">Heap</code></a> data structure</p><h3 id="module-annotations" class="section-heading">
-  <a href="#module-annotations" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Annotations
-</h3>
-<ul><li>n - number of elements in heap</li></ul>        </section>
+<p>Documentation for <a href="#content"><code class="inline">Heap</code></a> data structure</p>
+        </section>
+
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -82,6 +91,21 @@ Heap      </h1>
             </a>
             Summary
           </h1>
+
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:heap/0">heap()</a>
+
+  </div>
+
+</div>
+
+  </div>
+
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
@@ -89,54 +113,159 @@ Heap      </h1>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#build_heap/2">build_heap(heap, type)</a>
+
   </div>
-    <div class="summary-synopsis"><p>Method complexity: O(n)
-Restores ownership of a whole heap to   Heap[parent(i)] &gt;= Heap[i],
-so build heap max</p></div>
+
+    <div class="summary-synopsis"><p>Method complexity: O(n)</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#empty?/1">empty?(heap)</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Checks if heap is empty</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#left/1">left(index)</a>
+
   </div>
-    <div class="summary-synopsis"><p>Return left element of index</p></div>
+
+    <div class="summary-synopsis"><p>Returns index of left leaf.</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#max_heapify/3">max_heapify(heap, index, len \\ nil)</a>
+
   </div>
-    <div class="summary-synopsis"><p>Method complexity: O(lgn)
-Max heapify changes list of elements in max heap where for each 
-elements of list (except root) ownership takes place:
-Heap[parent(i)] &gt;= Heap[i]</p></div>
+
+    <div class="summary-synopsis"><p>Method complexity: O(lgn)</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#member?/2">member?(heap, value)</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Checks if the passed integer is a member of the heap</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#min_heapify/3">min_heapify(heap, index, len \\ nil)</a>
+
   </div>
-    <div class="summary-synopsis"><p>Method complexity: O(lgn)
-Min heapify changes list of elements in min heap where for each 
-elements of list (except root) ownership takes place:
-Heap[parent(i)] &lt;= Heap[i]</p></div>
+
+    <div class="summary-synopsis"><p>Method complexity: O(lgn)</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#new/0">new()</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Create new, empty Heap</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#parent/1">parent(index)</a>
+
   </div>
-    <div class="summary-synopsis"><p>Return parent index</p></div>
+
+    <div class="summary-synopsis"><p>Returns parent index.</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#right/1">right(index)</a>
+
   </div>
-    <div class="summary-synopsis"><p>Return right element of index</p></div>
+
+    <div class="summary-synopsis"><p>Returns index of right leaf.</p></div>
+
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#root/1">root(heap)</a>
+
   </div>
+
+    <div class="summary-synopsis"><p>Returns the root value of the heap. Assume the passed heap has the max or min heap properties.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#size/1">size(heap)</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Returns current size of heap</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sort/1">sort(heap)</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Method complexity: O(n)</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sort/2">sort(max_heap, j)</a>
+
+  </div>
+
+</div>
+
+  </div>
+
+        </section>
+
+
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Types
+          </h1>
+          <div class="types-list">
+<section class="detail" id="t:heap/0">
+
+  <div class="detail-header">
+    <a href="#t:heap/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature">heap()</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>heap() :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()]</pre>
+
+      </div>
+
+
+  </section>
+</section>
+
+          </div>
         </section>
 
         <section id="functions" class="details-list">
@@ -145,158 +274,406 @@ Heap[parent(i)] &lt;= Heap[i]</p></div>
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-Functions          </h1>
+Functions
+          </h1>
           <div class="functions-list">
 <section class="detail" id="build_heap/2">
+
   <div class="detail-header">
     <a href="#build_heap/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">build_heap(heap, type)</h1>
+
+
   </div>
 
   <section class="docstring">
 
-<p>Method complexity: O(n)
-Restores ownership of a whole heap to   Heap[parent(i)] &gt;= Heap[i],
-so build heap max</p><h2 id="build_heap/2-examples" class="section-heading">
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>build_heap(<a href="#t:heap/0">heap</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: <a href="#t:heap/0">heap</a>()</pre>
+
+      </div>
+
+<p>Method complexity: O(n)</p><p>Transforms passed heap (list) into specified heap type</p><ul><li>min: (Heap[parent(i)] &lt;= Heap[i])</li><li>max: (Heap[parent(i)] &gt;= Heap[i])</li></ul><h2 id="build_heap/2-examples" class="section-heading">
   <a href="#build_heap/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="6147779840-1">(</span><span class="p" data-group-id="6147779840-2">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="6147779840-2">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:max</span><span class="p" data-group-id="6147779840-1">)</span><span class="w">
-</span><span class="p" data-group-id="6147779840-3">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6147779840-3">]</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="1673170033-1">(</span><span class="p" data-group-id="1673170033-2">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="1673170033-2">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:max</span><span class="p" data-group-id="1673170033-1">)</span><span class="w">
+</span><span class="p" data-group-id="1673170033-3">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1673170033-3">]</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="6147779840-4">(</span><span class="p" data-group-id="6147779840-5">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6147779840-5">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:max</span><span class="p" data-group-id="6147779840-4">)</span><span class="w">
-</span><span class="p" data-group-id="6147779840-6">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6147779840-6">]</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="1673170033-4">(</span><span class="p" data-group-id="1673170033-5">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1673170033-5">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:max</span><span class="p" data-group-id="1673170033-4">)</span><span class="w">
+</span><span class="p" data-group-id="1673170033-6">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1673170033-6">]</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="6147779840-7">(</span><span class="p" data-group-id="6147779840-8">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6147779840-8">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:min</span><span class="p" data-group-id="6147779840-7">)</span><span class="w">
-</span><span class="p" data-group-id="6147779840-9">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="6147779840-9">]</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">build_heap</span><span class="p" data-group-id="1673170033-7">(</span><span class="p" data-group-id="1673170033-8">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1673170033-8">]</span><span class="p">,</span><span class="w"> </span><span class="ss">:min</span><span class="p" data-group-id="1673170033-7">)</span><span class="w">
+</span><span class="p" data-group-id="1673170033-9">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="1673170033-9">]</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="empty?/1">
+
+  <div class="detail-header">
+    <a href="#empty?/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">empty?(heap)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>empty?(<a href="#t:heap/0">heap</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+
+      </div>
+
+<p>Checks if heap is empty</p><h2 id="empty?/1-examples" class="section-heading">
+  <a href="#empty?/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">empty?</span><span class="p" data-group-id="3080965123-1">(</span><span class="p" data-group-id="3080965123-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="3080965123-2">]</span><span class="p" data-group-id="3080965123-1">)</span><span class="w">
+</span><span class="no">false</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="left/1">
+
   <div class="detail-header">
     <a href="#left/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">left(index)</h1>
+
+
   </div>
 
   <section class="docstring">
 
-<p>Return left element of index</p><h2 id="left/1-examples" class="section-heading">
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>left(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+
+      </div>
+
+<p>Returns index of left leaf.</p><h2 id="left/1-examples" class="section-heading">
   <a href="#left/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">left</span><span class="p" data-group-id="4547680498-1">(</span><span class="mi">2</span><span class="p" data-group-id="4547680498-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">left</span><span class="p" data-group-id="6316487871-1">(</span><span class="mi">2</span><span class="p" data-group-id="6316487871-1">)</span><span class="w">
 </span><span class="mi">5</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">left</span><span class="p" data-group-id="4547680498-2">(</span><span class="mi">4</span><span class="p" data-group-id="4547680498-2">)</span><span class="w">
-</span><span class="mi">9</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">left</span><span class="p" data-group-id="6316487871-2">(</span><span class="mi">4</span><span class="p" data-group-id="6316487871-2">)</span><span class="w">
+</span><span class="mi">9</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="max_heapify/3">
+
     <span id="max_heapify/2"></span>
+
   <div class="detail-header">
     <a href="#max_heapify/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">max_heapify(heap, index, len \\ nil)</h1>
+
+
   </div>
 
   <section class="docstring">
 
-<p>Method complexity: O(lgn)
-Max heapify changes list of elements in max heap where for each 
-elements of list (except root) ownership takes place:
-Heap[parent(i)] &gt;= Heap[i]</p><h2 id="max_heapify/3-examples" class="section-heading">
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>max_heapify(<a href="#t:heap/0">heap</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil) :: <a href="#t:heap/0">heap</a>()</pre>
+
+      </div>
+
+<p>Method complexity: O(lgn)</p><p>Max heapify changes list of elements in max heap. There is property for every element in heap:</p><p>Heap[parent(i)] &gt;= Heap[i]</p><h2 id="max_heapify/3-examples" class="section-heading">
   <a href="#max_heapify/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">max_heapify</span><span class="p" data-group-id="0401557605-1">(</span><span class="p" data-group-id="0401557605-2">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0401557605-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0401557605-1">)</span><span class="w">
-</span><span class="p" data-group-id="0401557605-3">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0401557605-3">]</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">max_heapify</span><span class="p" data-group-id="6136025905-1">(</span><span class="p" data-group-id="6136025905-2">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6136025905-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6136025905-1">)</span><span class="w">
+</span><span class="p" data-group-id="6136025905-3">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6136025905-3">]</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="member?/2">
+
+  <div class="detail-header">
+    <a href="#member?/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">member?(heap, value)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>member?(<a href="#t:heap/0">heap</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+
+      </div>
+
+<p>Checks if the passed integer is a member of the heap</p><h2 id="member?/2-examples" class="section-heading">
+  <a href="#member?/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">member?</span><span class="p" data-group-id="0974456199-1">(</span><span class="p" data-group-id="0974456199-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="0974456199-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="0974456199-1">)</span><span class="w">
+</span><span class="no">true</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">member?</span><span class="p" data-group-id="0974456199-3">(</span><span class="p" data-group-id="0974456199-4">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="0974456199-4">]</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="0974456199-3">)</span><span class="w">
+</span><span class="no">false</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="min_heapify/3">
+
     <span id="min_heapify/2"></span>
+
   <div class="detail-header">
     <a href="#min_heapify/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">min_heapify(heap, index, len \\ nil)</h1>
+
+
   </div>
 
   <section class="docstring">
 
-<p>Method complexity: O(lgn)
-Min heapify changes list of elements in min heap where for each 
-elements of list (except root) ownership takes place:
-Heap[parent(i)] &lt;= Heap[i]</p><h2 id="min_heapify/3-examples" class="section-heading">
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>min_heapify(<a href="#t:heap/0">heap</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil) :: <a href="#t:heap/0">heap</a>()</pre>
+
+      </div>
+
+<p>Method complexity: O(lgn)</p><p>Min heapify changes list of elements in max heap. There is property for every element in heap:</p><p>Heap[parent(i)] &lt;= Heap[i]</p><h2 id="min_heapify/3-examples" class="section-heading">
   <a href="#min_heapify/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">min_heapify</span><span class="p" data-group-id="3091177094-1">(</span><span class="p" data-group-id="3091177094-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p" data-group-id="3091177094-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="3091177094-1">)</span><span class="w">
-</span><span class="p" data-group-id="3091177094-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p" data-group-id="3091177094-3">]</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">min_heapify</span><span class="p" data-group-id="5452351838-1">(</span><span class="p" data-group-id="5452351838-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p" data-group-id="5452351838-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="5452351838-1">)</span><span class="w">
+</span><span class="p" data-group-id="5452351838-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p" data-group-id="5452351838-3">]</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="new/0">
+
   <div class="detail-header">
     <a href="#new/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">new()</h1>
+
+
   </div>
 
   <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>new() :: []</pre>
+
+      </div>
 
 <p>Create new, empty Heap</p><h2 id="new/0-examples" class="section-heading">
   <a href="#new/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">new</span><span class="p" data-group-id="7236264363-1">(</span><span class="p" data-group-id="7236264363-1">)</span><span class="w">
-</span><span class="p" data-group-id="7236264363-2">[</span><span class="p" data-group-id="7236264363-2">]</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">new</span><span class="p" data-group-id="3789904948-1">(</span><span class="p" data-group-id="3789904948-1">)</span><span class="w">
+</span><span class="p" data-group-id="3789904948-2">[</span><span class="p" data-group-id="3789904948-2">]</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="parent/1">
+
   <div class="detail-header">
     <a href="#parent/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">parent(index)</h1>
+
+
   </div>
 
   <section class="docstring">
 
-<p>Return parent index</p><h2 id="parent/1-examples" class="section-heading">
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>parent(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: nil | <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+
+      </div>
+
+<p>Returns parent index.</p><h2 id="parent/1-examples" class="section-heading">
   <a href="#parent/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">parent</span><span class="p" data-group-id="2222496670-1">(</span><span class="mi">7</span><span class="p" data-group-id="2222496670-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">parent</span><span class="p" data-group-id="7408789337-1">(</span><span class="mi">7</span><span class="p" data-group-id="7408789337-1">)</span><span class="w">
 </span><span class="mi">3</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">parent</span><span class="p" data-group-id="2222496670-2">(</span><span class="mi">0</span><span class="p" data-group-id="2222496670-2">)</span><span class="w">
-</span><span class="no">nil</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">parent</span><span class="p" data-group-id="7408789337-2">(</span><span class="mi">0</span><span class="p" data-group-id="7408789337-2">)</span><span class="w">
+</span><span class="no">nil</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="right/1">
+
   <div class="detail-header">
     <a href="#right/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">right(index)</h1>
+
+
   </div>
 
   <section class="docstring">
 
-<p>Return right element of index</p><h2 id="right/1-examples" class="section-heading">
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>right(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+
+      </div>
+
+<p>Returns index of right leaf.</p><h2 id="right/1-examples" class="section-heading">
   <a href="#right/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">right</span><span class="p" data-group-id="3632134107-1">(</span><span class="mi">2</span><span class="p" data-group-id="3632134107-1">)</span><span class="w">
-</span><span class="mi">6</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">right</span><span class="p" data-group-id="8448600146-1">(</span><span class="mi">2</span><span class="p" data-group-id="8448600146-1">)</span><span class="w">
+</span><span class="mi">6</span></code></pre>
+  </section>
 </section>
+<section class="detail" id="root/1">
+
+  <div class="detail-header">
+    <a href="#root/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">root(heap)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>root(<a href="#t:heap/0">heap</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil</pre>
+
+      </div>
+
+<p>Returns the root value of the heap. Assume the passed heap has the max or min heap properties.</p><h2 id="root/1-examples" class="section-heading">
+  <a href="#root/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">root</span><span class="p" data-group-id="1830595377-1">(</span><span class="p" data-group-id="1830595377-2">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1830595377-2">]</span><span class="p" data-group-id="1830595377-1">)</span><span class="w">
+</span><span class="mi">16</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">root</span><span class="p" data-group-id="1830595377-3">(</span><span class="p" data-group-id="1830595377-4">[</span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p" data-group-id="1830595377-4">]</span><span class="p" data-group-id="1830595377-3">)</span><span class="w">
+</span><span class="mi">44</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">root</span><span class="p" data-group-id="1830595377-5">(</span><span class="p" data-group-id="1830595377-6">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p" data-group-id="1830595377-6">]</span><span class="p" data-group-id="1830595377-5">)</span><span class="w">
+</span><span class="mi">3</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="size/1">
+
+  <div class="detail-header">
+    <a href="#size/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">size(heap)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>size(<a href="#t:heap/0">heap</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+
+      </div>
+
+<p>Returns current size of heap</p><h2 id="size/1-examples" class="section-heading">
+  <a href="#size/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">size</span><span class="p" data-group-id="2035980446-1">(</span><span class="p" data-group-id="2035980446-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="2035980446-2">]</span><span class="p" data-group-id="2035980446-1">)</span><span class="w">
+</span><span class="mi">3</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">size</span><span class="p" data-group-id="2035980446-3">(</span><span class="p" data-group-id="2035980446-4">[</span><span class="p" data-group-id="2035980446-4">]</span><span class="p" data-group-id="2035980446-3">)</span><span class="w">
+</span><span class="mi">0</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="sort/1">
+
+  <div class="detail-header">
+    <a href="#sort/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">sort(heap)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>sort(<a href="#t:heap/0">heap</a>()) :: <a href="#t:heap/0">heap</a>()</pre>
+
+      </div>
+
+<p>Method complexity: O(n)</p><p>Sorts the heap (from min to max)</p><h2 id="sort/1-examples" class="section-heading">
+  <a href="#sort/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Heap</span><span class="o">.</span><span class="n">sort</span><span class="p" data-group-id="6638952410-1">(</span><span class="p" data-group-id="6638952410-2">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="6638952410-2">]</span><span class="p" data-group-id="6638952410-1">)</span><span class="w">
+</span><span class="p" data-group-id="6638952410-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p" data-group-id="6638952410-3">]</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="sort/2">
+
+  <div class="detail-header">
+    <a href="#sort/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">sort(max_heap, j)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+
           </div>
         </section>
+
       <footer class="footer">
         <p>
           <span class="line">
@@ -328,5 +705,6 @@ Heap[parent(i)] &lt;= Heap[i]</p><h2 id="min_heapify/3-examples" class="section-
   </div>
 </section>
 </div>
+
   </body>
 </html>

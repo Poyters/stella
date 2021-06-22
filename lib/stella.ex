@@ -1,8 +1,8 @@
 defmodule Stella do
   @moduledoc """
   ![print image](assets/images/stella.png)
-  
-  Documentation for `Project Stella`. 
+
+  Documentation for `Project Stella`.
   Rapid pure elixir library providing implementations of the most
   famous algorithms, data structures and math functions
   """
@@ -13,8 +13,8 @@ defmodule Stella do
   ## Examples
 
       iex> Stella.version
-      '0.5.0'
-      
+      '0.6.0'
+
   """
 
   def version, do: Application.spec(:stella, :vsn)

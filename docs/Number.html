@@ -5,15 +5,21 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
-    <meta name="project" content="stella v0.4.0">
-    <title>Number — stella v0.4.0</title>
+    <meta name="project" content="stella v0.5.0">
+
+    <title>Number — stella v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-1e6a74effd.js"></script>
+
+    <script src="dist/sidebar_items-19ef8d83d7.js"></script>
+
       <script src="docs_config.js"></script>
+
     <script async src="dist/app-0103364119015b97e56c.js"></script>
+
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -41,17 +47,20 @@
   <div class="sidebar-header">
     <div class="sidebar-projectDetails">
       <a href="Stella.html" class="sidebar-projectName">
-stella      </a>
+stella
+      </a>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
+
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
+
 
   </ul>
   <div class="gradient"></div>
@@ -63,12 +72,16 @@ stella      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">stella v0.4.0</small>
-Number      </h1>
+        <small class="app-vsn">stella v0.5.0</small>
+Number
+
+      </h1>
 
 
         <section id="moduledoc">
-<p>Documentation for <a href="#content"><code class="inline">Number</code></a>.</p>        </section>
+<p>Documentation for <a href="#content"><code class="inline">Number</code></a>.</p>
+        </section>
+
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -78,6 +91,7 @@ Number      </h1>
             </a>
             Summary
           </h1>
+
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
@@ -85,25 +99,37 @@ Number      </h1>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#clamp/3">clamp(number, min \\ 0, max \\ 1)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Puts a given number to min-max range. In other words, input value
 will be minimum equal to min value or maximum equal to max value.
 Function assumes min &lt; max</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#is_power/2">is_power(x, y)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Check if y is power of x</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#nearly_equal/3">nearly_equal(x, y, epsilon \\ 1)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Determines whether number is equal to the other by given epsilon.</p></div>
+
 </div>
+
   </div>
+
         </section>
+
 
         <section id="functions" class="details-list">
           <h1 class="section-heading">
@@ -111,17 +137,23 @@ Function assumes min &lt; max</p></div>
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-Functions          </h1>
+Functions
+          </h1>
           <div class="functions-list">
 <section class="detail" id="clamp/3">
+
     <span id="clamp/1"></span>
+
     <span id="clamp/2"></span>
+
   <div class="detail-header">
     <a href="#clamp/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">clamp(number, min \\ 0, max \\ 1)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -132,16 +164,20 @@ Function assumes min &lt; max</p><h2 id="clamp/3-examples" class="section-headin
   <a href="#clamp/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">clamp</span><span class="p" data-group-id="0309039197-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="0309039197-1">)</span><span class="w">
-</span><span class="mi">2</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">clamp</span><span class="p" data-group-id="4227366462-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="4227366462-1">)</span><span class="w">
+</span><span class="mi">2</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="is_power/2">
+
   <div class="detail-header">
     <a href="#is_power/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">is_power(x, y)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -150,17 +186,22 @@ Function assumes min &lt; max</p><h2 id="clamp/3-examples" class="section-headin
   <a href="#is_power/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">is_power</span><span class="p" data-group-id="8938679735-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="8938679735-1">)</span><span class="w">
-</span><span class="no">false</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">is_power</span><span class="p" data-group-id="9890603974-1">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="9890603974-1">)</span><span class="w">
+</span><span class="no">false</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="nearly_equal/3">
+
     <span id="nearly_equal/2"></span>
+
   <div class="detail-header">
     <a href="#nearly_equal/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">nearly_equal(x, y, epsilon \\ 1)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -169,20 +210,23 @@ Function assumes min &lt; max</p><h2 id="clamp/3-examples" class="section-headin
   <a href="#nearly_equal/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="2118677386-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2118677386-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="4776003994-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="4776003994-1">)</span><span class="w">
 </span><span class="no">true</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="2118677386-2">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2118677386-2">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="4776003994-2">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="4776003994-2">)</span><span class="w">
 </span><span class="no">false</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="2118677386-3">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="2118677386-3">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="4776003994-3">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="4776003994-3">)</span><span class="w">
 </span><span class="no">true</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="2118677386-4">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="2118677386-4">)</span><span class="w">
-</span><span class="no">false</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Number</span><span class="o">.</span><span class="n">nearly_equal</span><span class="p" data-group-id="4776003994-4">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="4776003994-4">)</span><span class="w">
+</span><span class="no">false</span></code></pre>
+  </section>
 </section>
+
           </div>
         </section>
+
       <footer class="footer">
         <p>
           <span class="line">
@@ -214,5 +258,6 @@ Function assumes min &lt; max</p><h2 id="clamp/3-examples" class="section-headin
   </div>
 </section>
 </div>
+
   </body>
 </html>

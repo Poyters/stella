@@ -5,15 +5,21 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
-    <meta name="project" content="stella v0.4.0">
-    <title>Queue — stella v0.4.0</title>
+    <meta name="project" content="stella v0.5.0">
+
+    <title>Queue — stella v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-1e6a74effd.js"></script>
+
+    <script src="dist/sidebar_items-19ef8d83d7.js"></script>
+
       <script src="docs_config.js"></script>
+
     <script async src="dist/app-0103364119015b97e56c.js"></script>
+
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -41,17 +47,20 @@
   <div class="sidebar-header">
     <div class="sidebar-projectDetails">
       <a href="Stella.html" class="sidebar-projectName">
-stella      </a>
+stella
+      </a>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
+
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
+
 
   </ul>
   <div class="gradient"></div>
@@ -63,12 +72,16 @@ stella      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">stella v0.4.0</small>
-Queue      </h1>
+        <small class="app-vsn">stella v0.5.0</small>
+Queue
+
+      </h1>
 
 
         <section id="moduledoc">
-<p>Documentation for <a href="#content"><code class="inline">Queue</code></a> data structure</p>        </section>
+<p>Documentation for <a href="#content"><code class="inline">Queue</code></a> data structure</p>
+        </section>
+
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -78,6 +91,7 @@ Queue      </h1>
             </a>
             Summary
           </h1>
+
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
@@ -85,29 +99,44 @@ Queue      </h1>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#dequeue/1">dequeue(queue)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Delete element from queue</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#enqueue/2">enqueue(queue, element)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Add element to queue</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#is_empty/1">is_empty(queue)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Check if queue is empty</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#new/0">new()</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Create a new, empty qeue</p></div>
+
 </div>
+
   </div>
+
         </section>
+
 
         <section id="functions" class="details-list">
           <h1 class="section-heading">
@@ -115,15 +144,19 @@ Queue      </h1>
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-Functions          </h1>
+Functions
+          </h1>
           <div class="functions-list">
 <section class="detail" id="dequeue/1">
+
   <div class="detail-header">
     <a href="#dequeue/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">dequeue(queue)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -132,22 +165,26 @@ Functions          </h1>
   <a href="#dequeue/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p" data-group-id="8855435990-1">(</span><span class="p" data-group-id="8855435990-2">[</span><span class="mi">1</span><span class="p" data-group-id="8855435990-2">]</span><span class="p" data-group-id="8855435990-1">)</span><span class="w">
-</span><span class="p" data-group-id="8855435990-3">[</span><span class="p" data-group-id="8855435990-3">]</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p" data-group-id="0979798649-1">(</span><span class="p" data-group-id="0979798649-2">[</span><span class="mi">1</span><span class="p" data-group-id="0979798649-2">]</span><span class="p" data-group-id="0979798649-1">)</span><span class="w">
+</span><span class="p" data-group-id="0979798649-3">[</span><span class="p" data-group-id="0979798649-3">]</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p" data-group-id="8855435990-4">(</span><span class="p" data-group-id="8855435990-5">[</span><span class="p" data-group-id="8855435990-5">]</span><span class="p" data-group-id="8855435990-4">)</span><span class="w">
-</span><span class="p" data-group-id="8855435990-6">[</span><span class="p" data-group-id="8855435990-6">]</span><span class="w">     
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p" data-group-id="0979798649-4">(</span><span class="p" data-group-id="0979798649-5">[</span><span class="p" data-group-id="0979798649-5">]</span><span class="p" data-group-id="0979798649-4">)</span><span class="w">
+</span><span class="p" data-group-id="0979798649-6">[</span><span class="p" data-group-id="0979798649-6">]</span><span class="w">     
 
-</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="nc">Queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p" data-group-id="8855435990-7">(</span><span class="p" data-group-id="8855435990-8">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="8855435990-8">]</span><span class="p" data-group-id="8855435990-7">)</span><span class="w">
-</span><span class="p" data-group-id="8855435990-9">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="8855435990-9">]</span></code></pre>  </section>
+</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="nc">Queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p" data-group-id="0979798649-7">(</span><span class="p" data-group-id="0979798649-8">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="0979798649-8">]</span><span class="p" data-group-id="0979798649-7">)</span><span class="w">
+</span><span class="p" data-group-id="0979798649-9">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="0979798649-9">]</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="enqueue/2">
+
   <div class="detail-header">
     <a href="#enqueue/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">enqueue(queue, element)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -156,16 +193,20 @@ Functions          </h1>
   <a href="#enqueue/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">enqueue</span><span class="p" data-group-id="4248044626-1">(</span><span class="p" data-group-id="4248044626-2">[</span><span class="mi">1</span><span class="p" data-group-id="4248044626-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="4248044626-1">)</span><span class="w">
-</span><span class="p" data-group-id="4248044626-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="4248044626-3">]</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">enqueue</span><span class="p" data-group-id="5607975430-1">(</span><span class="p" data-group-id="5607975430-2">[</span><span class="mi">1</span><span class="p" data-group-id="5607975430-2">]</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="5607975430-1">)</span><span class="w">
+</span><span class="p" data-group-id="5607975430-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="5607975430-3">]</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="is_empty/1">
+
   <div class="detail-header">
     <a href="#is_empty/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">is_empty(queue)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -174,16 +215,20 @@ Functions          </h1>
   <a href="#is_empty/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">is_empty</span><span class="p" data-group-id="6191909546-1">(</span><span class="p" data-group-id="6191909546-2">[</span><span class="p" data-group-id="6191909546-2">]</span><span class="p" data-group-id="6191909546-1">)</span><span class="w">
-</span><span class="no">true</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">is_empty</span><span class="p" data-group-id="7004303694-1">(</span><span class="p" data-group-id="7004303694-2">[</span><span class="p" data-group-id="7004303694-2">]</span><span class="p" data-group-id="7004303694-1">)</span><span class="w">
+</span><span class="no">true</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="new/0">
+
   <div class="detail-header">
     <a href="#new/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">new()</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -192,11 +237,14 @@ Functions          </h1>
   <a href="#new/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">new</span><span class="p" data-group-id="1593337822-1">(</span><span class="p" data-group-id="1593337822-1">)</span><span class="w">
-</span><span class="p" data-group-id="1593337822-2">[</span><span class="p" data-group-id="1593337822-2">]</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Queue</span><span class="o">.</span><span class="n">new</span><span class="p" data-group-id="8643201294-1">(</span><span class="p" data-group-id="8643201294-1">)</span><span class="w">
+</span><span class="p" data-group-id="8643201294-2">[</span><span class="p" data-group-id="8643201294-2">]</span></code></pre>
+  </section>
 </section>
+
           </div>
         </section>
+
       <footer class="footer">
         <p>
           <span class="line">
@@ -228,5 +276,6 @@ Functions          </h1>
   </div>
 </section>
 </div>
+
   </body>
 </html>

@@ -1,6 +1,6 @@
 # Stella
 
-Rapid elixir library providing implementations of the most famous algorithms, data structures and math functions. Key features of this library are:
+Rapid Elixir library providing implementations of the most famous algorithms, data structures and math functions. Key features of this library are:
 - a high test coverage (near to 100%)
 - good quality documentation with examples of usage to each function
 - featured complexity of each action
@@ -12,7 +12,7 @@ The package can be installed by adding `stella` to your list of dependencies in 
 ```elixir
 def deps do
   [
-    {:stella, "~> 0.5.0"}
+    {:stella, "~> 0.6.0"}
   ]
 end
 ```
@@ -52,13 +52,28 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Priority queue
 - [ ] Binary Search Tree (with deletion)
 - [x] Struct, converting a nested Struct to a nested Map 
-- [ ] Heap with heapsort
+- [x] Heap with heapsort
 
+## Contributing
+
+We appreciate any contribution to `Stella`. You will need to have installed the newest versions of Elixir and Erlang at your machine. Then, follow the steps bellow:
+
+1.  Install project dependencies
+
+    ```bash
+    $ mix deps.get
+    ```
+
+2.  Watch tests
+
+    ```bash
+    $ mix test.watch
+    ```
 
 ## Changelog
 
 ### Version 0.6.0 (planned 2021)
-- Create Range module with `random_number` and `member?` methods
+- Create `Interval` module with `random_number` and `member?` methods
 - Rewrite `Heap` data structure and add `heapsort` to it
 
 ### Version 0.5.0 (02 March 2021) 

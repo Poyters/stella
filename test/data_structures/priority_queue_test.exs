@@ -20,6 +20,14 @@ defmodule PriorityQueueTest do
       === {2, {"make a bed", -2, {4, "Do homework", nil, nil}, nil}}
   end
 
+  test "check if is empty 1" do
+    assert PriorityQueue.new |> PriorityQueue.empty? === true
+  end
+
+  test "check if is empty 2" do
+    assert PriorityQueue.empty?({2, {"make a bed", -2, {4, "Do homework", nil, nil}, nil}}) === false
+  end
+
   test "checkout queue size; 0" do
     assert PriorityQueue.new
       |> PriorityQueue.size
@@ -106,4 +114,3 @@ defmodule PriorityQueueTest do
       === {2, {3, "Do homework", {2, "once again make a bed", nil, nil}, nil}}
   end
 end
-
