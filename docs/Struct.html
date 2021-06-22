@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.22.2">
     <meta name="project" content="stella v0.5.0">
 
-    <title>Countingsort — stella v0.5.0</title>
+    <title>Struct — stella v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
 
     <script src="dist/sidebar_items-19ef8d83d7.js"></script>
@@ -73,19 +73,13 @@ stella
 
       <h1>
         <small class="app-vsn">stella v0.5.0</small>
-Countingsort
+Struct
 
       </h1>
 
 
         <section id="moduledoc">
-<p> Documentation for <code class="inline">Counting sort</code> algorithm. All important
- informations about counting sort you can find on
- <a href="https://en.wikipedia.org/wiki/Counting_sort">Wikipedia</a> page.</p><h3 id="module-annotations" class="section-heading">
-  <a href="#module-annotations" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Annotations
-</h3>
-<ul><li>n - number of elements in list</li><li>range of the non-negative key values.</li></ul>
+<p>Documentation for <a href="#content"><code class="inline">Struct</code></a> module.</p>
         </section>
 
 
@@ -104,11 +98,18 @@ Countingsort
     </h2>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#run/1">run(list)</a>
+    <a href="#to_map/0">to_map()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Sort list</p></div>
+    <div class="summary-synopsis"><p>Converts nested Struct type element to nested Map type</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_map/1">to_map(map)</a>
+
+  </div>
 
 </div>
 
@@ -126,26 +127,52 @@ Countingsort
 Functions
           </h1>
           <div class="functions-list">
-<section class="detail" id="run/1">
+<section class="detail" id="to_map/0">
 
   <div class="detail-header">
-    <a href="#run/1" class="detail-link" title="Link to this function">
+    <a href="#to_map/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">run(list)</h1>
+    <h1 class="signature">to_map()</h1>
 
 
   </div>
 
   <section class="docstring">
 
-<p>Sort list</p><ul><li>Normal complexity: O(n)</li><li>Worst complexity: O(n + k)</li></ul><h2 id="run/1-examples" class="section-heading">
-  <a href="#run/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+<p>Converts nested Struct type element to nested Map type</p><h2 id="to_map/0-examples" class="section-heading">
+  <a href="#to_map/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Countingsort</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="6914054451-1">(</span><span class="p" data-group-id="6914054451-2">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="6914054451-2">]</span><span class="p" data-group-id="6914054451-1">)</span><span class="w">
-</span><span class="p" data-group-id="6914054451-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="6914054451-3">]</span></code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Struct</span><span class="o">.</span><span class="n">to_map</span><span class="p" data-group-id="1690351733-1">(</span><span class="p" data-group-id="1690351733-2">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1690351733-2">}</span><span class="p" data-group-id="1690351733-1">)</span><span class="w">
+</span><span class="p" data-group-id="1690351733-3">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1690351733-3">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Struct</span><span class="o">.</span><span class="n">to_map</span><span class="p" data-group-id="1690351733-4">(</span><span class="p" data-group-id="1690351733-5">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1690351733-5">}</span><span class="p" data-group-id="1690351733-4">)</span><span class="w">
+</span><span class="p" data-group-id="1690351733-6">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1690351733-6">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Struct</span><span class="o">.</span><span class="n">to_map</span><span class="p" data-group-id="1690351733-7">(</span><span class="p" data-group-id="1690351733-7">)</span><span class="w">
+</span><span class="p" data-group-id="1690351733-8">%{</span><span class="p" data-group-id="1690351733-8">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Struct</span><span class="o">.</span><span class="n">to_map</span><span class="p" data-group-id="1690351733-9">(</span><span class="no">nil</span><span class="p" data-group-id="1690351733-9">)</span><span class="w">
+</span><span class="p" data-group-id="1690351733-10">%{</span><span class="p" data-group-id="1690351733-10">}</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="to_map/1">
+
+  <div class="detail-header">
+    <a href="#to_map/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">to_map(map)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+
   </section>
 </section>
 

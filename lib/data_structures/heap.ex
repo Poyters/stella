@@ -1,12 +1,9 @@
 defmodule Heap do
   @moduledoc """
 	Documentation for `Heap` data structure
-
-	### Annotations
-	- n - number of elements in heap
 	"""
 
-	@type heap:: list(integer)
+	@type heap :: list(integer)
 
   @doc """
   Create new, empty Heap
@@ -67,7 +64,7 @@ defmodule Heap do
   def size(heap), do: length(heap)
 
 	@doc """
-  Returns the root value of the heap. Assume the passed heap has the max or min heap properties
+  Returns the root value of the heap. Assume the passed heap has the max or min heap properties.
 
   ## Examples
 
@@ -86,7 +83,7 @@ defmodule Heap do
   def root(heap), do: List.first(heap)
 
   @doc """
-  Return parent index
+  Returns parent index.
 
   ## Examples
 
@@ -107,7 +104,7 @@ defmodule Heap do
 	end
 
   @doc """
-  Returns index of left leaf
+  Returns index of left leaf.
 
   ## Examples
 
@@ -123,7 +120,7 @@ defmodule Heap do
 	def left(index), do: index * 2 + 1
 
   @doc """
-  Return right element of index
+  Returns index of right leaf.
 
   ## Examples
 
@@ -135,38 +132,11 @@ defmodule Heap do
 	@spec right(integer) :: integer
   def right(index), do: index * 2 + 2
 
-	defp max_heap(heap, index, len) do
-		l = left(index)
-		r = right(index)
-		largest = if (
-			l < len &&
-			Enum.at(heap, l) > Enum.at(heap, index)
-		), do: l, else: index
-
-		if (
-			r < len &&
-			Enum.at(heap, r) > Enum.at(heap, largest)
-		), do: r, else: largest
-	end
-
-	defp min_heap(heap, index, len) do
-		l = left(index)
-		r = right(index)
-		largest = if (
-			l < len &&
-			Enum.at(heap, l) < Enum.at(heap, index)
-		), do: l, else: index
-
-		if (
-			r < len &&
-			Enum.at(heap, r) < Enum.at(heap, largest)
-		), do: r, else: largest
-	end
-
 	@doc """
 		Method complexity: O(lgn)
-		Max heapify changes list of elements in max heap where for each
-		elements of list (except root) ownership takes place:
+
+		Max heapify changes list of elements in max heap. There is property for every element in heap:
+
 		Heap[parent(i)] >= Heap[i]
 
   ## Examples
@@ -176,6 +146,7 @@ defmodule Heap do
 
   """
 
+	@spec max_heapify(heap, integer, integer | nil) :: heap
 	def max_heapify(heap, index, len \\ nil) do
 		heap_size = if len != nil, do: len, else: length(heap)
 		largest = max_heap(heap, index, heap_size)
@@ -192,8 +163,9 @@ defmodule Heap do
 
 	@doc """
 		Method complexity: O(lgn)
-		Min heapify changes list of elements in min heap where for each
-		elements of list (except root) ownership takes place:
+
+		Min heapify changes list of elements in max heap. There is property for every element in heap:
+
 		Heap[parent(i)] <= Heap[i]
 
   ## Examples
@@ -203,10 +175,10 @@ defmodule Heap do
 
   """
 
+	@spec min_heapify(heap, integer, integer | nil) :: heap
 	def min_heapify(heap, index, len \\ nil) do
-		largest = if len != nil,
-			do: min_heap(heap, index, len),
-			else: min_heap(heap, index, length(heap))
+		heap_size = if len != nil, do: len, else: length(heap)
+		largest = min_heap(heap, index, heap_size)
 
 		if largest != index do
 			swap(List.to_tuple(heap), index, largest)
@@ -217,14 +189,12 @@ defmodule Heap do
 		end
 	end
 
-	defp swap(heap, i, j) do
-    {vi, vj} = {elem(heap, i), elem(heap, j)}
-    heap |> put_elem(i, vj) |> put_elem(j, vi)
-  end
-
 	@doc """
 		Method complexity: O(n)
-		Transforms passed heap (list) into specified heap type: min (A[parent(i)] <= A[i]) or max (A[parent(i)] >= A[i])
+
+		Transforms passed heap (list) into specified heap type
+		 - min: (Heap[parent(i)] <= Heap[i])
+		 - max: (Heap[parent(i)] >= Heap[i])
 
   ## Examples
 
@@ -239,6 +209,7 @@ defmodule Heap do
 
   """
 
+	@spec build_heap(heap, atom) :: heap
 	def build_heap(heap, type) do
 		leaf = Integer.floor_div(length(heap), 2) - 1
 		if type == :max,
@@ -255,8 +226,9 @@ defmodule Heap do
 	defp build_heap(heap, _type, _i), do: heap
 
 	@doc """
-		Heapsort
+		Method complexity: O(n)
 
+		Sorts the heap (from min to max)
   ## Examples
 
 			iex> Heap.sort([4, 1, 3, 2, 16, 9, 10, 14, 8, 7])
@@ -264,20 +236,17 @@ defmodule Heap do
 
   """
 
+	@spec sort(heap) :: heap
 	def sort(heap) do
 		max_heap = build_heap(heap, :max)
+		heap_size = size(max_heap)
 
-		i = size(max_heap) - 1
-
-		swap(List.to_tuple(max_heap), 0, i)
-			|> Tuple.to_list
-			|> max_heapify(0, i)
-			|> sort(i)
+		max_heap |> sort(heap_size)
 	end
 
-	def sort(max_heap, j) when j <= 1, do: max_heap
+	defp sort(max_heap, j) when j <= 1, do: max_heap
 
-	def sort(max_heap, j) do
+	defp sort(max_heap, j) do
 		i = j - 1
 
 		swap(List.to_tuple(max_heap), 0, i)
@@ -285,5 +254,40 @@ defmodule Heap do
 			|> max_heapify(0, i)
 			|> sort(i)
 	end
+
+	@spec max_heap(heap, integer, integer) :: integer
+	defp max_heap(heap, index, len) do
+		l = left(index)
+		r = right(index)
+		largest = if (
+			l < len &&
+			Enum.at(heap, l) > Enum.at(heap, index)
+		), do: l, else: index
+
+		if (
+			r < len &&
+			Enum.at(heap, r) > Enum.at(heap, largest)
+		), do: r, else: largest
+	end
+
+	@spec min_heap(heap, integer, integer) :: integer
+	defp min_heap(heap, index, len) do
+		l = left(index)
+		r = right(index)
+		largest = if (
+			l < len &&
+			Enum.at(heap, l) < Enum.at(heap, index)
+		), do: l, else: index
+
+		if (
+			r < len &&
+			Enum.at(heap, r) < Enum.at(heap, largest)
+		), do: r, else: largest
+	end
+
+	defp swap(heap, i, j) do
+    {vi, vj} = {elem(heap, i), elem(heap, j)}
+    heap |> put_elem(i, vj) |> put_elem(j, vi)
+  end
 
 end

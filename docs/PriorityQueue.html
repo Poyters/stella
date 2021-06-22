@@ -5,15 +5,21 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
-    <meta name="project" content="stella v0.4.0">
-    <title>PriorityQueue — stella v0.4.0</title>
+    <meta name="project" content="stella v0.5.0">
+
+    <title>PriorityQueue — stella v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-1e6a74effd.js"></script>
+
+    <script src="dist/sidebar_items-19ef8d83d7.js"></script>
+
       <script src="docs_config.js"></script>
+
     <script async src="dist/app-0103364119015b97e56c.js"></script>
+
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -41,17 +47,20 @@
   <div class="sidebar-header">
     <div class="sidebar-projectDetails">
       <a href="Stella.html" class="sidebar-projectName">
-stella      </a>
+stella
+      </a>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
+
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
+
 
   </ul>
   <div class="gradient"></div>
@@ -63,14 +72,18 @@ stella      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">stella v0.4.0</small>
-PriorityQueue      </h1>
+        <small class="app-vsn">stella v0.5.0</small>
+PriorityQueue
+
+      </h1>
 
 
         <section id="moduledoc">
 <p>Documentation for <a href="#content"><code class="inline">PriorityQueue</code></a> data structure implemented on general balanced trees by Arne Andersson
 These have no storage overhead compared to unbalanced binary trees, and
-their performance is better than AVL trees.</p><p>More about GB trees on <a href="http://user.it.uu.se/~hansh/arne1.pdf">Arne Andersson work</a></p>        </section>
+their performance is better than AVL trees.</p><p>More about GB trees on <a href="http://user.it.uu.se/~hansh/arne1.pdf">Arne Andersson work</a></p>
+        </section>
+
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -80,54 +93,88 @@ their performance is better than AVL trees.</p><p>More about GB trees on <a href
             </a>
             Summary
           </h1>
+
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#insert/3">insert(queue, element, priority)</a>
+    <a href="#empty?/1">empty?(queue)</a>
+
   </div>
+
+    <div class="summary-synopsis"><p>Check if priority queue is empty</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#insert/3">insert(queue, element, priority)</a>
+
+  </div>
+
     <div class="summary-synopsis"><p>Add a new element with priority to queue</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#is_empty/1">is_empty(queue)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Checkout if queue is empty</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#new/0">new()</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Create a new, empty qeue</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#peek/1">peek(queue)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Return peek element of queue</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#size/1">size(queue)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Return number of elements in queue</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#to_list/1">to_list(queue)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Checkout if queue is empty</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#top/1">top(queue)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Remove element from queue with the higest priority</p></div>
+
 </div>
+
   </div>
+
         </section>
+
 
         <section id="functions" class="details-list">
           <h1 class="section-heading">
@@ -135,15 +182,41 @@ their performance is better than AVL trees.</p><p>More about GB trees on <a href
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-Functions          </h1>
+Functions
+          </h1>
           <div class="functions-list">
+<section class="detail" id="empty?/1">
+
+  <div class="detail-header">
+    <a href="#empty?/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">empty?(queue)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Check if priority queue is empty</p><h2 id="empty?/1-examples" class="section-heading">
+  <a href="#empty?/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">empty?</span><span class="w">
+</span><span class="no">true</span></code></pre>
+  </section>
+</section>
 <section class="detail" id="insert/3">
+
   <div class="detail-header">
     <a href="#insert/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">insert(queue, element, priority)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -152,16 +225,20 @@ Functions          </h1>
   <a href="#insert/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="3165821023-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="3165821023-1">)</span><span class="w">
-</span><span class="p" data-group-id="3165821023-2">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3165821023-3">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="3165821023-3">}</span><span class="p" data-group-id="3165821023-2">}</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="9950293811-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="9950293811-1">)</span><span class="w">
+</span><span class="p" data-group-id="9950293811-2">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9950293811-3">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="9950293811-3">}</span><span class="p" data-group-id="9950293811-2">}</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="is_empty/1">
+
   <div class="detail-header">
     <a href="#is_empty/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">is_empty(queue)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -170,19 +247,23 @@ Functions          </h1>
   <a href="#is_empty/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="1520644630-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1520644630-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">is_empty</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="1258175732-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1258175732-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">is_empty</span><span class="w">
 </span><span class="no">false</span><span class="w">
 
 </span><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">is_empty</span><span class="w">
-</span><span class="no">true</span></code></pre>  </section>
+</span><span class="no">true</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="new/0">
+
   <div class="detail-header">
     <a href="#new/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">new()</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -192,15 +273,19 @@ Functions          </h1>
   Examples
 </h2>
 <pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w">
-</span><span class="p" data-group-id="6360276287-1">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="6360276287-1">}</span></code></pre>  </section>
+</span><span class="p" data-group-id="9748889860-1">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="9748889860-1">}</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="peek/1">
+
   <div class="detail-header">
     <a href="#peek/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">peek(queue)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -209,16 +294,20 @@ Functions          </h1>
   <a href="#peek/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="6474880513-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="6474880513-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">peek</span><span class="w">
-</span><span class="s">&quot;Do homework&quot;</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="3719988673-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="3719988673-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">peek</span><span class="w">
+</span><span class="s">&quot;Do homework&quot;</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="size/1">
+
   <div class="detail-header">
     <a href="#size/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">size(queue)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -227,16 +316,20 @@ Functions          </h1>
   <a href="#size/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="7792976370-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="7792976370-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">size</span><span class="w">
-</span><span class="mi">1</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="2663768567-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2663768567-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">size</span><span class="w">
+</span><span class="mi">1</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="to_list/1">
+
   <div class="detail-header">
     <a href="#to_list/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">to_list(queue)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -245,19 +338,23 @@ Functions          </h1>
   <a href="#to_list/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> 
-</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="3436827108-1">(</span><span class="s">&quot;Do4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="3436827108-1">)</span><span class="w"> 
-</span><span class="n">iex</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="3436827108-2">(</span><span class="s">&quot;Do1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="3436827108-2">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="3315264158-1">(</span><span class="s">&quot;Do4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="3315264158-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="3315264158-2">(</span><span class="s">&quot;Do1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="3315264158-2">)</span><span class="w">
 </span><span class="gp unselectable">iex&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">to_list</span><span class="w">
-</span><span class="p" data-group-id="3436827108-3">[</span><span class="p" data-group-id="3436827108-4">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do1&quot;</span><span class="p" data-group-id="3436827108-4">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3436827108-5">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do4&quot;</span><span class="p" data-group-id="3436827108-5">}</span><span class="p" data-group-id="3436827108-3">]</span></code></pre>  </section>
+</span><span class="p" data-group-id="3315264158-3">[</span><span class="p" data-group-id="3315264158-4">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do1&quot;</span><span class="p" data-group-id="3315264158-4">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3315264158-5">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do4&quot;</span><span class="p" data-group-id="3315264158-5">}</span><span class="p" data-group-id="3315264158-3">]</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="top/1">
+
   <div class="detail-header">
     <a href="#top/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">top(queue)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -266,11 +363,14 @@ Functions          </h1>
   <a href="#top/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="5170314058-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="5170314058-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">top</span><span class="w">
-</span><span class="p" data-group-id="5170314058-2">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="5170314058-2">}</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">new</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">insert</span><span class="p" data-group-id="9433895651-1">(</span><span class="s">&quot;Do homework&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="9433895651-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">PriorityQueue</span><span class="o">.</span><span class="n">top</span><span class="w">
+</span><span class="p" data-group-id="9433895651-2">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="9433895651-2">}</span></code></pre>
+  </section>
 </section>
+
           </div>
         </section>
+
       <footer class="footer">
         <p>
           <span class="line">
@@ -302,5 +402,6 @@ Functions          </h1>
   </div>
 </section>
 </div>
+
   </body>
 </html>

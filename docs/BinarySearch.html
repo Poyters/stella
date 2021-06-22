@@ -5,15 +5,21 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
-    <meta name="project" content="stella v0.4.0">
-    <title>BinarySearch — stella v0.4.0</title>
+    <meta name="project" content="stella v0.5.0">
+
+    <title>BinarySearch — stella v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-1e6a74effd.js"></script>
+
+    <script src="dist/sidebar_items-19ef8d83d7.js"></script>
+
       <script src="docs_config.js"></script>
+
     <script async src="dist/app-0103364119015b97e56c.js"></script>
+
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -41,17 +47,20 @@
   <div class="sidebar-header">
     <div class="sidebar-projectDetails">
       <a href="Stella.html" class="sidebar-projectName">
-stella      </a>
+stella
+      </a>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
+
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
+
 
   </ul>
   <div class="gradient"></div>
@@ -63,8 +72,10 @@ stella      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">stella v0.4.0</small>
-BinarySearch      </h1>
+        <small class="app-vsn">stella v0.5.0</small>
+BinarySearch
+
+      </h1>
 
 
         <section id="moduledoc">
@@ -72,7 +83,9 @@ BinarySearch      </h1>
   <a href="#module-annotations" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Annotations
 </h3>
-<ul><li>n - number of elements in list</li></ul>        </section>
+<ul><li>n - number of elements in list</li></ul>
+        </section>
+
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -82,6 +95,7 @@ BinarySearch      </h1>
             </a>
             Summary
           </h1>
+
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
@@ -89,11 +103,17 @@ BinarySearch      </h1>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#run/2">run(list, searched_value)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Find number in list and return it index. Requires as input sorted list.</p></div>
+
 </div>
+
   </div>
+
         </section>
+
 
         <section id="functions" class="details-list">
           <h1 class="section-heading">
@@ -101,15 +121,19 @@ BinarySearch      </h1>
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-Functions          </h1>
+Functions
+          </h1>
           <div class="functions-list">
 <section class="detail" id="run/2">
+
   <div class="detail-header">
     <a href="#run/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">run(list, searched_value)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -118,14 +142,17 @@ Functions          </h1>
   <a href="#run/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">BinarySearch</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="1222635232-1">(</span><span class="p" data-group-id="1222635232-2">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.00000001</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1222635232-2">]</span><span class="p">,</span><span class="w"> </span><span class="mf">3.00000001</span><span class="p" data-group-id="1222635232-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">BinarySearch</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="5351033432-1">(</span><span class="p" data-group-id="5351033432-2">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.00000001</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="5351033432-2">]</span><span class="p">,</span><span class="w"> </span><span class="mf">3.00000001</span><span class="p" data-group-id="5351033432-1">)</span><span class="w">
 </span><span class="mi">2</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">BinarySearch</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="1222635232-3">(</span><span class="p" data-group-id="1222635232-4">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1222635232-4">]</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="1222635232-3">)</span><span class="w">
-</span><span class="mi">3</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">BinarySearch</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="5351033432-3">(</span><span class="p" data-group-id="5351033432-4">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="5351033432-4">]</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5351033432-3">)</span><span class="w">
+</span><span class="mi">3</span></code></pre>
+  </section>
 </section>
+
           </div>
         </section>
+
       <footer class="footer">
         <p>
           <span class="line">
@@ -157,5 +184,6 @@ Functions          </h1>
   </div>
 </section>
 </div>
+
   </body>
 </html>

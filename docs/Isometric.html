@@ -5,15 +5,21 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.22.2">
-    <meta name="project" content="stella v0.4.0">
-    <title>Isometric — stella v0.4.0</title>
+    <meta name="project" content="stella v0.5.0">
+
+    <title>Isometric — stella v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-d678dad126d82ddc061f.css" />
-    <script src="dist/sidebar_items-1e6a74effd.js"></script>
+
+    <script src="dist/sidebar_items-19ef8d83d7.js"></script>
+
       <script src="docs_config.js"></script>
+
     <script async src="dist/app-0103364119015b97e56c.js"></script>
+
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -41,17 +47,20 @@
   <div class="sidebar-header">
     <div class="sidebar-projectDetails">
       <a href="Stella.html" class="sidebar-projectName">
-stella      </a>
+stella
+      </a>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
+
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
+
 
   </ul>
   <div class="gradient"></div>
@@ -63,12 +72,16 @@ stella      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">stella v0.4.0</small>
-Isometric      </h1>
+        <small class="app-vsn">stella v0.5.0</small>
+Isometric
+
+      </h1>
 
 
         <section id="moduledoc">
-<p>Documentation for <a href="#content"><code class="inline">Isometric</code></a>.</p>        </section>
+<p>Documentation for <a href="#content"><code class="inline">Isometric</code></a>.</p>
+        </section>
+
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -78,6 +91,7 @@ Isometric      </h1>
             </a>
             Summary
           </h1>
+
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
@@ -85,44 +99,65 @@ Isometric      </h1>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#convert_cartesian_to_isometric/3">convert_cartesian_to_isometric(x, y, z \\ 0)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Projects 2D/3D carthesian coordinates to 2D isometric coordinates.
 The X axis goes from top-left to bottom-right.
 The Y axis goes from top-right to bottom-left.
 The Z axis goes straight up.</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#distance_between/2">distance_between(point_a, point_b)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Convert string to point (2D or 3D)</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#point_to_string/1">point_to_string(point)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Convert point to string</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#string_to_point/1">string_to_point(string)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Convert string to point (2D or 3D)</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#to_string/2">to_string(x, y)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Convert coorddinates to string</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#to_string/3">to_string(x, y, z)</a>
+
   </div>
+
     <div class="summary-synopsis"><p>Convert coorddinates to string</p></div>
+
 </div>
+
   </div>
+
         </section>
+
 
         <section id="functions" class="details-list">
           <h1 class="section-heading">
@@ -130,16 +165,21 @@ The Z axis goes straight up.</p></div>
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-Functions          </h1>
+Functions
+          </h1>
           <div class="functions-list">
 <section class="detail" id="convert_cartesian_to_isometric/3">
+
     <span id="convert_cartesian_to_isometric/2"></span>
+
   <div class="detail-header">
     <a href="#convert_cartesian_to_isometric/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">convert_cartesian_to_isometric(x, y, z \\ 0)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -151,16 +191,20 @@ The Z axis goes straight up.</p><h2 id="convert_cartesian_to_isometric/3-example
   <a href="#convert_cartesian_to_isometric/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">convert_cartesian_to_isometric</span><span class="p" data-group-id="8864005814-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="8864005814-1">)</span><span class="w">
-</span><span class="p" data-group-id="8864005814-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p" data-group-id="8864005814-2">}</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">convert_cartesian_to_isometric</span><span class="p" data-group-id="7518117761-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="7518117761-1">)</span><span class="w">
+</span><span class="p" data-group-id="7518117761-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p" data-group-id="7518117761-2">}</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="distance_between/2">
+
   <div class="detail-header">
     <a href="#distance_between/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">distance_between(point_a, point_b)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -169,19 +213,23 @@ The Z axis goes straight up.</p><h2 id="convert_cartesian_to_isometric/3-example
   <a href="#distance_between/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">distance_between</span><span class="p" data-group-id="1234412022-1">(</span><span class="p" data-group-id="1234412022-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1234412022-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1234412022-3">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1234412022-3">}</span><span class="p" data-group-id="1234412022-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">distance_between</span><span class="p" data-group-id="3627637918-1">(</span><span class="p" data-group-id="3627637918-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="3627637918-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3627637918-3">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="3627637918-3">}</span><span class="p" data-group-id="3627637918-1">)</span><span class="w">
 </span><span class="mi">2</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">distance_between</span><span class="p" data-group-id="1234412022-4">(</span><span class="p" data-group-id="1234412022-5">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">91</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p" data-group-id="1234412022-5">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1234412022-6">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1234412022-6">}</span><span class="p" data-group-id="1234412022-4">)</span><span class="w">
-</span><span class="mi">103</span></code></pre>  </section>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">distance_between</span><span class="p" data-group-id="3627637918-4">(</span><span class="p" data-group-id="3627637918-5">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">91</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p" data-group-id="3627637918-5">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3627637918-6">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="3627637918-6">}</span><span class="p" data-group-id="3627637918-4">)</span><span class="w">
+</span><span class="mi">103</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="point_to_string/1">
+
   <div class="detail-header">
     <a href="#point_to_string/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">point_to_string(point)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -190,16 +238,20 @@ The Z axis goes straight up.</p><h2 id="convert_cartesian_to_isometric/3-example
   <a href="#point_to_string/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">point_to_string</span><span class="p" data-group-id="4288162852-1">(</span><span class="p" data-group-id="4288162852-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">z</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="4288162852-2">}</span><span class="p" data-group-id="4288162852-1">)</span><span class="w">
-</span><span class="s">&quot;x: 1, y: 2, z: 3&quot;</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">point_to_string</span><span class="p" data-group-id="1651204753-1">(</span><span class="p" data-group-id="1651204753-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">z</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="1651204753-2">}</span><span class="p" data-group-id="1651204753-1">)</span><span class="w">
+</span><span class="s">&quot;x: 1, y: 2, z: 3&quot;</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="string_to_point/1">
+
   <div class="detail-header">
     <a href="#string_to_point/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">string_to_point(string)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -208,16 +260,20 @@ The Z axis goes straight up.</p><h2 id="convert_cartesian_to_isometric/3-example
   <a href="#string_to_point/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">string_to_point</span><span class="p" data-group-id="0004747407-1">(</span><span class="s">&quot;x: 1, y: 2, z: 3&quot;</span><span class="p" data-group-id="0004747407-1">)</span><span class="w">
-</span><span class="p" data-group-id="0004747407-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">z</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="0004747407-2">}</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">string_to_point</span><span class="p" data-group-id="4830879099-1">(</span><span class="s">&quot;x: 1, y: 2, z: 3&quot;</span><span class="p" data-group-id="4830879099-1">)</span><span class="w">
+</span><span class="p" data-group-id="4830879099-2">%{</span><span class="ss">x</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">y</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">z</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="4830879099-2">}</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="to_string/2">
+
   <div class="detail-header">
     <a href="#to_string/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">to_string(x, y)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -226,16 +282,20 @@ The Z axis goes straight up.</p><h2 id="convert_cartesian_to_isometric/3-example
   <a href="#to_string/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">to_string</span><span class="p" data-group-id="4640768298-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="4640768298-1">)</span><span class="w">
-</span><span class="s">&quot;x: 1, y: 2&quot;</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">to_string</span><span class="p" data-group-id="1456135893-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1456135893-1">)</span><span class="w">
+</span><span class="s">&quot;x: 1, y: 2&quot;</span></code></pre>
+  </section>
 </section>
 <section class="detail" id="to_string/3">
+
   <div class="detail-header">
     <a href="#to_string/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">to_string(x, y, z)</h1>
+
+
   </div>
 
   <section class="docstring">
@@ -244,11 +304,14 @@ The Z axis goes straight up.</p><h2 id="convert_cartesian_to_isometric/3-example
   <a href="#to_string/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">to_string</span><span class="p" data-group-id="0798508671-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="0798508671-1">)</span><span class="w">
-</span><span class="s">&quot;x: 1, y: 2, z: 3&quot;</span></code></pre>  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Isometric</span><span class="o">.</span><span class="n">to_string</span><span class="p" data-group-id="8389780081-1">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="8389780081-1">)</span><span class="w">
+</span><span class="s">&quot;x: 1, y: 2, z: 3&quot;</span></code></pre>
+  </section>
 </section>
+
           </div>
         </section>
+
       <footer class="footer">
         <p>
           <span class="line">
@@ -280,5 +343,6 @@ The Z axis goes straight up.</p><h2 id="convert_cartesian_to_isometric/3-example
   </div>
 </section>
 </div>
+
   </body>
 </html>
