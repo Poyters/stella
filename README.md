@@ -72,9 +72,10 @@ We appreciate any contribution to `Stella`. You will need to have installed the 
 
 ## Changelog
 
-### Version 0.6.0 (planned 2021)
+### Version 0.6.0 (planned July 2021)
 - Create `Interval` module with `random_number` and `member?` methods
 - Rewrite `Heap` data structure and add `heapsort` to it
+- Add type specs to a whole project
 
 ### Version 0.5.0 (02 March 2021) 
 - Add a new documentation test, expand the method descriptions 
