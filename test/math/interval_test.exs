@@ -74,4 +74,47 @@ defmodule IntervalTest do
     assert Interval.member?(-5, -6, 0) == nil
   end
 
+  test "contained 1" do
+    assert Interval.contained?(1..2, 1..3) == true
+  end
+
+  test "contained 2" do
+    assert Interval.contained?(1..3, 1..3) == true
+  end
+
+  test "contained 3" do
+    assert Interval.contained?(1..4, 1..3) == false
+  end
+
+  test "contained 4" do
+    assert Interval.contained?(-5..-3, 1..3) == false
+  end
+
+  test "contained 5" do
+    assert Interval.contained?(-5..-3, -4..3) == false
+  end
+
+  test "contained 6" do
+    assert Interval.contained?(-5..-3, -5..3) == true
+  end
+
+  test "randdom number 1" do
+    rand = Interval.random_number(1, 1)
+    assert rand <= 1 && rand >= 1 == true
+  end
+
+  test "randdom number 2" do
+    rand = Interval.random_number(1, 2)
+    assert rand <= 2 && rand >= 1 == true
+  end
+
+  test "randdom number 3" do
+    rand = Interval.random_number(-5, 1)
+    assert rand <= 1 && rand >= -5 == true
+  end
+
+  test "randdom number 4" do
+    assert Interval.random_number(-5, -6) == nil
+  end
+
 end

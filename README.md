@@ -35,7 +35,7 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Vector 3D
 - [x] Ackermann function
 - [x] Fibonacci sequence
-- [x] Range
+- [x] Math intervals
  
 
 ### Algorithms
