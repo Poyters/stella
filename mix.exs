@@ -48,14 +48,14 @@ defmodule Stella.MixProject do
   end
 
   defp description() do
-    "Rapid, Elixir library providing implementations of the most famous algorithms, data structures and math functions, out of the box"
+    "Rapid Elixir library providing implementations of the most famous algorithms, data structures and math functions, out of the box"
   end
 
   defp package() do
     [
       name: "stella",
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => "https://github.com/RafalKostecki/stella"}
+      links: %{"GitHub" => "https://github.com/Poyters/stella"}
     ]
   end
 end
