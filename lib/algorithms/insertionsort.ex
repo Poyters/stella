@@ -1,9 +1,9 @@
 defmodule Insertionsort do
   @moduledoc """
 	Documentation for `Insertion sort` algorithm. All important
-  informations about counting sort you can find on
+  informations about counting sort you can find at
   [Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort) page.
-	
+
 	### Annotations
 	 - n - number of elements in list
 	"""
@@ -21,9 +21,9 @@ defmodule Insertionsort do
 
       iex> Insertionsort.run([-7, 0, 0, -2, -3, 5, 2])
       [-7, -3, -2, 0, 0, 2, 5]
-      
+
   """
-  
+  @spec run(list(integer)) :: list
   def run(unsorted) when is_list(unsorted), do: run_with_sorted(unsorted, [])
 
   defp run_with_sorted([], sorted), do: sorted

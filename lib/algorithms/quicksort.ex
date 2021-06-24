@@ -3,7 +3,7 @@ defmodule Quicksort do
 	Documentation for `Quick sort` algorithm. All important
   informations about counting sort you can find on
   [Wikipedia](https://en.wikipedia.org/wiki/Quicksort) page.
-	
+
 	### Annotations
 	 - n - number of elements in list
 	"""
@@ -20,9 +20,9 @@ defmodule Quicksort do
 
       iex> Quicksort.run([-2.0, 0, 4, 1, 3, 2])
       [-2.0, 0, 1, 2, 3, 4]
-      
-  """
 
+  """
+  @spec run(list(number)) :: list(number)
   def run([]), do: []
 
   def run([h | t]) do

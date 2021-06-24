@@ -1,7 +1,7 @@
 defmodule Countingsort do
   @moduledoc """
   Documentation for `Counting sort` algorithm. All important
-  informations about counting sort you can find on
+  informations about counting sort you can find at
   [Wikipedia](https://en.wikipedia.org/wiki/Counting_sort) page.
 
 	### Annotations
@@ -19,8 +19,11 @@ defmodule Countingsort do
       iex> Countingsort.run([4, 1, 3, 5, 2])
       [1, 2, 3, 4, 5]
 
-  """
+      iex> Countingsort.run([1, 2, 4, 3])
+      [1, 2, 3, 4]
 
+  """
+  @spec run(list(integer)) :: list(integer)
   def run([]), do: []
 
   def run(list) do

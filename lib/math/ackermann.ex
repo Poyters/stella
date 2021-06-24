@@ -1,6 +1,6 @@
 defmodule Ackermann do
   @moduledoc """
-  Documentation for `Ackermann`.
+  Ackermann function is one of the simplest example of a total computable function that is not primitive recursive.
   """
 
   @doc """
@@ -14,10 +14,10 @@ defmodule Ackermann do
 
       iex> Ackermann.ack(3, 6)
       509
-      
-  """
 
-  def ack(0, n), do: n + 1 
+  """
+  @spec ack(non_neg_integer, number) :: number
+  def ack(0, n), do: n + 1
   def ack(m, 0), do: ack(m - 1, 1)
   def ack(m, n), do: ack(m - 1, ack(m, n - 1))
 end

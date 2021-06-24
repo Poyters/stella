@@ -18,10 +18,10 @@ defmodule Interval do
       false
 
   """
-
-  @spec member?(integer | float, integer | float, integer | float):: boolean | nil
+  @spec member?(number, number, number):: boolean | nil
   def member?(min, max, _) when min > max, do: nil
   def member?(min, max, x), do: x >= min && x <= max
+
 
   @doc """
   Checks if interval is contained in the second one
@@ -38,8 +38,7 @@ defmodule Interval do
       false
 
   """
-
-  @spec contained?(Range, Range):: boolean
+  @spec contained?(Range.t(), Range.t()) :: boolean
   def contained?(min..max, destination_range) do
     Enum.member?(destination_range, min) && Enum.member?(destination_range, max)
   end
@@ -57,7 +56,6 @@ defmodule Interval do
       nil
 
   """
-
   @spec random_number(integer, integer):: integer | nil
   def random_number(min, max) when min > max, do: nil
   def random_number(min, max), do: Enum.random(min..max)

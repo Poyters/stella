@@ -1,6 +1,6 @@
 defmodule Fibonacci do
   @moduledoc """
-  Documentation for `Fibonacci sequence`.
+  The Fibonacci polynomials are a polynomial sequence which can be considered as a generalization of the Fibonacci numbers.
   """
 
   @doc """
@@ -13,10 +13,10 @@ defmodule Fibonacci do
 
       iex> Fibonacci.sequence(10)
       55
-      
-  """
 
+  """
+  @spec sequence(non_neg_integer) :: non_neg_integer
   def sequence(0), do: 0
   def sequence(1), do: 1
-  def sequence(n), do: sequence(n-1) + sequence(n-2)  
+  def sequence(n), do: sequence(n-1) + sequence(n-2)
 end

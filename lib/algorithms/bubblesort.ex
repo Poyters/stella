@@ -3,7 +3,7 @@ defmodule Bubblesort do
 	Documentation for `Bubble sort` algorithm. All important
   informations about counting sort you can find on
   [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort) page.
-	
+
 	### Annotations
 	 - n - number of elements in list
 	"""
@@ -21,8 +21,12 @@ defmodule Bubblesort do
 
       iex> Bubblesort.run([-2.0, 0, 4, 1, 3, 2])
       [-2.0, 0, 1, 2, 3, 4]
-      
+
+      iex> Bubblesort.run([-2.0, 0.0001, 0.00001, 1, 3, 2])
+      [-2.0, 0.00001, 0.0001, 1, 2, 3]
+
   """
+  @spec run(list(number)) :: list(number)
   def run(list) when is_list(list) do
   after_iteration = run_internal(list)
 

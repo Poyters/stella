@@ -14,7 +14,6 @@ defmodule Heap do
 			[]
 
   """
-
 	@spec new :: []
   def new, do: []
 
@@ -27,7 +26,6 @@ defmodule Heap do
 			false
 
   """
-
 	@spec empty?(heap) :: boolean
   def empty?(heap), do: length(heap) == 0
 
@@ -43,7 +41,6 @@ defmodule Heap do
 			false
 
   """
-
 	@spec member?(heap, integer) :: boolean
   def member?(heap, value), do: Enum.member?(heap, value)
 
@@ -59,8 +56,7 @@ defmodule Heap do
 			0
 
   """
-
-	@spec size(heap) :: integer
+	@spec size(heap) :: non_neg_integer
   def size(heap), do: length(heap)
 
 	@doc """
@@ -78,7 +74,6 @@ defmodule Heap do
 			3
 
   """
-
 	@spec root(heap) :: integer | nil
   def root(heap), do: List.first(heap)
 
@@ -95,8 +90,7 @@ defmodule Heap do
 
 
   """
-
-	@spec parent(integer) :: nil | integer
+	@spec parent(integer) :: nil | non_neg_integer
 	def parent(index) do
 		leaf = Integer.floor_div(index - 1, 2)
 
@@ -116,7 +110,7 @@ defmodule Heap do
 
   """
 
-	@spec left(integer) :: integer
+	@spec left(non_neg_integer) :: non_neg_integer
 	def left(index), do: index * 2 + 1
 
   @doc """
@@ -128,8 +122,7 @@ defmodule Heap do
 			6
 
   """
-
-	@spec right(integer) :: integer
+	@spec right(non_neg_integer) :: non_neg_integer
   def right(index), do: index * 2 + 2
 
 	@doc """
@@ -145,7 +138,6 @@ defmodule Heap do
 			[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
 
   """
-
 	@spec max_heapify(heap, integer, integer | nil) :: heap
 	def max_heapify(heap, index, len \\ nil) do
 		heap_size = if len != nil, do: len, else: length(heap)
@@ -174,7 +166,6 @@ defmodule Heap do
 			[1, 4, 10, 14, 7, 9, 3, 2, 8, 16]
 
   """
-
 	@spec min_heapify(heap, integer, integer | nil) :: heap
 	def min_heapify(heap, index, len \\ nil) do
 		heap_size = if len != nil, do: len, else: length(heap)
@@ -208,7 +199,6 @@ defmodule Heap do
 			[1, 2, 3, 8, 4, 10, 9, 14, 16, 7]
 
   """
-
 	@spec build_heap(heap, atom) :: heap
 	def build_heap(heap, type) do
 		leaf = Integer.floor_div(length(heap), 2) - 1
@@ -235,7 +225,6 @@ defmodule Heap do
 			[1, 2, 3, 4, 7, 8, 9, 10, 14, 16]
 
   """
-
 	@spec sort(heap) :: heap
 	def sort(heap) do
 		max_heap = build_heap(heap, :max)

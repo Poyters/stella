@@ -13,8 +13,9 @@ defmodule Isometric do
 
       iex> Isometric.convert_cartesian_to_isometric(1, 2)
       %{x: -1, y: 1.5}
-      
+
   """
+  @spec convert_cartesian_to_isometric(number, number, number) :: %{x: number, y: float}
   def convert_cartesian_to_isometric(x, y, z \\ 0) do
     %{
       x: x - y,
@@ -29,11 +30,10 @@ defmodule Isometric do
 
       iex> Isometric.to_string(1, 2)
       "x: 1, y: 2"
-      
+
   """
-  def to_string(x, y) do
-    "x: #{x}, y: #{y}"
-  end
+  @spec to_string(number, number) :: <<_::64, _::_*8>>
+  def to_string(x, y), do: "x: #{x}, y: #{y}"
 
   @doc """
   Convert coorddinates to string
@@ -42,11 +42,13 @@ defmodule Isometric do
 
       iex> Isometric.to_string(1, 2, 3)
       "x: 1, y: 2, z: 3"
-      
+
+      iex> Isometric.to_string(1, 2, 3)
+      "x: 1, y: 2, z: 3"
+
   """
-  def to_string(x, y, z) do
-    "x: #{x}, y: #{y}, z: #{z}"
-  end
+  @spec to_string(number, number, number) :: <<_::64, _::_*8>>
+  def to_string(x, y, z), do: "x: #{x}, y: #{y}, z: #{z}"
 
   @doc """
   Convert point to string
@@ -55,12 +57,13 @@ defmodule Isometric do
 
       iex> Isometric.point_to_string(%{x: 1, y: 2, z: 3})
       "x: 1, y: 2, z: 3"
-      
+
   """
+  @spec point_to_string(map) :: <<_::64, _::_*8>>
   def point_to_string(point) do
     if point[:z] do
        "x: #{point[:x]}, y: #{point[:y]}, z: #{point[:z]}"
-    else 
+    else
       "x: #{point[:x]}, y: #{point[:y]}"
     end
   end
@@ -72,15 +75,16 @@ defmodule Isometric do
 
       iex> Isometric.string_to_point("x: 1, y: 2, z: 3")
       %{x: 1, y: 2, z: 3}
-      
+
   """
+  @spec string_to_point(binary) :: map
   def string_to_point(string) do
-    string 
+    string
     |> String.split([", ", ": "])
     |> Enum.chunk_every(2)
-    |> Enum.map(fn [key, value] -> 
-        {String.to_atom(key), String.to_integer(value)} 
-      end) 
+    |> Enum.map(fn [key, value] ->
+        {String.to_atom(key), String.to_integer(value)}
+      end)
     |> Map.new
   end
 
@@ -94,11 +98,12 @@ defmodule Isometric do
 
       iex> Isometric.distance_between(%{x: -91, y: -20}, %{x: -10, y: 2})
       103
-      
+
   """
+  @spec distance_between(map, map) :: number
   def distance_between(point_a, point_b) do
-    x_delta = abs(point_a[:x] - point_b[:x]) 
-    y_delta = abs(point_a[:y] - point_b[:y]) 
+    x_delta = abs(point_a[:x] - point_b[:x])
+    y_delta = abs(point_a[:y] - point_b[:y])
 
     x_delta + y_delta
   end

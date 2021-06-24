@@ -13,8 +13,9 @@ defmodule Vector3D do
 
       iex> Vector3D.new()
       %{x: 0, y: 0, z: 0}
-      
+
   """
+  @spec new(number, number, number) :: %{x: number, y: number, z: number}
   def new(x \\ 0, y \\ 0, z \\ 0), do: %{x: x, y: y, z: z}
 
   @doc """
@@ -29,11 +30,12 @@ defmodule Vector3D do
 
       iex> Vector3D.new(-3, 3, 1) |> Vector3D.length()
       4.358898943540674
-      
+
   """
-  def length(vector) do 
+  @spec length(%{x: number, y: number, z: number}) :: float
+  def length(vector) do
     :math.sqrt(
-      :math.pow(vector[:x], 2) + 
+      :math.pow(vector[:x], 2) +
       :math.pow(vector[:y], 2) +
       :math.pow(vector[:z], 2)
     )
@@ -49,9 +51,10 @@ defmodule Vector3D do
 
       iex> Vector3D.new(-3, 3, 4) |> Vector3D.add(%{x: 3, y: 6, z: 3})
       %{x: 0, y: 9, z: 7}
-      
+
   """
-  def add(curr_vector, given_vector) do 
+  @spec add(%{x: number, y: number, z: number}, %{x: number, y: number, z: number}) :: %{x: number, y: number, z: number}
+  def add(curr_vector, given_vector) do
     %{
       x: curr_vector[:x] + given_vector[:x],
       y: curr_vector[:y] + given_vector[:y],
@@ -69,9 +72,10 @@ defmodule Vector3D do
 
       iex> Vector3D.new(-3, 3, 5) |> Vector3D.sub(%{x: 3, y: 6, z: 5})
       %{x: -6, y: -3, z: 0}
-      
+
   """
-  def sub(curr_vector, given_vector) do 
+  @spec sub(%{x: number, y: number, z: number}, %{x: number, y: number, z: number}) :: %{x: number, y: number, z: number}
+  def sub(curr_vector, given_vector) do
     %{
       x: curr_vector[:x] - given_vector[:x],
       y: curr_vector[:y] - given_vector[:y],
@@ -89,9 +93,13 @@ defmodule Vector3D do
 
       iex> Vector3D.new(-3, 3, 1) |> Vector3D.scale(3)
       %{x: -9, y: 9, z: 3}
-      
+
+      iex> Vector3D.new(-3, 3, 1) |> Vector3D.scale(3.08)
+      %{x: -9.24, y: 9.24, z: 3.08}
+
   """
-  def scale(vector, scalar) do 
+  @spec scale(%{x: number, y: number, z: number}, float) :: %{x: number, y: number, z: number}
+  def scale(vector, scalar) do
     %{
       x: vector[:x] * scalar,
       y: vector[:y] * scalar,
@@ -109,9 +117,10 @@ defmodule Vector3D do
 
       iex> Vector3D.new(-3, 3, 2) |> Vector3D.multiply(%{x: 2, y: 3, z: 2})
       %{x: -6, y: 9, z: 4}
-      
+
   """
-  def multiply(curr_vector, given_vector) do 
+  @spec multiply(%{x: number, y: number, z: number}, %{x: number, y: number, z: number}) :: %{x: number, y: number, z: number}
+  def multiply(curr_vector, given_vector) do
     %{
       x: curr_vector[:x] * given_vector[:x],
       y: curr_vector[:y] * given_vector[:y],
@@ -129,9 +138,10 @@ defmodule Vector3D do
 
       iex> Vector3D.new(-3, 3, 3) |> Vector3D.divide(%{x: 2, y: 3, z: 2})
       %{x: -1.5, y: 1.0, z: 1.5}
-      
+
   """
-  def divide(curr_vector, given_vector) do 
+  @spec divide(%{x: number, y: number, z: number}, %{x: number, y: number, z: number}) :: %{x: number, y: number, z: number}
+  def divide(curr_vector, given_vector) do
     %{
       x: curr_vector[:x] / given_vector[:x],
       y: curr_vector[:y] / given_vector[:y],
@@ -158,12 +168,13 @@ defmodule Vector3D do
 
       iex> Vector3D.new(-3, 3, 3) |> Vector3D.equals(%{x: 2, y: 3, z: 2})
       false
-      
+
   """
-  def equals(curr_vector, given_vector) do 
-    curr_vector[:x] / 1 === given_vector[:x] / 1 && 
+  @spec equals(%{x: number, y: number, z: number}, %{x: number, y: number, z: number}) :: boolean
+  def equals(curr_vector, given_vector) do
+    curr_vector[:x] / 1 === given_vector[:x] / 1 &&
     curr_vector[:y] / 1 === given_vector[:y] / 1 &&
-    curr_vector[:z] / 1 === given_vector[:z] / 1 
+    curr_vector[:z] / 1 === given_vector[:z] / 1
   end
 
   @doc """
@@ -173,8 +184,9 @@ defmodule Vector3D do
 
       iex> Vector3D.to_list(%{x: 1, y: 2, z: 3})
       [1, 2, 3]
-      
+
   """
+  @spec to_list(%{x: number, y: number, z: number}) :: [...]
   def to_list(vector), do: [vector[:x], vector[:y], vector[:z]]
 
   @doc """
@@ -184,8 +196,9 @@ defmodule Vector3D do
 
       iex> Vector3D.to_struct([1, 2, 3])
       %{x: 1, y: 2, z: 3}
-      
+
   """
+  @spec to_struct([...]) :: %{x: number, y: number, z: number}
   def to_struct(vector) do
     %{
       x: Enum.at(vector, 0),
@@ -204,9 +217,10 @@ defmodule Vector3D do
 
       iex> Vector3D.distance(%{x: -2, y: 4, z: 5}, %{x: 2, y: 2.0, z: 1})
       6.0
-      
+
   """
-  def distance(curr_vector, given_vector) do 
+  @spec distance(%{x: number, y: number, z: number}, %{x: number, y: number, z: number}) :: float
+  def distance(curr_vector, given_vector) do
     delta_x = curr_vector[:x] - given_vector[:x]
     delta_y = curr_vector[:y] - given_vector[:y]
     delta_z = curr_vector[:z] - given_vector[:z]

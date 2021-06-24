@@ -4,7 +4,7 @@ defmodule Stack do
   """
 
   @doc """
-  Create new, empty stack
+  Creates new, empty stack
 
   ## Examples
 
@@ -16,28 +16,31 @@ defmodule Stack do
 
       iex> Stack.new() |> Stack.push([1, 2, 3, 4]) |> Stack.pop()
       [1, 2, 3]
-      
-  """
 
+  """
+  @spec new :: []
   def new, do: []
 
   @doc """
-  Check if stack is empty
+  Checks if stack is empty
 
   ## Examples
 
       iex> Stack.is_empty([])
       true
-      
-  """
 
+      iex> Stack.is_empty(["5", 3, 4])
+      false
+
+  """
+  @spec is_empty(list) :: boolean
   def is_empty(stack) do
     if length(stack) == 0, do: true, else: false
   end
 
 
   @doc """
-  Add new element on the top of stack
+  Adds a new element to the top of the stack
 
   ## Examples
 
@@ -47,11 +50,11 @@ defmodule Stack do
       iex> Stack.push([1, 2], 3)
       [1, 2, 3]
 
-      iex> Stack.push([1, 2], [3, 4, 5])
-      [1, 2, 3, 4, 5]
-      
-  """
+      iex> Stack.push([1, 2, :xxx], [3, 4, 0.001, 5, "5"])
+      [1, 2, :xxx, 3, 4, 0.001, 5, "5"]
 
+  """
+  @spec push(list, list) :: list
   def push(stack, element) when is_list(element) do
     Enum.concat(stack, element)
   end
@@ -61,7 +64,7 @@ defmodule Stack do
   end
 
   @doc """
-  Delete top element of stack
+  Deletes the top element of the stack
 
   ## Examples
 
@@ -70,11 +73,11 @@ defmodule Stack do
 
       iex> Stack.pop([1])
       []
-      
-  """
 
+  """
+  @spec pop(list) :: list
   def pop(stack) when length(stack) <= 1, do: []
 
-  def pop(stack), do: Enum.drop stack, -1 
+  def pop(stack), do: Enum.drop stack, -1
 
 end

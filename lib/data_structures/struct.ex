@@ -21,9 +21,10 @@ defmodule Struct do
       %{}
 
   """
-
+  @spec to_map :: %{}
   def to_map(), do: %{}
 
+  @spec to_map(nil | :maps.iterator(any, any) | map) :: map
   def to_map(nil), do: %{}
 
   def to_map(map), do: :maps.map(&do_sample/2, map)

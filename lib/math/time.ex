@@ -12,6 +12,7 @@ defmodule Time do
       1000
 
   """
+  @spec sec_to_ms(number) :: number
   def sec_to_ms(sec) do
     sec * 1000
   end
@@ -25,9 +26,11 @@ defmodule Time do
       1.0
 
   """
+  @spec ms_to_sec(number) :: float
   def ms_to_sec(ms) do
     ms / 1000
   end
+
 
   @doc """
   Converts HH:MM:SS time type to seconds (integer)
@@ -38,8 +41,9 @@ defmodule Time do
       70
 
   """
+  @spec hms_to_sec(binary) :: number
   def hms_to_sec(hms) do
-    items = hms 
+    items = hms
       |> String.split(":")
       |> Enum.map(&String.to_integer/1)
 
@@ -53,8 +57,9 @@ defmodule Time do
 
       iex> Time.hms_to_ms("0:1:10")
       70000
-      
+
   """
+  @spec hms_to_ms(binary) :: number
   def hms_to_ms(hms) do
     hms_to_sec(hms) * 1000
   end
@@ -75,8 +80,9 @@ defmodule Time do
 
       iex> Time.ms_to_hms(61000)
       "00:01:01"
-      
+
   """
+  @spec ms_to_hms(integer, binary) :: binary
   def ms_to_hms(ms, separator \\ ":") do
     hours = Integer.to_string(Integer.floor_div(Integer.floor_div(ms, 1000), 3600))
     ms_modulo = rem(Integer.floor_div(ms, 1000), 3600)
@@ -86,7 +92,7 @@ defmodule Time do
     hh = String.pad_leading(hours, 2, "0")
     mm = String.pad_leading(minutes, 2, "0")
     ss = String.pad_leading(seconds, 2, "0")
-    
+
     "#{hh}#{separator}#{mm}#{separator}#{ss}"
   end
 
@@ -106,8 +112,9 @@ defmodule Time do
 
       iex> Time.sec_to_hms(61)
       "00:01:01"
-      
+
   """
+  @spec sec_to_hms(integer, binary) :: binary
   def sec_to_hms(sec, separator \\ ":"), do: ms_to_hms(sec*1000, separator)
 
 end
