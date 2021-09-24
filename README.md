@@ -23,7 +23,7 @@ Link to hex package: https://hex.pm/packages/stella
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
 
-## Content of version 0.6.0 (in development)
+## Content of version 0.6.0
 
 ### Math
 - [x] Cartesian
@@ -50,7 +50,6 @@ Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 - [x] Queue
 - [x] Stack
 - [x] Priority queue
-- [ ] Binary Search Tree (with deletion)
 - [x] Struct, converting a nested Struct to a nested Map 
 - [x] Heap with heapsort
 
@@ -72,7 +71,7 @@ We appreciate any contribution to `Stella`. You will need to have installed the 
 
 ## Changelog
 
-### Version 0.6.0 (planned July 2021)
+### Version 0.6.0 (24 September 2021)
 - Create `Interval` module with `random_number` and `member?` methods
 - Rewrite `Heap` data structure and add `heapsort` to it
 - Add type specs to a whole project
