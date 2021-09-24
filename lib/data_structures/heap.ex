@@ -3,6 +3,9 @@ defmodule Heap do
 	Documentation for `Heap` data structure
 	"""
 
+	@typedoc """
+   Heap - data structure
+   """
 	@type heap :: list(integer)
 
   @doc """
@@ -88,7 +91,6 @@ defmodule Heap do
 			iex> Heap.parent(0)
 			nil
 
-
   """
 	@spec parent(integer) :: nil | non_neg_integer
 	def parent(index) do
@@ -109,7 +111,6 @@ defmodule Heap do
 			9
 
   """
-
 	@spec left(non_neg_integer) :: non_neg_integer
 	def left(index), do: index * 2 + 1
 
@@ -219,6 +220,7 @@ defmodule Heap do
 		Method complexity: O(n)
 
 		Sorts the heap (from min to max)
+		
   ## Examples
 
 			iex> Heap.sort([4, 1, 3, 2, 16, 9, 10, 14, 8, 7])
