@@ -3,7 +3,7 @@ defmodule StellaTest do
   doctest Stella
 
   test "checkout version" do
-    assert Stella.version == '0.6.0'
+    assert Stella.version == '0.7.0'
   end
 
 end

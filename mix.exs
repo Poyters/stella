@@ -4,8 +4,8 @@ defmodule Stella.MixProject do
   def project do
     [
       app: :stella,
-      version: "0.6.0",
-      elixir: "~> 1.10",
+      version: "0.7.0",
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
@@ -13,7 +13,7 @@ defmodule Stella.MixProject do
       aliases: aliases(),
       docs: [
         main: "Stella",
-        extras: ["README.md"]
+        extras: ["README.md", "CHANGELOG.md"]
       ]
     ]
   end
@@ -42,8 +42,8 @@ defmodule Stella.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
-      {:ex_doc, "~> 0.22", only: :dev, runtime: false}
+      {:mix_test_watch, "~> 1.1", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.29.4", only: :dev, runtime: false}
     ]
   end
 
