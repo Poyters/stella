@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="assets/images/stella.png" />
+<p>
+
 # Stella
 
 Rapid Elixir library providing implementations of the most famous algorithms, data structures and math functions. Key features of this library are:
