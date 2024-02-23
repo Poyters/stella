@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.7.1 (23 February 2024)
+
+- Upgrade Stella logo
+
 ## Version 0.7.0 (16 May 2023)
 
 - Upgrade Stella project dependencies, add support for Elixir 1.14
