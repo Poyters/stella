@@ -28,7 +28,7 @@ Link to hex package: https://hex.pm/packages/stella
 
 Generated with ExDoc: https://hexdocs.pm/stella/Stella.html
 
-## Content of version 0.7.0
+## Content of version 0.7.1
 
 ### Math
 
